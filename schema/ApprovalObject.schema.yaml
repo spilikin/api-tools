@@ -20,9 +20,7 @@ $defs:
     type: object
     properties:
       name:
-        anyOf:
-          - $ref: Produkttyp.schema.json
-          - type: string
+        type: string
       version:
         type: string
       description:
@@ -58,7 +56,7 @@ $defs:
       name:
         type: string
       version:
-        type: version
+        type: string
       title:
         type: string
       description:

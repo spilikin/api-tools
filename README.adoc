@@ -2,5 +2,25 @@
 
 This repository contains a set of tools for producing and using the gematik API documentation
 
-== Schema
+== Productmodel
+=== Approval Object
 * link:schema/ApprovalObject.schema.json[ApprovalObject]
+
+[source,yaml]
+----
+# yaml-language-server: $schema=https://raw.githubusercontent.com/spilikin/api-tools/main/schema/ApprovalObject.schema.json <1>
+apiVersion: v1
+kind: ApprovalObject
+meta:
+  name: gemProdT_eRp_FD
+  version: 1.2.0
+spec:
+  components:
+    - name: FHIR
+      provides:
+        - name: I_ERP_Prescribe
+        - name: I_ERP_Dispense
+          description: Administration
+----
+
+<1> Schema

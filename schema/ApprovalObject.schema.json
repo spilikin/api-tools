@@ -34,7 +34,12 @@
           "items": {
             "$ref": "#/$defs/component" 
           }
-          
+        },
+        "provides": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/interface"
+          }
         }
       }
     },

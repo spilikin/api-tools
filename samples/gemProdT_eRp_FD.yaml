@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/spilikin/api-tools/main/schema/ApprovalObject.schema.json
+apiVersion: v1
+kind: ApprovalObject
+meta:
+  name: gemProdT_eRp_FD
+  version: 1.2.0
+spec:
+  components:
+    - name: FHIR
+      provides:
+        - name: I_ERP_Prescribe
+        - name: I_ERP_Dispense
+          description: Administration
+

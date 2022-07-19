@@ -3,4 +3,4 @@
 This repository contains a set of tools for producing and using the gematik API documentation
 
 == Schema
-* link:schemas/ApprovalObject.schema.jaon[ApprovalObject]
+* link:schema/ApprovalObject.schema.jaon[ApprovalObject]

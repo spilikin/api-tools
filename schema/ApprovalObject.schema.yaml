@@ -1,0 +1,67 @@
+$id: urn:gematik:api:schema:ApprovalObject
+$schema: https://json-schema.org/draft/2020-12/schema
+description: ApprovalObject (Zulassungsobjekt/Produkttyp)
+type: object
+properties:
+  apiVersion:
+    const: v1
+  kind:
+    const: ApprovalObject
+  meta:
+    $ref: '#/$defs/meta'
+  spec:
+    $ref: '#/$defs/spec'
+required:
+  - apiVersion
+  - kind
+  - meta
+$defs:
+  meta:
+    type: object
+    properties:
+      name:
+        anyOf:
+          - $ref: Produkttyp.schema.json
+          - type: string
+      version:
+        type: string
+      description:
+        type: string
+    required:
+      - name
+      - version
+  spec:
+    type: object
+    properties:
+      components:
+        type: array
+        items:
+          $ref: '#/$defs/component'
+      provides:
+        type: array
+        items:
+          $ref: '#/$defs/interface'
+  component:
+    type: object
+    properties:
+      name:
+        type: string
+      provides:
+        type: array
+        items:
+          $ref: '#/$defs/interface'
+    required:
+      - name
+  interface:
+    type: object
+    properties:
+      name:
+        type: string
+      version:
+        type: version
+      title:
+        type: string
+      description:
+        type: string
+    required:
+      - name

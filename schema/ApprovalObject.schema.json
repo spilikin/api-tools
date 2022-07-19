@@ -60,7 +60,7 @@
       "type": "object",
       "properties": {
         "name": {"type": "string"},
-        "version": {"type": "version"},
+        "version": {"type": "string"},
         "title": {"type": "string"},
         "description": {"type": "string"}
       },

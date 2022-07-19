@@ -38,11 +38,17 @@
         "provides": {
           "type": "array",
           "items": {
-            "$ref": "#/$defs/interface"
+            "$ref": "#/$defs/provided-interface"
           }
         }
+      },
+      "requires": {
+        "type": "array",
+        "items": {
+          "$ref": "#/$defs/required-interface"
+        }
       }
-    },
+  },
     "component": {
       "type": "object",
       "properties": {
@@ -50,13 +56,19 @@
         "provides": {
           "type": "array",
           "items": {
-            "$ref": "#/$defs/interface"
+            "$ref": "#/$defs/provided-interface"
+          }
+        },
+        "requires": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/required-interface"
           }
         }
       },
       "required": [ "name"]
     },
-    "interface": {
+    "provided-interface": {
       "type": "object",
       "properties": {
         "name": {"type": "string"},
@@ -65,6 +77,23 @@
         "description": {"type": "string"}
       },
       "required": [ "name"]
+    },
+    "required-interface": {
+      "type": "object",
+      "properties": {
+        "providedBy": {
+          "anyOf": [
+            { "$ref": "Produkttyp.schema.json" },
+            { "type": "string" }
+          ]
+        },
+        "fromVersion": {"type": "string"},
+        "toVersion": {"type": "string"},
+        "interfaceName": {"type": "string"},
+        "interfaceVersion": {"type": "string"},
+        "description": {"type": "string"}
+      },
+      "required": [ "providedBy", "interfaceName"]
     }
   }
 }

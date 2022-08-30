@@ -35,14 +35,14 @@
             "$ref": "#/$defs/component" 
           }
         },
-        "provides": {
+        "providesInterfaces": {
           "type": "array",
           "items": {
             "$ref": "#/$defs/provided-interface"
           }
         }
       },
-      "requires": {
+      "requiresInterfaces": {
         "type": "array",
         "items": {
           "$ref": "#/$defs/required-interface"

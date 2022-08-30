@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../../schema/System.schema.json
+apiVersion: v1
+kind: System
+meta:
+  cn: Konnektor
+  version: 0.0.0
+spec:
+  stereotype: TIEndUserHardware
+  approvalContext: 
+    cn: gemProdT_Kon
+    version: 0.0.0
+  components:
+    - name: FM_VSDM
+      provides:
+        - name: I_FM_VSDM
+    - name: FM_NFDM
+      provides:
+        - name: I_FM_NFDM
+    - name: FM_AMTS
+      provides:
+        - name: I_FM_AMTS
+    - name: FM_EPA
+      provides:
+        - name: I_FM_EPA
+    - name: ServiceDirectory
+      provides:
+        - name: I_Services
+
+  

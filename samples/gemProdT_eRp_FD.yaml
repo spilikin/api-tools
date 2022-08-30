@@ -5,10 +5,7 @@ meta:
   name: gemProdT_eRp_FD
   version: 1.2.0
 spec:
-  components:
-    - name: FHIR
-      provides:
-        - name: I_ERP_Prescribe
-        - name: I_ERP_Dispense
-          description: Administration
-
+  provides:
+    - name: I_ERP_Task_Prescribe
+    - name: I_ERP_Task_Dispense
+  

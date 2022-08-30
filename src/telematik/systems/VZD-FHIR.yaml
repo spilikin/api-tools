@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=../../../schema/System.schema.json
+apiVersion: v1
+kind: System
+meta:
+  cn: VZD-FHIR
+  version: 0.0.0
+spec:
+  stereotype: TIPlatformService
+  approvalContext: 
+    cn: gemProdT_VZD_FHIR
+    version: 0.0.0
+  

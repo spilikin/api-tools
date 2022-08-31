@@ -8,6 +8,7 @@ from diagrams.onprem.client import Client, User
 from diagrams.onprem.compute import Server
 from diagrams.generic.compute import Rack
 from diagrams.custom import Custom
+from diagrams.generic.blank import Blank
 from diagrams.generic.network import Firewall, Switch
 
 @click.command()
@@ -15,24 +16,38 @@ def diagrams():
   print("Generating diagrams")
   sm = systems.load_all("src/telematik/systems")
 
+  graph_attr = {
+    "fontsize": "45",
+  }
 
-  with Diagram("TI Network", show=True):
+  edge_attr = {
+    "arrowhead": "none",
+    "arrowtail": "none",
+  }
+
+  with Diagram("TI Network", show=True, graph_attr=graph_attr, edge_attr=edge_attr):
     user = User("Practitioner")
+
     with Cluster("Office"):
-      pvs = Client("PVS")
-      with Cluster("TI"):
+      pvs = Client("Software")
+      with Cluster("TI Smartcards"):
+        egk = Server("eGK")
+        hba = Server("HBA")
+        smcb = Server("SMC-B")
+      with Cluster("TI Hardware"):
         kon = Server("Konnektor")
         kt = Server("eHealth-KT")
-        egk = Server("eGK")
-    kt >> kon
-    egk >> kt
-    user >> kt
+
     user >> pvs
     pvs >> kon
-    with Cluster("Zugang"):
+    [ egk, hba, smcb ] >> kt
+    
+    with Cluster("Access"):
       vpnzd = Firewall("VPN-ZD")
-      szzp1 = Switch("SZZP")
+      szzp1 = Switch("node")
       vpnzd >> szzp1
+
+
     with Cluster("TI Platform"):
       tsps = [
         Server("tsp1"),

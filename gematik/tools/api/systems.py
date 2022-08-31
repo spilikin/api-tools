@@ -29,6 +29,7 @@ class RequiredInterfaceSpec(BaseModel):
 
 class SystemComponentSpec(BaseModel):
   name: str
+  providedInterfaces: Optional[List[ProvidedInterfaceSpec]]
 
 class SystemStereotype(str, Enum):
   ClientGeneric = "ClientGeneric"

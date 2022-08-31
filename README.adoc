@@ -2,23 +2,11 @@
 
 This repository contains a set of tools for producing and using the gematik API documentation
 
-== Productmodel
-=== Approval Object
-* link:schema/ApprovalObject.schema.json[ApprovalObject]
+== System Model
 
-[source,yaml]
-----
-# yaml-language-server: $schema=https://raw.githubusercontent.com/spilikin/api-tools/main/schema/ApprovalObject.schema.json
-apiVersion: v1
-kind: ApprovalObject
-meta:
-  name: gemProdT_eRp_FD
-  version: 1.2.0
-spec:
-  components:
-    - name: FHIR
-      provides:
-        - name: I_ERP_Prescribe
-        - name: I_ERP_Dispense
-          description: Administration
-----
+TI is a complex infrastructure consisting of variety of software and hardware systems. To describe the TI we use the following *Systen Model*:
+
+* *System*: any hardware or software system that is either part of the TI or is required to use and operate the TI
+* *Component*: depending on the complexity of a *System* it can be decomposed into parts.
+* *Interface*: any kind of electrical, network, software or logical interfaces provided by the *Systems* or it's *Components*. The interfaces allow the the interactions between the *Systems*
+* *ApprovalObject*: combines one or more *Systems* to subject of an approval process (german: Zulassung).

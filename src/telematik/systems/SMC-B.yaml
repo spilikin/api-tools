@@ -9,4 +9,7 @@ spec:
   approvalContext: 
     cn: gemProdT_SMC-B
     version: 0.0.0
-  
+  components:
+    - name: COS
+    - name: ObjSys_SMC-B
+    - name: Certificates  

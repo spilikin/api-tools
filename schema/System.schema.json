@@ -167,12 +167,65 @@
         "version"
       ]
     },
+    "ProvidedInterfaceSpec": {
+      "title": "ProvidedInterfaceSpec",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
     "SystemComponentSpec": {
       "title": "SystemComponentSpec",
       "type": "object",
       "properties": {
         "name": {
           "title": "Name",
+          "type": "string"
+        },
+        "providedInterfaces": {
+          "title": "Providedinterfaces",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ProvidedInterfaceSpec"
+          }
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "RequiredInterfaceSpec": {
+      "title": "RequiredInterfaceSpec",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "sourceSystem": {
+          "title": "Sourcesystem",
+          "type": "string"
+        },
+        "sourceSystemVersion": {
+          "title": "Sourcesystemversion",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
           "type": "string"
         }
       },
@@ -195,6 +248,20 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/SystemComponentSpec"
+          }
+        },
+        "providedInterfaces": {
+          "title": "Providedinterfaces",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ProvidedInterfaceSpec"
+          }
+        },
+        "requiredInterfaces": {
+          "title": "Requiredinterfaces",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RequiredInterfaceSpec"
           }
         }
       },

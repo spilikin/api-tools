@@ -1,6 +1,6 @@
 import click
 
-from gematik.tools.api.systems_generator import systems_generator
+from .systems_generator import systems_generator
 from . import systems
 from .diagrams import diagrams
 

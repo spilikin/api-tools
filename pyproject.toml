@@ -9,7 +9,7 @@ authors = ["Your Name <you@example.com>"]
 license = "MIT"
 
 [tool.poetry.scripts]
-gemapi = "gematik.tools.api:cli"
+gemapi = "gematik.apitools:cli"
 
 [tool.poetry.dependencies]
 python = "^3.9"

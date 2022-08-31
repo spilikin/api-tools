@@ -31,9 +31,9 @@ def diagrams():
     with Cluster("Office"):
       pvs = Client("Software")
       with Cluster("TI Smartcards"):
-        egk = Server("eGK")
-        hba = Server("HBA")
-        smcb = Server("SMC-B")
+        egk = Custom("eGK", "./images/icons/smartcard.png")
+        hba = Custom("HBA", "./images/icons/smartcard.png")
+        smcb = Custom("SMC-B", "./images/icons/smartcard.png")
       with Cluster("TI Hardware"):
         kon = Server("Konnektor")
         kt = Server("eHealth-KT")

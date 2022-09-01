@@ -19,6 +19,7 @@ class ProvidedInterfaceSpec(BaseModel):
   name: str
   description: Optional[str]
   version: Optional[str]
+  definitionURL: Optional[str]
 
 class RequiredInterfaceSpec(BaseModel):
   name: str

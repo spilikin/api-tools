@@ -182,6 +182,10 @@
         "version": {
           "title": "Version",
           "type": "string"
+        },
+        "definitionURL": {
+          "title": "Definitionurl",
+          "type": "string"
         }
       },
       "required": [

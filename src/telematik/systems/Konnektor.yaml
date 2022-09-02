@@ -73,7 +73,7 @@ spec:
           definitionURL: https://github.com/gematik/api-vzd/
 
     - name: FM_VSDM
-      provides:
+      providedInterfaces:
         - name: KvkService
           # version ist in der Spec schwer / kaum zu finden
           version: 4.0.0

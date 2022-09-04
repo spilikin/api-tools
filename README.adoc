@@ -10,3 +10,5 @@ TI is a complex infrastructure consisting of variety of software and hardware sy
 * *Component*: depending on the complexity of a *System* it can be decomposed into parts.
 * *Interface*: any kind of electrical, network, software or logical interfaces provided by the *Systems* or it's *Components*. The interfaces allow the the interactions between the *Systems*
 * *ApprovalObject*: combines one or more *Systems* to subject of an approval process (german: Zulassung).
+* *User*: a person or an organisation which uses a system 
+* *Operator*: a person or an organisation which operates a system

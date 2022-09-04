@@ -2,7 +2,6 @@ import click
 
 from .systems_asciidoc import systems_asciidoc
 from .systems_plantuml import systems_plantuml
-from .system_literals import SystemCanonical
 from .graph import graph
 from . import model
 from .diagrams import diagrams

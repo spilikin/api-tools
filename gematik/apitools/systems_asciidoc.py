@@ -2,7 +2,7 @@ import click
 from rich import print
 from rich.progress import track
 from jinja2 import Environment, PackageLoader, select_autoescape
-from .systems import load_all
+from .playbook import build_playbook
 import os
 from urllib.parse import urlparse
 
@@ -33,10 +33,10 @@ def systems_asciidoc():
 
     template = env.get_template("System.adoc")
 
-    sm = load_all(".")
+    playbook = build_playbook()
 
     os.makedirs("docs/systems", exist_ok = True)
 
-    for system in track(sm.systems, description="Writing system asciidoc..."):
-      with open(f"docs/systems/{system.meta.cn}.adoc", "w") as out:
+    for system in track(playbook.systems, description="Writing system asciidoc..."):
+      with open(f"docs/systems/{system.canonical}.adoc", "w") as out:
         out.write(template.render(system=system))

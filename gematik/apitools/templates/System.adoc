@@ -1,13 +1,18 @@
-= {{ system.meta.cn }} v{{ system.meta.version }}
+= {{ system.canonical.value }}
 
-{%- if system.spec.providedInterfaces is not none %}
+{%- if system.providedInterfaces is not none %}
 == Interfaces
+
+{% for interface in system.providedInterfaces -%}
+* {{ interface.name }}
+{% endfor %}
+
 {%- endif %}
 
-{% if system.spec.components is not none -%}
+{% if system.components is not none -%}
 == Components
 
-{% for component in system.spec.components -%}
+{% for component in system.components -%}
 === {{ component.name }}
 
 {%- if component.providedInterfaces is not none %}

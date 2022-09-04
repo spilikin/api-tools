@@ -2,7 +2,6 @@ import click
 from rich import print
 from rich.progress import track
 from jinja2 import Environment, PackageLoader, select_autoescape
-from .systems import load_all
 import os
 
 @click.command()

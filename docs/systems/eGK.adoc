@@ -1,10 +1,8 @@
-= eGK v0.0.0
+= 
 
 == Components
 
 === COS
 
-=== ObjSys_eGK
-
-=== Certificates
+=== ObjectSystemEGK
 

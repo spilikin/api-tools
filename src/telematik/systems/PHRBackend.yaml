@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=../../../schema/System.schema.json
+canonical: PHRBackend
+version: 0.0.0
+approvalContext: 
+  canonical: gemProdT_Aktensystem_ePA
+  version: 0.0.0
+  

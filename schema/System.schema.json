@@ -3,79 +3,137 @@
   "description": "Describes any system in context of telematics infrastructure",
   "type": "object",
   "properties": {
-    "apiVersion": {
-      "title": "Apiversion",
-      "const": "v1",
-      "type": "string"
+    "canonical": {
+      "title": "Canonical",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/SystemCanonical"
+        },
+        {
+          "type": "string"
+        }
+      ]
     },
     "kind": {
-      "title": "Kind",
-      "const": "System",
+      "$ref": "#/definitions/SystemKind"
+    },
+    "version": {
+      "title": "Version",
       "type": "string"
     },
-    "meta": {
-      "$ref": "#/definitions/Meta"
+    "approvalContext": {
+      "$ref": "#/definitions/SystemApprovalContext"
     },
-    "spec": {
-      "$ref": "#/definitions/SystemSpec"
+    "components": {
+      "title": "Components",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/SystemComponent"
+      }
+    },
+    "providedInterfaces": {
+      "title": "Providedinterfaces",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ProvidedInterface"
+      }
+    },
+    "requiredInterfaces": {
+      "title": "Requiredinterfaces",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/RequiredInterface"
+      }
     }
   },
   "required": [
-    "meta",
-    "spec"
+    "canonical"
   ],
   "definitions": {
-    "Meta": {
-      "title": "Meta",
-      "type": "object",
-      "properties": {
-        "cn": {
-          "title": "Cn",
-          "type": "string"
-        },
-        "version": {
-          "title": "Version",
-          "type": "string"
-        },
-        "title": {
-          "title": "Title",
-          "type": "string"
-        },
-        "icon": {
-          "title": "Icon",
-          "type": "string"
-        }
-      },
-      "required": [
-        "cn",
-        "version"
-      ]
-    },
-    "SystemStereotype": {
-      "title": "SystemStereotype",
+    "SystemCanonical": {
+      "title": "SystemCanonical",
       "description": "An enumeration.",
       "enum": [
+        "AuthnSignatureService",
+        "BasisConsumer",
+        "CardTerminal",
+        "Connector",
+        "ConnectorHighspeed",
+        "CVCRootECC",
+        "Directory",
+        "EPrescriptionBackend",
+        "EPrescriptionPersonalFrontend",
+        "EPrescriptionPrivacyFrontend",
+        "ExistingNetworksGateway",
+        "FHIRDirectory",
+        "HealthInsuranceConsumer",
+        "HealthInsurancePrivacyFrontend",
+        "HBA",
+        "IDPFederated",
+        "IDPFederationMaster",
+        "IDPService",
+        "KIMBackend",
+        "KIMClientModule",
+        "MobileCardTerminal",
+        "NCPEH",
+        "OCSPProxy",
+        "PharmaciesDirectory",
+        "PHRBackend",
+        "EHRKeyGenerationService",
+        "EHRPersonalFrontend",
+        "PrivateKeyGenerator",
+        "Repository",
+        "SMCB",
+        "TIDNS",
+        "TIMessengerBackend",
+        "TIMessengerFrontend",
+        "TINetwork",
+        "TINTP",
+        "TIRootCA",
+        "TSLService",
+        "TSP_CVC",
+        "TSP_X509_nonQES_eGK",
+        "TSP_X509_nonQES_HBA",
+        "TSP_X509_nonQES_Komp",
+        "TSP_X509_nonQES_SMCB",
+        "TSP_X509_QES",
+        "VPNService",
+        "VSDM_CMS",
+        "VSDM_Intermediary",
+        "VSDM_UFS",
+        "VSDM_VSD"
+      ],
+      "type": "string"
+    },
+    "SystemKind": {
+      "title": "SystemKind",
+      "description": "An enumeration.",
+      "enum": [
+        "NetworkLAN",
+        "NetworkInternet",
         "ClientGeneric",
         "ServiceGeneric",
         "ClientPractitioner",
         "MobileApp",
+        "TINetwork",
         "TIPlatformService",
-        "TIEndUserHardware",
+        "TIUserHardware",
         "TISmartcard",
         "TIApplicationService",
         "TIApplicationClient",
         "TIApplicationClientApp",
         "TIApplicationClientNative",
-        "TIApplicationClientWeb"
+        "TIApplicationClientWeb",
+        "TIPlatformConsumer"
       ],
       "type": "string"
     },
-    "SystemApprovalContextSpec": {
-      "title": "SystemApprovalContextSpec",
+    "SystemApprovalContext": {
+      "title": "SystemApprovalContext",
       "type": "object",
       "properties": {
-        "cn": {
-          "title": "Cn",
+        "canonical": {
+          "title": "Canonical",
           "anyOf": [
             {
               "enum": [
@@ -163,12 +221,12 @@
         }
       },
       "required": [
-        "cn",
+        "canonical",
         "version"
       ]
     },
-    "ProvidedInterfaceSpec": {
-      "title": "ProvidedInterfaceSpec",
+    "ProvidedInterface": {
+      "title": "ProvidedInterface",
       "type": "object",
       "properties": {
         "name": {
@@ -192,8 +250,8 @@
         "name"
       ]
     },
-    "SystemComponentSpec": {
-      "title": "SystemComponentSpec",
+    "SystemComponent": {
+      "title": "SystemComponent",
       "type": "object",
       "properties": {
         "name": {
@@ -204,7 +262,7 @@
           "title": "Providedinterfaces",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/ProvidedInterfaceSpec"
+            "$ref": "#/definitions/ProvidedInterface"
           }
         }
       },
@@ -212,8 +270,8 @@
         "name"
       ]
     },
-    "RequiredInterfaceSpec": {
-      "title": "RequiredInterfaceSpec",
+    "RequiredInterface": {
+      "title": "RequiredInterface",
       "type": "object",
       "properties": {
         "name": {
@@ -235,42 +293,6 @@
       },
       "required": [
         "name"
-      ]
-    },
-    "SystemSpec": {
-      "title": "SystemSpec",
-      "type": "object",
-      "properties": {
-        "stereotype": {
-          "$ref": "#/definitions/SystemStereotype"
-        },
-        "approvalContext": {
-          "$ref": "#/definitions/SystemApprovalContextSpec"
-        },
-        "components": {
-          "title": "Components",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/SystemComponentSpec"
-          }
-        },
-        "providedInterfaces": {
-          "title": "Providedinterfaces",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ProvidedInterfaceSpec"
-          }
-        },
-        "requiredInterfaces": {
-          "title": "Requiredinterfaces",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/RequiredInterfaceSpec"
-          }
-        }
-      },
-      "required": [
-        "stereotype"
       ]
     }
   }

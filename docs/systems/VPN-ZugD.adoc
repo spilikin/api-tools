@@ -1,0 +1,26 @@
+= VPN-ZugD v0.0.0
+
+== Components
+
+=== VPN-Server
+|===
+|Name | Version | Definition
+
+| I_IPSec
+| None
+| None[None]
+
+|===
+
+=== OCSP-Forwarder
+
+=== RegistrationService
+|===
+|Name | Version | Definition
+
+| I_Registration
+| None
+| None[None]
+
+|===
+

@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=../../../schema/System.schema.json
+canonical: SMCB
+approvalContext: 
+  canonical: gemProdT_SMC-B
+  version: 0.0.0
+components:
+  - name: COS
+  - name: ObjSys_SMC-B

@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../../schema/System.schema.json
+canonical: CardTerminal
+version: 1.8.0
+approvalContext: 
+  canonical: gemProdT_KT
+  version: 1.8.0
+providedInterfaces:
+  - name: GUI
+  - name: PinPAD
+  - name: WebAdmin
+  - name: SmartcardNFCInterface
+  - name: SmartcardChipInterface
+  - name: SICCT
+  

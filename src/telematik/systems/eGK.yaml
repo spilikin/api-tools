@@ -1,13 +1,7 @@
 # yaml-language-server: $schema=../../../schema/System.schema.json
 # Es gibt tatsächlich keinen Produkttyp "eGK" :)
-apiVersion: v1
-kind: System
-meta:
-  cn: eGK
-  version: 0.0.0
-spec:
-  stereotype: TISmartcard
-  components:
-    - name: COS
-    - name: ObjSys_eGK
-    - name: Certificates
+canonical: EGK
+version: 0.0.0
+components:
+  - name: COS
+  - name: ObjectSystemEGK

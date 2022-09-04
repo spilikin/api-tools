@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=../../../schema/System.schema.json
+canonical: BasisConsumer
+version: 0.0.0
+approvalContext: 
+  canonical: gemProdT_Basis-Consumer
+  version: 0.0.0
+  

@@ -6,13 +6,13 @@ from .literals import ApprovalType
 import yaml
 
 class Meta(BaseModel):
-  cn: str
-  version: str
+  canonical: str
+  version: Optional[str]
   title: Optional[str]
   icon: Optional[str]
 
 class SystemApprovalContextSpec(BaseModel):
-  cn: Union[ApprovalType, str]
+  canonical: Union[ApprovalType, str]
   version: str
 
 class ProvidedInterfaceSpec(BaseModel):
@@ -38,7 +38,7 @@ class SystemStereotype(str, Enum):
   ClientPractitioner = "ClientPractitioner"
   ClientMobile = "MobileApp"
   TIPlatformService = "TIPlatformService"
-  TIEndUserHardware = "TIEndUserHardware"
+  TIUserHardware = "TIUserHardware"
   TISmartcard = "TISmartcard"
   TIApplicationService = "TIApplicationService"
   TIApplicationClient = "TIApplicationClient"

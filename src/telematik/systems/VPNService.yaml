@@ -1,15 +1,11 @@
 # yaml-language-server: $schema=../../../schema/System.schema.json
-apiVersion: v1
-kind: System
-meta:
-  cn: VPN-ZugD
+canonical: VPNService
+version: 0.0.0
+approvalContext: 
+  canonical: gemProdT_VPN_ZugD
   version: 0.0.0
-spec:
-  stereotype: TIPlatformService
-  approvalContext: 
-    cn: gemProdT_VPN_ZugD
-    version: 0.0.0
   components:
+    # TODO
     - name: VPN-Server
       providedInterfaces:
         - name: I_IPSec

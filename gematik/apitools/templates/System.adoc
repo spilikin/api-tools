@@ -1,0 +1,26 @@
+= {{ system.meta.cn }} v{{ system.meta.version }}
+
+{%- if system.spec.providedInterfaces is not none %}
+== Interfaces
+{%- endif %}
+
+{% if system.spec.components is not none -%}
+== Components
+
+{% for component in system.spec.components -%}
+=== {{ component.name }}
+
+{%- if component.providedInterfaces is not none %}
+|===
+|Name | Version | Definition
+{% for interface in component.providedInterfaces %}
+| {{ interface.name }}
+| {{ interface.version }}
+| {{ interface.definitionURL | github_url}}[{{ interface.definitionURL | basename }}]
+{% endfor %}
+|===
+{%- endif %}
+
+{% endfor %}
+
+{%- endif %}

@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=../../../schema/System.schema.json
+canonical: PHRPersonalFrontend
+version: 0.0.0
+approvalContext: 
+  canonical: gemProdT_ePA_FdV
+  version: 0.0.0
+providedInterfaces:
+  - name: GUI
+
+  

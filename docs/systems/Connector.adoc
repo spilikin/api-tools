@@ -39,110 +39,187 @@
     * PHRService
     * PHRService
 
+
 == Components
 
-=== Basisdienste|===
+=== Basisdienste
+
+|===
 |Name | Version | Definition
 | AuthSignatureService
-| 7.4.0| https://github.com/gematik/api-telematik/blob/4.1.2/conn/AuthSignatureService.wsdl[AuthSignatureService.wsdl]
+| 7.4.0
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/AuthSignatureService.wsdl[AuthSignatureService.wsdl]
 
 | AuthSignatureService
-| 7.4.1| https://github.com/gematik/api-telematik/blob/4.1.2/conn/AuthSignatureService_v7_4_1.wsdl[AuthSignatureService_v7_4_1.wsdl]
+| 7.4.1
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/AuthSignatureService_v7_4_1.wsdl[AuthSignatureService_v7_4_1.wsdl]
 
 | CardService
-| 8.1.0| https://github.com/gematik/api-telematik/blob/4.1.2/conn/CardService.wsdl[CardService.wsdl]
+| 8.1.0
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/CardService.wsdl[CardService.wsdl]
 
 | CardService
-| 8.1.1| https://github.com/gematik/api-telematik/blob/4.1.2/conn/CardService_v8_1_1.wsdl[CardService_v8_1_1.wsdl]
+| 8.1.1
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/CardService_v8_1_1.wsdl[CardService_v8_1_1.wsdl]
 
 | CardService
-| 8.1.2| https://github.com/gematik/api-telematik/blob/4.1.2/conn/CardService_v8_1_2.wsdl[CardService_v8_1_2.wsdl]
+| 8.1.2
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/CardService_v8_1_2.wsdl[CardService_v8_1_2.wsdl]
 
 | CardService
-| 8.1.3| https://github.com/gematik/api-telematik/blob/4.1.2/conn/CardService_v8_1_3.wsdl[CardService_v8_1_3.wsdl]
+| 8.1.3
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/CardService_v8_1_3.wsdl[CardService_v8_1_3.wsdl]
 
 | CardTerminalService
-| 1.1.0| https://github.com/gematik/api-telematik/blob/4.1.2/conn/CardTerminalService.wsdl[CardTerminalService.wsdl]
+| 1.1.0
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/CardTerminalService.wsdl[CardTerminalService.wsdl]
 
 | CertificateService
-| 6.0.0| https://github.com/gematik/api-telematik/blob/4.1.2/conn/CertificateService.wsdl[CertificateService.wsdl]
+| 6.0.0
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/CertificateService.wsdl[CertificateService.wsdl]
 
 | CertificateService
-| 6.0.1| https://github.com/gematik/api-telematik/blob/4.1.2/conn/CertificateService_6.0.1.wsdl[CertificateService_6.0.1.wsdl]
+| 6.0.1
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/CertificateService_6.0.1.wsdl[CertificateService_6.0.1.wsdl]
 
 | CertificateService
-| 6.0.2| https://github.com/gematik/api-telematik/blob/4.1.2/conn/CertificateService_6.0.1.wsdl[CertificateService_6.0.1.wsdl]
+| 6.0.2
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/CertificateService_6.0.1.wsdl[CertificateService_6.0.1.wsdl]
 
 | EncryptionService
-| 6.1.0| https://github.com/gematik/api-telematik/blob/4.1.2/conn/EncryptionService.wsdl[EncryptionService.wsdl]
+| 6.1.0
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/EncryptionService.wsdl[EncryptionService.wsdl]
 
 | EncryptionService
-| 6.1.1| https://github.com/gematik/api-telematik/blob/4.1.2/conn/EncryptionService_v6_1_1.wsdl[EncryptionService_v6_1_1.wsdl]
+| 6.1.1
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/EncryptionService_v6_1_1.wsdl[EncryptionService_v6_1_1.wsdl]
 
 | EncryptionService
-| 6.1.2| https://github.com/gematik/api-telematik/blob/4.1.2/conn/EncryptionService_v6_1_2.wsdl[EncryptionService_v6_1_2.wsdl]
+| 6.1.2
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/EncryptionService_v6_1_2.wsdl[EncryptionService_v6_1_2.wsdl]
 
 | EventService
-| 7.2.0| https://github.com/gematik/api-telematik/blob/4.1.2/conn/EventService.wsdl[EventService.wsdl]
+| 7.2.0
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/EventService.wsdl[EventService.wsdl]
 
 | ServiceDirectory
-| 3.1.0| https://github.com/gematik/api-telematik/blob/4.1.2/conn/ServiceDirectory.xsd[ServiceDirectory.xsd]
+| 3.1.0
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/ServiceDirectory.xsd[ServiceDirectory.xsd]
 
 | SignatureService
-| 7.4.0| https://github.com/gematik/api-telematik/blob/4.1.2/conn/SignatureService.wsdl[SignatureService.wsdl]
+| 7.4.0
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/SignatureService.wsdl[SignatureService.wsdl]
 
 | SignatureService
-| 7.4.2| https://github.com/gematik/api-telematik/blob/4.1.2/conn/SignatureService_V7_4_2.wsdl[SignatureService_V7_4_2.wsdl]
+| 7.4.2
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/SignatureService_V7_4_2.wsdl[SignatureService_V7_4_2.wsdl]
 
 | SignatureService
-| 7.4.4| https://github.com/gematik/api-telematik/blob/4.1.2/conn/SignatureService_V7_4_4.wsdl[SignatureService_V7_4_4.wsdl]
+| 7.4.4
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/SignatureService_V7_4_4.wsdl[SignatureService_V7_4_4.wsdl]
 
 | SignatureService
-| 7.5.5| https://github.com/gematik/api-telematik/blob/4.1.2/conn/SignatureService_V7_5_5.wsdl[SignatureService_V7_5_5.wsdl]
+| 7.5.5
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/SignatureService_V7_5_5.wsdl[SignatureService_V7_5_5.wsdl]
 
 | I_Directory_Query
-| None| https://github.com/gematik/api-vzd/[]
+| None
+
+| https://github.com/gematik/api-vzd/[]
 
 |===
-=== FM_VSDM|===
+
+=== FM_VSDM
+
+|===
 |Name | Version | Definition
 | KvkService
-| 4.0.0| https://github.com/gematik/api-telematik/blob/4.1.2/conn/vsds/KvkService.wsdl[KvkService.wsdl]
+| 4.0.0
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/vsds/KvkService.wsdl[KvkService.wsdl]
 
 | VSDService
-| 5.2.0| https://github.com/gematik/api-telematik/blob/4.1.2/conn/vsds/VSDService.wsdl[VSDService.wsdl]
+| 5.2.0
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/vsds/VSDService.wsdl[VSDService.wsdl]
 
 |===
-=== FM_NFDM|===
+
+=== FM_NFDM
+
+|===
 |Name | Version | Definition
 | DPEService
-| 1.0.0| https://github.com/gematik/api-telematik/blob/4.1.2/conn/nfds/DPEService.wsdl[DPEService.wsdl]
+| 1.0.0
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/nfds/DPEService.wsdl[DPEService.wsdl]
 
 | NFDService
-| 1.0.0| https://github.com/gematik/api-telematik/blob/4.1.2/conn/nfds/NFDService.wsdl[NFDService.wsdl]
+| 1.0.0
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/nfds/NFDService.wsdl[NFDService.wsdl]
 
 |===
-=== FM_AMTS|===
+
+=== FM_AMTS
+
+|===
 |Name | Version | Definition
 | AMTSService
-| 1.0.0| https://github.com/gematik/api-telematik/blob/4.1.2/conn/amtss/AMTSService.wsdl[AMTSService.wsdl]
+| 1.0.0
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/amtss/AMTSService.wsdl[AMTSService.wsdl]
 
 |===
-=== FM_EPA|===
+
+=== FM_EPA
+
+|===
 |Name | Version | Definition
 | PHRManagementService
-| 1.3.0| https://github.com/gematik/api-telematik/blob/4.1.2/conn/phrs/PHRManagementService.wsdl[PHRManagementService.wsdl]
+| 1.3.0
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/phrs/PHRManagementService.wsdl[PHRManagementService.wsdl]
 
 | PHRManagementService
-| 2.0.0| https://github.com/gematik/api-telematik/blob/4.1.2/conn/phrs/PHRManagementService_V2_0.wsdl[PHRManagementService_V2_0.wsdl]
+| 2.0.0
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/phrs/PHRManagementService_V2_0.wsdl[PHRManagementService_V2_0.wsdl]
 
 | PHRManagementService
-| 2.0.1| https://github.com/gematik/api-telematik/blob/4.1.2/conn/phrs/PHRManagementService_V2_0_1.wsdl[PHRManagementService_V2_0_1.wsdl]
+| 2.0.1
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/phrs/PHRManagementService_V2_0_1.wsdl[PHRManagementService_V2_0_1.wsdl]
 
 | PHRService
-| 1.3.0| https://github.com/gematik/api-telematik/blob/4.1.2/conn/phrs/PHRService.wsdl[PHRService.wsdl]
+| 1.3.0
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/phrs/PHRService.wsdl[PHRService.wsdl]
 
 | PHRService
-| 2.0.1| https://github.com/gematik/api-telematik/blob/4.1.2/conn/phrs/PHRService_V2_0_1.wsdl[PHRService_V2_0_1.wsdl]
+| 2.0.1
+
+| https://github.com/gematik/api-telematik/blob/4.1.2/conn/phrs/PHRService_V2_0_1.wsdl[PHRService_V2_0_1.wsdl]
 
 |===
+
+

@@ -55,5 +55,44 @@ class System(BaseModel):
   providedInterfaces: Optional[List[ProvidedInterface]]
   requiredInterfaces: Optional[List[RequiredInterface]]
 
-class SystemsManager():
-  systems: List[System] = list()
+class FlowEdge(BaseModel):
+  to: Union[SystemCanonical, str]
+
+class FlowVertexType(Enum):
+  System = 1
+  User = 2
+  Operator = 3
+  Custom = 4
+
+class FlowVertex(BaseModel):
+  system: Optional[SystemCanonical]
+  user: Optional[str]
+  operator: Optional[str]
+  title: Optional[str]
+  connects: Optional[List[FlowEdge]]
+  style: Optional[str]
+
+  def id(self) -> str:
+    type = self.type()
+    if type == FlowVertexType.System:
+      return f"{self.system}"
+    if type == FlowVertexType.User:
+      return f"{self.user}"
+    if type == FlowVertexType.Operator:
+      return f"{self.operator}"
+    else:
+      return f"{self.title}"
+
+  def type(self) -> FlowVertexType:
+    if self.system != None:
+      return FlowVertexType.System
+    if self.user != None:
+      return FlowVertexType.User
+    if self.operator != None:
+      return FlowVertexType.Operator
+    else:
+      return FlowVertexType.Custom
+
+class Flow(BaseModel):
+  layout: str
+  nodes: List[FlowVertex]

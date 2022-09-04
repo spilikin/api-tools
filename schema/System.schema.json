@@ -61,6 +61,7 @@
         "ConnectorHighspeed",
         "CVCRootECC",
         "Directory",
+        "EGK",
         "EPrescriptionBackend",
         "EPrescriptionPersonalFrontend",
         "EPrescriptionPrivacyFrontend",
@@ -79,8 +80,8 @@
         "OCSPProxy",
         "PharmaciesDirectory",
         "PHRBackend",
-        "EHRKeyGenerationService",
-        "EHRPersonalFrontend",
+        "PHRKeyGenerationService",
+        "PHRPersonalFrontend",
         "PrivateKeyGenerator",
         "Repository",
         "SMCB",
@@ -101,7 +102,10 @@
         "VSDM_CMS",
         "VSDM_Intermediary",
         "VSDM_UFS",
-        "VSDM_VSD"
+        "VSDM_VSD",
+        "HealthProfessionalSoftware",
+        "InternetAccess",
+        "InternetServices"
       ],
       "type": "string"
     },

@@ -10,6 +10,7 @@ class SystemCanonical(str, Enum):
   ConnectorHighspeed = "ConnectorHighspeed"
   CVCRootECC = "CVCRootECC"
   Directory = "Directory"
+  EGK = "EGK"
   EPrescriptionBackend = "EPrescriptionBackend"
   EPrescriptionPersonalFrontend = "EPrescriptionPersonalFrontend"
   EPrescriptionPrivacyFrontend = "EPrescriptionPrivacyFrontend"
@@ -51,3 +52,7 @@ class SystemCanonical(str, Enum):
   VSDM_Intermediary = "VSDM_Intermediary"
   VSDM_UFS = "VSDM_UFS"
   VSDM_VSD = "VSDM_VSD"
+
+  HealthProfessionalSoftware = "HealthProfessionalSoftware"
+  InternetAccess = "InternetAccess"
+  InternetServices = "InternetServices"

@@ -1,6 +1,7 @@
 # yaml-language-server: $schema=../../../schema/System.schema.json
 canonical: Connector
 version: 5.3.0-0
+kind: TIUserHardware
 approvalContext: 
   canonical: gemProdT_Kon
   version: 5.3.0-0

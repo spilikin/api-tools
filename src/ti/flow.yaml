@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../schema/Flow.schema.json
+layout: horizontalflow
+nodes:
+  - system: InternetAccess
+    connects:
+    - to: VPNService
+  - system: VPNService
+  - system: Connector
+    connects:
+      - to: InternetAccess
+  - system: HBA
+    connects:
+      - to: CardTerminal
+  - system: SMCB
+    connects:
+      - to: CardTerminal
+  - system: EGK
+    connects:
+      - to: CardTerminal
+  - system: CardTerminal
+    connects:
+      # ich weiss, genau genommen Konnektor verbindet sich mit KT
+      - to: Connector
+  - system: HealthProfessionalSoftware
+    connects:
+      - to: Connector
+  - user: Person
+    connects:
+      - to: EGK
+      - to: CardTerminal
+  - user: Practitioner
+    connects:
+      - to: HBA
+      - to: CardTerminal
+      - to: HealthProfessionalSoftware

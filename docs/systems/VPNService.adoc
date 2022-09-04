@@ -12,7 +12,6 @@
 == Components
 
 === VPN-Server
-
 |===
 |Name | Version | Definition
 
@@ -25,13 +24,7 @@
 
 === OCSP-Forwarder
 
-|===
-|Name | Version | Definition
-
-|===
-
 === RegistrationService
-
 |===
 |Name | Version | Definition
 

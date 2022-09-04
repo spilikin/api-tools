@@ -15,13 +15,12 @@
 
 {% endif %}
 
-{% if system.components is not none %}
+{% if system.components | length > 0 %}
 == Components
 
 {% for component in system.components %}
 === {{ component.name }}
-
-{% if component.providedInterfaces is not none %}
+{% if component.providedInterfaces | length > 0 %}
 |===
 |Name | Version | Definition
 

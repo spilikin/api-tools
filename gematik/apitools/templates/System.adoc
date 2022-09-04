@@ -1,6 +1,5 @@
 = {{ system.canonical.value }}
-
-{%- if system.providedInterfaces is not none %}
+{% if system.providedInterfaces is not none %}
 == Interfaces
 
 {% for interface in system.providedInterfaces -%}

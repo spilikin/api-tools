@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=../../../schema/System.schema.json
-canonical: VZD-FHIR
+canonical: FHIRDirectory
 version: 0.0.0
 spec:
   approvalContext: 

@@ -1,28 +1,35 @@
 = {{ system.canonical.value }}
 
-{% if system.allProvidedInterfaces() | length > 0 %}
+{% if system.hasInterfaces() %}
 == Interfaces
 
-{% for info in system.allProvidedInterfaces() -%}
-* {{ info.interface.name }}
+{% for interface in system.providedInterfaces -%}
+* {{ interface.name }}
+{% endfor %}
+{% for component in system.components %}
+* {{ component.name }}
+{% for interface in component.providedInterfaces %}
+** {{ interface.name }} {{ ('`' + interface.version + '`') if interface.version is not none else '' }}
+{% endfor %}
 {% endfor %}
 
-{%- endif %}
+{% endif %}
 
-{% if system.components is not none -%}
+{% if system.components is not none %}
 == Components
 
-{% for component in system.components -%}
+{% for component in system.components %}
 === {{ component.name }}
 
-{%- if component.providedInterfaces is not none %}
+{% if component.providedInterfaces is not none %}
 |===
 |Name | Version | Definition
+
 {% for interface in component.providedInterfaces %}
 | {{ interface.name }}
 | {{ interface.version }}
 
-{%- if interface.definitionURL is not none %}
+{% if interface.definitionURL is not none %}
 | {{ interface.definitionURL | github_url}}[{{ interface.definitionURL | basename }}]
 {% else %}
 |
@@ -30,8 +37,8 @@
 
 {% endfor %}
 |===
-{%- endif %}
+{% endif %}
 
 {% endfor %}
 
-{%- endif %}
+{% endif %}

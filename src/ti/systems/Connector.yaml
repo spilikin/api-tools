@@ -5,6 +5,8 @@ kind: TIUserHardware
 approvalContext: 
   canonical: gemProdT_Kon
   version: 5.3.0-0
+providedInterfaces:
+  - name: WebAdminGUI
 components:
   - name: Basisdienste
     providedInterfaces:

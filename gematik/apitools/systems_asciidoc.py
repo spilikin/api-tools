@@ -26,7 +26,9 @@ def j2_github_url(url):
 def systems_asciidoc():
     env = Environment(
       loader=PackageLoader("gematik", "apitools/templates"),
-      autoescape=select_autoescape()
+      autoescape=select_autoescape(),
+      trim_blocks=True,
+      lstrip_blocks=True,
     )
     env.filters['basename'] = j2_basename
     env.filters['github_url'] = j2_github_url

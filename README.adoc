@@ -12,3 +12,7 @@ TI is a complex infrastructure consisting of variety of software and hardware sy
 * *ApprovalObject*: combines one or more *Systems* to subject of an approval process (german: Zulassung).
 * *User*: a person or an organisation which uses a system 
 * *Operator*: a person or an organisation which operates a system
+
+== TI Overview
+
+image:images/Overview.svg[]

@@ -1,9 +1,18 @@
 = SMCB
 
 
+
 == Components
 
 === COS
+|===
+|Name | Version | Definition
+
+|===
 
 === ObjSys_SMC-B
+|===
+|Name | Version | Definition
+
+|===
 

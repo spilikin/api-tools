@@ -1,5 +1,6 @@
 = CardTerminal
 
+
 == Interfaces
 
 * GUI
@@ -9,4 +10,6 @@
 * SmartcardChipInterface
 * SICCT
 
+
+== Components
 

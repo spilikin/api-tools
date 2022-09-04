@@ -5,7 +5,7 @@ from pydantic import BaseModel
 from .system_literals import SystemCanonical
 from .literals import ApprovalType
 
-class SystemApprovalContext(BaseModel):
+class ApprovalContext(BaseModel):
   canonical: Union[ApprovalType, str]
   version: str
 
@@ -23,7 +23,7 @@ class RequiredInterface(BaseModel):
 
 class SystemComponent(BaseModel):
   name: str
-  providedInterfaces: Optional[List[ProvidedInterface]]
+  providedInterfaces: Optional[List[ProvidedInterface]] = list()
 
 class SystemKind(str, Enum):
   NetworkGeneric = "NetworkLAN"
@@ -43,6 +43,11 @@ class SystemKind(str, Enum):
   TIApplicationClientWeb = "TIApplicationClientWeb"
   TIPlatformConsumer = "TIPlatformConsumer"
 
+class ProvidedInterfaceInfo(BaseModel):
+  systemCanonical: Union[SystemCanonical, str]
+  interface: ProvidedInterface
+  componentName: Optional[str] = None
+
 class System(BaseModel):
   """
   Describes any system in context of telematics infrastructure
@@ -50,10 +55,29 @@ class System(BaseModel):
   canonical: Union[SystemCanonical, str]
   kind: Optional[SystemKind]
   version: Optional[str]
-  approvalContext: Optional[SystemApprovalContext]
-  components: Optional[List[SystemComponent]]
-  providedInterfaces: Optional[List[ProvidedInterface]]
-  requiredInterfaces: Optional[List[RequiredInterface]]
+  approvalContext: Optional[ApprovalContext]
+  components: Optional[List[SystemComponent]] = list()
+  providedInterfaces: Optional[List[ProvidedInterface]] = list()
+  requiredInterfaces: Optional[List[RequiredInterface]] = list()
+
+  def hasInterfaces(self) -> bool:
+    if len(self.providedInterfaces) > 0:
+      return True
+    
+    for c in self.components:
+      if len(c.providedInterfaces) > 0:
+        return True
+
+  def allProvidedInterfaces(self) -> List[ProvidedInterfaceInfo]:
+    result = list()
+    for i in self.providedInterfaces:
+      result.append(ProvidedInterfaceInfo(systemCanonical=self.canonical, interface=i))
+
+    for c in self.components:
+      for i in c.providedInterfaces:
+        result.append(ProvidedInterfaceInfo(systemCanonical=self.canonical, interface=i, componentName=c.name))
+
+    return result
 
 class FlowEdge(BaseModel):
   to: Union[SystemCanonical, str]

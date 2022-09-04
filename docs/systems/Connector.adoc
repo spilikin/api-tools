@@ -1,6 +1,40 @@
 = Connector
 
 
+== Interfaces
+
+* AuthSignatureService
+* AuthSignatureService
+* CardService
+* CardService
+* CardService
+* CardService
+* CardTerminalService
+* CertificateService
+* CertificateService
+* CertificateService
+* EncryptionService
+* EncryptionService
+* EncryptionService
+* EventService
+* ServiceDirectory
+* SignatureService
+* SignatureService
+* SignatureService
+* SignatureService
+* I_Directory_Query
+* KvkService
+* VSDService
+* DPEService
+* NFDService
+* AMTSService
+* PHRManagementService
+* PHRManagementService
+* PHRManagementService
+* PHRService
+* PHRService
+
+
 == Components
 
 === Basisdienste

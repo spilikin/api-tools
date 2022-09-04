@@ -1,6 +1,12 @@
 = VPNService
 
 
+== Interfaces
+
+* I_IPSec
+* I_Registration
+
+
 == Components
 
 === VPN-Server
@@ -16,6 +22,10 @@
 |===
 
 === OCSP-Forwarder
+|===
+|Name | Version | Definition
+
+|===
 
 === RegistrationService
 |===

@@ -1,9 +1,10 @@
 = {{ system.canonical.value }}
-{% if system.providedInterfaces is not none %}
+
+{% if system.allProvidedInterfaces() | length > 0 %}
 == Interfaces
 
-{% for interface in system.providedInterfaces -%}
-* {{ interface.name }}
+{% for info in system.allProvidedInterfaces() -%}
+* {{ info.interface.name }}
 {% endfor %}
 
 {%- endif %}

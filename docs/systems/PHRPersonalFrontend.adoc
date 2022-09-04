@@ -1,7 +1,10 @@
 = PHRPersonalFrontend
 
+
 == Interfaces
 
 * GUI
 
+
+== Components
 

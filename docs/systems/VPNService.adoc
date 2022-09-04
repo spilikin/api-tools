@@ -9,7 +9,9 @@
 
 | I_IPSec
 | None
-| None[None]
+|
+
+
 
 |===
 
@@ -21,7 +23,9 @@
 
 | I_Registration
 | None
-| None[None]
+|
+
+
 
 |===
 

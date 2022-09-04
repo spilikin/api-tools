@@ -20,7 +20,13 @@
 {% for interface in component.providedInterfaces %}
 | {{ interface.name }}
 | {{ interface.version }}
+
+{%- if interface.definitionURL is not none %}
 | {{ interface.definitionURL | github_url}}[{{ interface.definitionURL | basename }}]
+{% else %}
+|
+{% endif %}
+
 {% endfor %}
 |===
 {%- endif %}

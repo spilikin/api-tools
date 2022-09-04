@@ -4,40 +4,40 @@
 
 * WebAdminGUI
 * Basisdienste
-  * AuthSignatureService
-  * AuthSignatureService
-  * CardService
-  * CardService
-  * CardService
-  * CardService
-  * CardTerminalService
-  * CertificateService
-  * CertificateService
-  * CertificateService
-  * EncryptionService
-  * EncryptionService
-  * EncryptionService
-  * EventService
-  * ServiceDirectory
-  * SignatureService
-  * SignatureService
-  * SignatureService
-  * SignatureService
-  * I_Directory_Query
+    * AuthSignatureService
+    * AuthSignatureService
+    * CardService
+    * CardService
+    * CardService
+    * CardService
+    * CardTerminalService
+    * CertificateService
+    * CertificateService
+    * CertificateService
+    * EncryptionService
+    * EncryptionService
+    * EncryptionService
+    * EventService
+    * ServiceDirectory
+    * SignatureService
+    * SignatureService
+    * SignatureService
+    * SignatureService
+    * I_Directory_Query
 * FM_VSDM
-  * KvkService
-  * VSDService
+    * KvkService
+    * VSDService
 * FM_NFDM
-  * DPEService
-  * NFDService
+    * DPEService
+    * NFDService
 * FM_AMTS
-  * AMTSService
+    * AMTSService
 * FM_EPA
-  * PHRManagementService
-  * PHRManagementService
-  * PHRManagementService
-  * PHRService
-  * PHRService
+    * PHRManagementService
+    * PHRManagementService
+    * PHRManagementService
+    * PHRService
+    * PHRService
 
 == Components
 

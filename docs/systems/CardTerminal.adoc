@@ -1,5 +1,7 @@
 = CardTerminal
+
 == Interfaces
+
 * GUI
 * PinPAD
 * WebAdmin

@@ -10,7 +10,7 @@ content:
 #      start_path: src/antora
 ui:
   bundle:
-    url: antora/ui-bundle.zip
+    url: ui-bundle.zip
     snapshot: true
 runtime:
   fetch: true

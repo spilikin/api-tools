@@ -1,6 +1,6 @@
 site:
   title: gematik API
-  url: https://docs.example.com
+  url: https://spilikin.dev/api-tools/
   start_page: api-guides::index.adoc
 content:
   sources:

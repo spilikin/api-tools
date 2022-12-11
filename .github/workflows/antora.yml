@@ -19,7 +19,6 @@ jobs:
       run: npx antora --fetch antora-playbook.yaml
     - name: Publish to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
-      working-directory: ./antora
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: build/site
+        publish_dir: antora/build/site

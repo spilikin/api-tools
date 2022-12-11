@@ -6,6 +6,18 @@ content:
   sources:
     - url: https://github.com/spilikin/poc-api-telematik.git
       start_path: src/antora
+      branches:
+        - main
+    - url: https://github.com/spilikin/poc-api-telematik.git
+      start_path: src/antora
+      branches:
+        - directory-ldap
+    - url: https://github.com/spilikin/poc-api-telematik.git
+      start_path: src/antora
+      branches:
+        - directory-fhir
+        - ti-messenger
+      
 #    - url: ../poc-api-telematik
 #      start_path: src/antora
 ui:

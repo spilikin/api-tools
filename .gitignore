@@ -1,2 +1,3 @@
-
-images/.$Overview.svg.bkp
+images/.*.bkp
+node_modules
+.DS_Store

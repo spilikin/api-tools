@@ -1,0 +1,16 @@
+site:
+  title: gematik API
+  url: https://docs.example.com
+  start_page: api-guides::index.adoc
+content:
+  sources:
+    - url: https://github.com/spilikin/poc-api-telematik.git
+      start_path: src/antora
+#    - url: ../poc-api-telematik
+#      start_path: src/antora
+ui:
+  bundle:
+    url: antora/ui-bundle.zip
+    snapshot: true
+runtime:
+  fetch: true

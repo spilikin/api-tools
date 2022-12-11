@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LDAP-Attribute :: gematik API</title>
+    <link rel="canonical" href="https://spilikin.dev/api-tools/api-directory-ldap/1.7.0/Attributen.html">
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spilikin.dev/api-tools">gematik API</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="https://github.com/gematik/"><img style="height: 1.4em;margin-right: 0.4em;" src="../../_/img/github-mark-white.svg"> GiHub</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://github.com/gematik/api-telematik">Telematik API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-erp">eRP API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-epa">ePA API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-kim/">KIM API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-ti-messenger/">TI-Messenger API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-vzd/">Directory API</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://fachportal.gematik.de/">Fachportal</a>
+        <div class="navbar-item" style="scale: 1;">
+          <span class="control">
+            <img class="logo" src="../../_/img/gematik_logo_text.svg">
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="api-directory-ldap" data-version="1.7.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">LDAP Directory API</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Einführung</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="Attributen.html">LDAP-Attribute</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Regeln.html">Wer kann Attribute im LDAP VZD befüllen und ändern</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Darstellung.html">Darstellungsbeispiele</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">LDAP Directory API</span>
+    <span class="version">1.7.0</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../api-guides/5.5.0/index.html">API Anleitungen</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-guides/5.5.0/index.html">5.5.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-directory-fhir/1.0.0/index.html">FHIR Directory API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-directory-fhir/1.0.0/index.html">1.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">LDAP Directory API</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">1.7.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-ti-messenger/1.1.0/index.html">TI-Messenger API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-ti-messenger/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../api-guides/5.5.0/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">LDAP Directory API</a></li>
+    <li><a href="Attributen.html">LDAP-Attribute</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/spilikin/poc-api-telematik/edit/directory-ldap/src/antora/modules/ROOT/pages/Attributen.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">LDAP-Attribute</h1>
+<div class="sect1">
+<h2 id="_übersicht"><a class="anchor" href="#_übersicht"></a>Übersicht</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content stretch">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribut</th>
+<th class="tableblock halign-left valign-top">0..N</th>
+<th class="tableblock halign-left valign-top">Bezeichnung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><strong>Identifikatoren</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#_telematikid">telematikID</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Telematik-ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#_domainid">domainID</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..N</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sektor-ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><strong>Namen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#_displayname">displayName</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anzeigename</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#cn">[cn]</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#_othername">otherName</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alternativer Name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#organization">[organization]</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Organisation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#_givenname">givenName</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vorname</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#sn">[sn]</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nachname</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#title">[title]</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Titel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><strong>Adressdaten</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#_streetaddress">streetAddress</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Straße und Hausnummer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#_postalcode">postalCode</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PLZ</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#_localityname">localityName</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ort</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#_stateorprovincename">stateOrProvinceName</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bundesland oder Region</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#countryCode">countryCode</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Landeskürzel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><strong>Berufliche Informationen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#_professionoid">professionOID</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..N</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Berufsgruppe</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#specialization">[specialization]</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..N</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fachgebiet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#_entrytype">entryType</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Typ des Eintags</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><strong>Anwendungsdaten</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#mail">[mail]</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..N</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KIM-Adresse</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#_komledata">komLeData</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..N</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KIM-Adresse mit Version</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><strong>Zertifikate</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#_usercertificate">userCertificate</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..N</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zertifikat</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><strong>Systemdaten</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#_datafromauthority">dataFromAuthority</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verwaltet durch Kartenherausgeber?</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#_personalentry">personalEntry</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eintrag einer natürlichen Person?</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="#_changedatetime">changeDateTime</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geändert am</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_identifikatoren"><a class="anchor" href="#_identifikatoren"></a>Identifikatoren</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_telematikid"><a class="anchor" href="#_telematikid"></a>telematikID</h3>
+<div class="paragraph">
+<p>Telematik-ID ist ein eindeutiger Identifikator einer Institution oder einer Person in der TI.
+Spezifiziert in <a href="https://fachportal.gematik.de/fachportal-import/files/gemSpec_PKI_V2.11.1.pdf">gemSpec_PKI</a>, Kapitel 4.7.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_domainid"><a class="anchor" href="#_domainid"></a>domainID</h3>
+<div class="paragraph">
+<p>Die sektorspezifische Kennung einer Institution oder einer Person.</p>
+</div>
+<div class="paragraph">
+<p>Per Eintag können mehrere Kennungen angeben werden. Im Gegensatz zu TelematikID sind die <code>domainID</code> nicht eindeutig können in mehreren Einträgen gleichzeitig vorkommen.</p>
+</div>
+<div class="paragraph">
+<p>Die Nutzung für die Sektoren wird in Kapitel <strong>Attributtabellen</strong> von Dokument <a href="https://fachportal.gematik.de/fileadmin/Fachportal/Downloadcenter/Implementierungsleitfaeden/gemILF_Pflege_VZD_V1.5.1.pdf">gemILF_Pflege_VZD</a> beschrieben.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Kassenärztliche Vereinigungen (SMC-B-Eintrag): Betriebsstättennummer der Praxis</p>
+</li>
+<li>
+<p>Kassenzahnärztliche Vereinigungen (SMC-B Eintrag): Abrechnungsnummer</p>
+</li>
+<li>
+<p>SMC-B-Eintrag für Apotheken: Nicht verwendet</p>
+</li>
+<li>
+<p>HBA-Eintrag für Apotheker: Spezifisches Kennzeichen der Apotheker. Kann mehrfach vorkommen (0..100).</p>
+</li>
+<li>
+<p>Krankenhäuser (SMC-B-Eintrag): Betriebsstättennummer des Krankenhauses</p>
+</li>
+<li>
+<p>Psychotherapeuten (HBA-Eintrag): Spezifisches Kennzeichen der Psychotherapeuten. Kann mehrfach vorkommen (0..100).</p>
+</li>
+<li>
+<p>Ärzte (HBA-Eintrag): Spezifisches Kennzeichen der Ärzte. Kann mehrfach vorkommen (0..100).</p>
+</li>
+<li>
+<p>Zahnärzte (HBA-Eintrag): Spezifisches Kennzeichen der Zahnärzte. Kann mehrfach vorkommen (0..100).</p>
+</li>
+<li>
+<p>Gesetzlichen Krankenkassen (SMC-B-Eintrag): Institutionskennzeichen. Kann mehrfach vorkommen (0..100).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_namen"><a class="anchor" href="#_namen"></a>Namen</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_displayname"><a class="anchor" href="#_displayname"></a>displayName</h3>
+<div class="paragraph">
+<p>Dieses Attribut wird verwendet um vollen Namen einer Institution oder Person in GUI anzuzeigen.</p>
+</div>
+<div class="paragraph">
+<p>Spezifiziert in <a href="https://datatracker.ietf.org/doc/html/rfc2798#section-2.3">RFC2798 Section 2.3</a></p>
+</div>
+<div class="sect3">
+<h4 id="_personen_hba"><a class="anchor" href="#_personen_hba"></a>Personen (HBA)</h4>
+<div class="paragraph">
+<p>Bei Personen wird <code>displayName</code> genutzt, um vollen Namen einer Person gegenüber dem Anwender darzustellen. Es wird empfohlen den Namen wie folgt anzugeben (<em>Nachname, Vorname</em>):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Dr. Mustermann, Manfred</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_institutionen_smc_b"><a class="anchor" href="#_institutionen_smc_b"></a>Institutionen (SMC-B)</h4>
+<div class="paragraph">
+<p>Bei Institutionen wird <code>displayName</code> genutzt, um  den Namen einer Institution gegenüber dem Anwender darzustellen.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Praxis Dr. Sandra Meyer</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cn"><a class="anchor" href="#_cn"></a>cn</h3>
+<div class="paragraph">
+<p>Eindeutiger Name einer Person oder Institution.
+LDAP unterstützt grundsätzlich mehrere Namen eines Objekts, in der TI wird jedoch meistens nur ein <code>cn</code>-Attribut verwendet, daher ist <code>cn</code> in der Regel identisch mit <code>displayName</code>.</p>
+</div>
+<div class="paragraph">
+<p>Spezifiziert in <a href="https://datatracker.ietf.org/doc/html/rfc2256#section-5.4">RFC2256 Section 5.4</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_othername"><a class="anchor" href="#_othername"></a>otherName</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Es wird nicht mehr empfohlen dieses Attribut zu verwenden.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_organization"><a class="anchor" href="#_organization"></a>organization</h3>
+<div class="paragraph">
+<p>Optionaler Name einer Organisation zu welcher diese Eintrag gehört.</p>
+</div>
+<div class="paragraph">
+<p>Spezifiziert in <a href="https://datatracker.ietf.org/doc/html/rfc2256#section-5.11">RFC2256 Section 5.11</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_givenname"><a class="anchor" href="#_givenname"></a>givenName</h3>
+<div class="paragraph">
+<p>Alle Vornamen einer natürlicher Person. Vornamen sollen nur bei natürlichen Personen befüllt sein, bei Institutionen muss <code>givenName</code> leer bleiben.</p>
+</div>
+<div class="paragraph">
+<p>Spezifiziert in <a href="https://datatracker.ietf.org/doc/html/rfc2256#section-5.43">RFC2256 Section 5.43</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sn"><a class="anchor" href="#_sn"></a>sn</h3>
+<div class="paragraph">
+<p>Nachname eine natürlichen Person. Nachnamen sollen nur bei natürlichen Personen befüllt sein, bei Institutionen muss <code>sn</code> leer bleiben.</p>
+</div>
+<div class="paragraph">
+<p>Spezifiziert in <a href="https://datatracker.ietf.org/doc/html/rfc2256#section-5.5">RFC2256 Section 5.5</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_title"><a class="anchor" href="#_title"></a>title</h3>
+<div class="paragraph">
+<p>Akademischer oder Adelstitel einer natürlichen Person.</p>
+</div>
+<div class="paragraph">
+<p>Spezifiziert in <a href="https://datatracker.ietf.org/doc/html/rfc2256#section-5.13">RFC2256 Section 5.13</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adressdaten"><a class="anchor" href="#_adressdaten"></a>Adressdaten</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Attribute</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hallesches Ufer 21<br>
+88451 Dettingen<br>
+Baden-Württemberg<br>
+DE<br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>streetAddress</code><br>
+<code>postalCode</code> <code>localityName</code><br>
+<code>stateOrProvinceName</code><br>
+<code>countryCode</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="_streetaddress"><a class="anchor" href="#_streetaddress"></a>streetAddress</h3>
+<div class="paragraph">
+<p>Straße und Hausnummer</p>
+</div>
+<div class="paragraph">
+<p>Spezifiziert in <a href="https://datatracker.ietf.org/doc/html/rfc2256#section-5.10">RFC2256 Section 5.10</a></p>
+</div>
+<div class="paragraph">
+<p>Kann als <code>street</code> abgekürzt werden</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_postalcode"><a class="anchor" href="#_postalcode"></a>postalCode</h3>
+<div class="paragraph">
+<p>Postleitzahl
+Spezifiziert in <a href="https://datatracker.ietf.org/doc/html/rfc2256#section-5.18">RFC2256 Section 5.18</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_localityname"><a class="anchor" href="#_localityname"></a>localityName</h3>
+<div class="paragraph">
+<p>Ort</p>
+</div>
+<div class="paragraph">
+<p>Spezifiziert in <a href="https://datatracker.ietf.org/doc/html/rfc2256#section-5.8">RFC2256 Section 5.8</a></p>
+</div>
+<div class="paragraph">
+<p>Kann als <code>l</code> abgekürzt werden</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_stateorprovincename"><a class="anchor" href="#_stateorprovincename"></a>stateOrProvinceName</h3>
+<div class="paragraph">
+<p>Bundesland oder Region</p>
+</div>
+<div class="paragraph">
+<p>Spezifiziert ib <a href="https://datatracker.ietf.org/doc/html/rfc2256#section-5.9">RFC2256 Section 5.9</a></p>
+</div>
+<div class="paragraph">
+<p>Kann als <code>st</code> abgekürzt werden</p>
+</div>
+<div class="sect3">
+<h4 id="_gültige_werte_für_stateorprovincename_in_deutschland"><a class="anchor" href="#_gültige_werte_für_stateorprovincename_in_deutschland"></a>Gültige Werte für <code>stateOrProvinceName</code> in Deutschland:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Baden-Württemberg</p>
+</li>
+<li>
+<p>Bayern</p>
+</li>
+<li>
+<p>Berlin</p>
+</li>
+<li>
+<p>Brandenburg</p>
+</li>
+<li>
+<p>Bremen</p>
+</li>
+<li>
+<p>Hamburg</p>
+</li>
+<li>
+<p>Hessen</p>
+</li>
+<li>
+<p>Mecklenburg-Vorpommern</p>
+</li>
+<li>
+<p>Niedersachsen</p>
+</li>
+<li>
+<p>Nordrhein-Westfalen</p>
+</li>
+<li>
+<p>Rheinland-Pfalz</p>
+</li>
+<li>
+<p>Saarland</p>
+</li>
+<li>
+<p>Sachsen</p>
+</li>
+<li>
+<p>Sachsen-Anhalt</p>
+</li>
+<li>
+<p>Schleswig-Holstein</p>
+</li>
+<li>
+<p>Thüringen</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Zusätzliche KV-Regionen:</div>
+<ul>
+<li>
+<p>Nordrhein</p>
+</li>
+<li>
+<p>Westfalen-Lippe</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="countryCode"><a class="anchor" href="#countryCode"></a>countryCode</h3>
+<div class="paragraph">
+<p>Zweistelliger Landeskürzel aus dem Wertebereich <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_berufliche_informationen"><a class="anchor" href="#_berufliche_informationen"></a>Berufliche Informationen</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_professionoid"><a class="anchor" href="#_professionoid"></a>professionOID</h3>
+<div class="paragraph">
+<p>Berufsgruppe oder Betriebsstätten-Typ innerhalb der Telematikinfrastruktur.</p>
+</div>
+<div class="paragraph">
+<p>Spezifiziert in <a href="https://fachportal.gematik.de/fachportal-import/files/gemSpec_OID_V3.11.0.pdf">gemSpec_OID</a></p>
+</div>
+<div class="paragraph">
+<p>Wertebereiche:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/gematik/api-vzd/blob/master/src/fhir/input/fsh/codesystems/PractitionerProfessionOID.fsh">für Personen (HBA)</a></p>
+</li>
+<li>
+<p><a href="https://github.com/gematik/api-vzd/blob/master/src/fhir/input/fsh/codesystems/OrganizationProfessionOID.fsh">für Institutionen (SMC-B)</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_specialization"><a class="anchor" href="#_specialization"></a>specialization</h3>
+<div class="paragraph">
+<p>Der Wertebereich für <code>specialization</code> entspricht den in HL7 definierten und für ePA festgelegten Werten.</p>
+</div>
+<div class="sect3">
+<h4 id="_personen_hba_2"><a class="anchor" href="#_personen_hba_2"></a>Personen (HBA)</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.hl7.de/index.php?title=IG:Value_Sets_für_XDS#DocumentEntry.authorSpecialty">Überblick AuthorSpeciality bei HL7</a></p>
+</li>
+<li>
+<p><a href="https://github.com/gematik/api-ePA/blob/master/src/vocabulary/value_sets/vs-author-specialty.xml">Normatives ValueSet für ePA</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Bildungsregel:<br>
+<code>urn:as:{OID Codesystem}:{Code}</code></p>
+</div>
+<div class="paragraph">
+<p>Beispiel für Facharzt Allgemeinmedizin:<br>
+<code>urn:as:1.2.276.0.76.5.114:010</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_institutionen_smc_b_2"><a class="anchor" href="#_institutionen_smc_b_2"></a>Institutionen (SMC-B)</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.hl7.de/index.php?title=IG:Value_Sets_für_XDS#DocumentEntry.practiceSettingCode">Überblick PracticeSettingCode bei HL7</a></p>
+</li>
+<li>
+<p><a href="https://github.com/gematik/api-ePA/blob/master/src/vocabulary/value_sets/vs-practice-setting-code.xml">Normatives ValueSet für ePA</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Weitere Ressourcen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/hl7germany/de.basisprofil.terminology/blob/3917ab759560993f9486562af6811765e357b8fc/input/fsh/codesystems/AerztlicheFachrichtungenIHEXDS.fsh">http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen</a></p>
+</li>
+<li>
+<p><a href="https://github.com/hl7germany/de.basisprofil.terminology/blob/3917ab759560993f9486562af6811765e357b8fc/input/fsh/codesystems/NichtAerztlicheFachrichtungenIHEXDS.fsh">http://ihe-d.de/CodeSystems/NichtaerztlicheFachrichtungen</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Bildungsregel:<br>
+<code>urn:psc:{OID Codesystem}:{Code}</code></p>
+</div>
+<div class="paragraph">
+<p>Beispiel für Allgemeinmedizin:<br>
+<code>urn:psc:1.3.6.1.4.1.19376.3.276.1.5.4:ALLG</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_entrytype"><a class="anchor" href="#_entrytype"></a>entryType</h3>
+<div class="paragraph">
+<p>Das Attribut wird automatisch aus <code>professionOID</code> berechnet. Werte werden primär durch ePA verwendet.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_anwendungsdaten"><a class="anchor" href="#_anwendungsdaten"></a>Anwendungsdaten</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_mail"><a class="anchor" href="#_mail"></a>mail</h3>
+<div class="paragraph">
+<p>Liste aller KIM-Adressen einer Person oder einer Institution. Zur Kompatibilität bleibt die KIM Mail Adresse in diesem Attribut zusätzlich zum Attribut  <code>komLeData</code> erhalten.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>mail: adresse1@anbieter.kim.telematik
+mail: adresse2@anbieter.kim.telematik</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_komledata"><a class="anchor" href="#_komledata"></a>komLeData</h3>
+<div class="paragraph">
+<p>Liste von KIM-Adressen mit der zugehörigen KIM-Version</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>komLeData: 1.0,adresse1@anbieter.kim.telematik
+komLeData: 1.5,adresse2@anbieter.kim.telematik</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_zertifikate"><a class="anchor" href="#_zertifikate"></a>Zertifikate</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_usercertificate"><a class="anchor" href="#_usercertificate"></a>userCertificate</h3>
+<div class="paragraph">
+<p>X509-Zertifikate werden für Verschlüsselung der KIM-Nachrichten sowie bei der Berechtigungserteilung in der ePA verwendet.</p>
+</div>
+<div class="paragraph">
+<p>Zertifikate werden als DER-kodierte Binary transportiert.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_systemdaten"><a class="anchor" href="#_systemdaten"></a>Systemdaten</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_holder"><a class="anchor" href="#_holder"></a>holder</h3>
+<div class="paragraph">
+<p>Enthält eine Liste von Organisationen, die für die Administration dieses Datensatzes berechtigt sind.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_datafromauthority"><a class="anchor" href="#_datafromauthority"></a>dataFromAuthority</h3>
+<div class="paragraph">
+<p>Enthält <code>TRUE</code> wenn die Daten durch einen Kartenherausgeber eingestellt wurden.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_personalentry"><a class="anchor" href="#_personalentry"></a>personalEntry</h3>
+<div class="paragraph">
+<p>Enthält <code>TRUE</code> wenn Eintrag eine natürliche Person beschreibt (einen Leistungsebringer) - d.h. einen HBA Empfänger. Enthält <code>FALSE</code> wenn es um einen Eintrag einer Institution handelt, d.h. SMC-B Empfänger.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_changedatetime"><a class="anchor" href="#_changedatetime"></a>changeDateTime</h3>
+<div class="paragraph">
+<p>Zeitstempel der letzten Änderung. Wert wird bei jeder Aktualisierung durch VZD auf aktuelle Systemzeit gesetzt.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> gematik GmbH</p>
+  <p>Generated using Antora and Asciidoc.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

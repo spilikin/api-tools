@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../../../schema/System.schema.json
+canonical: VPNService
+version: 0.0.0
+approvalContext: 
+  canonical: gemProdT_VPN_ZugD
+  version: 0.0.0
+components:
+  # TODO
+  - name: VPN-Server
+    providedInterfaces:
+      - name: I_IPSec
+  - name: OCSP-Forwarder
+  - name: RegistrationService
+    providedInterfaces:
+      - name: I_Registration
+
+  

@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=../../../schema/System.schema.json
+canonical: PHRKeyGenerationService
+version: 0.0.0
+approvalContext: 
+  canonical: gemProdT_SGD_ePA
+  version: 0.0.0
+  

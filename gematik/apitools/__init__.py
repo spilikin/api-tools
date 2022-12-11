@@ -1,13 +1,21 @@
 import click
 
-from .systems_generator import systems_generator
-from . import systems
+from .systems_asciidoc import systems_asciidoc
+from .systems_plantuml import systems_plantuml
+from .graph import graph
+from .flow import flow
+from . import model
 from .diagrams import diagrams
+import gettext
+from rich import *
+
+_ = gettext.gettext
 
 @click.command()
 def schema():
-  print("Schemas")
-  open("schema/System.schema.json", "w").write(systems.System.schema_json(indent=2))
+  print(_("Generate schema files"))
+  open("schema/System.schema.json", "w").write(model.System.schema_json(indent=2))
+  open("schema/Flow.schema.json", "w").write(model.Flow.schema_json(indent=2))
 
 @click.group()
 def cli():
@@ -15,5 +23,7 @@ def cli():
 
 cli.add_command(schema)
 cli.add_command(diagrams)
-cli.add_command(systems_generator)
-  
+cli.add_command(systems_asciidoc)
+cli.add_command(systems_plantuml)
+cli.add_command(graph)
+cli.add_command(flow)

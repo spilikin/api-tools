@@ -1,0 +1,14 @@
+@startuml
+
+component "{{ system.meta.cn }}" {
+{% if system.spec.components is not none -%}
+{% for component in system.spec.components -%}
+  component "{{component.name}}"
+
+{%- if component.providedInterfaces is not none %}
+{%- endif %}
+
+{% endfor %}
+{%- endif %}
+
+}

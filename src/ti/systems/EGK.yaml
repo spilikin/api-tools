@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=../../../schema/System.schema.json
+# Es gibt tatsächlich keinen Produkttyp "eGK" :)
+canonical: EGK
+version: 0.0.0
+components:
+  - name: COS
+  - name: ObjectSystemEGK

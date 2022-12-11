@@ -1,0 +1,12 @@
+= CardTerminal
+
+== Interfaces
+
+* GUI
+* PinPAD
+* WebAdmin
+* SmartcardNFCInterface
+* SmartcardChipInterface
+* SICCT
+
+

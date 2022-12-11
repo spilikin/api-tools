@@ -1,0 +1,130 @@
+{
+  "title": "Flow",
+  "type": "object",
+  "properties": {
+    "layout": {
+      "title": "Layout",
+      "type": "string"
+    },
+    "nodes": {
+      "title": "Nodes",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/FlowVertex"
+      }
+    }
+  },
+  "required": [
+    "layout",
+    "nodes"
+  ],
+  "definitions": {
+    "SystemCanonical": {
+      "title": "SystemCanonical",
+      "description": "An enumeration.",
+      "enum": [
+        "AuthnSignatureService",
+        "BasisConsumer",
+        "CardTerminal",
+        "Connector",
+        "ConnectorHighspeed",
+        "CVCRootECC",
+        "Directory",
+        "EGK",
+        "EPrescriptionBackend",
+        "EPrescriptionPersonalFrontend",
+        "EPrescriptionPrivacyFrontend",
+        "ExistingNetworksGateway",
+        "FHIRDirectory",
+        "HealthInsuranceConsumer",
+        "HealthInsurancePrivacyFrontend",
+        "HBA",
+        "IDPFederated",
+        "IDPFederationMaster",
+        "IDPService",
+        "KIMBackend",
+        "KIMClientModule",
+        "MobileCardTerminal",
+        "NCPEH",
+        "OCSPProxy",
+        "PharmaciesDirectory",
+        "PHRBackend",
+        "PHRKeyGenerationService",
+        "PHRPersonalFrontend",
+        "PrivateKeyGenerator",
+        "Repository",
+        "SMCB",
+        "TIDNS",
+        "TIMessengerBackend",
+        "TIMessengerFrontend",
+        "TINetwork",
+        "TINTP",
+        "TIRootCA",
+        "TSLService",
+        "TSP_CVC",
+        "TSP_X509_nonQES_eGK",
+        "TSP_X509_nonQES_HBA",
+        "TSP_X509_nonQES_Komp",
+        "TSP_X509_nonQES_SMCB",
+        "TSP_X509_QES",
+        "VPNService",
+        "VSDM_CMS",
+        "VSDM_Intermediary",
+        "VSDM_UFS",
+        "VSDM_VSD",
+        "HealthProfessionalSoftware",
+        "InternetAccess",
+        "InternetServices"
+      ],
+      "type": "string"
+    },
+    "FlowEdge": {
+      "title": "FlowEdge",
+      "type": "object",
+      "properties": {
+        "to": {
+          "title": "To",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/SystemCanonical"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "required": [
+        "to"
+      ]
+    },
+    "FlowVertex": {
+      "title": "FlowVertex",
+      "type": "object",
+      "properties": {
+        "system": {
+          "$ref": "#/definitions/SystemCanonical"
+        },
+        "user": {
+          "title": "User",
+          "type": "string"
+        },
+        "operator": {
+          "title": "Operator",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "connects": {
+          "title": "Connects",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FlowEdge"
+          }
+        }
+      }
+    }
+  }
+}

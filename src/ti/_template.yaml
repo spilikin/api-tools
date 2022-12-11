@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=../../../schema/System.schema.json
+canonical: <SystemName>
+version: 0.0.0
+approvalContext: 
+  canonical: <gemProdT_xxx>
+  version: 0.0.0
+  

@@ -1,0 +1,43 @@
+= {{ system.canonical.value }}
+
+{% if system.hasInterfaces() %}
+== Interfaces
+
+{% for interface in system.providedInterfaces -%}
+* {{ interface.name }}
+{% endfor %}
+{% for component in system.components %}
+* {{ component.name }}
+{% for interface in component.providedInterfaces %}
+** {{ interface.name }} {{ ('`' + interface.version + '`') if interface.version is not none else '' }}
+{% endfor %}
+{% endfor %}
+
+{% endif %}
+
+{% if system.components | length > 0 %}
+== Components
+
+{% for component in system.components %}
+=== {{ component.name }}
+{% if component.providedInterfaces | length > 0 %}
+|===
+|Name | Version | Definition
+
+{% for interface in component.providedInterfaces %}
+| {{ interface.name }}
+| {{ interface.version }}
+
+{% if interface.definitionURL is not none %}
+| {{ interface.definitionURL | github_url}}[{{ interface.definitionURL | basename }}]
+{% else %}
+|
+{% endif %}
+
+{% endfor %}
+|===
+{% endif %}
+
+{% endfor %}
+
+{% endif %}

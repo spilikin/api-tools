@@ -1,12 +1,8 @@
 # yaml-language-server: $schema=../../../schema/System.schema.json
-apiVersion: v1
-kind: System
-meta:
-  cn: ePA-SGD
-  version: 0.0.0
+canonical: FHIRDirectory
+version: 0.0.0
 spec:
-  stereotype: TIPlatformService
   approvalContext: 
-    cn: none
+    canonical: gemProdT_VZD_FHIR
     version: 0.0.0
   

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>E-Rezept API-Dokumentation :: gematik API</title>
+    <link rel="canonical" href="https://spilikin.dev/api-tools/api-erp/1.2/index.html">
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spilikin.dev/api-tools">gematik API</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="https://github.com/gematik/"><img style="height: 1.4em;margin-right: 0.4em;" src="../../_/img/github-mark-white.svg"> GiHub</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://github.com/gematik/api-telematik">Telematik API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-erp">eRP API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-epa">ePA API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-kim/">KIM API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-ti-messenger/">TI-Messenger API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-vzd/">Directory API</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://fachportal.gematik.de/">Fachportal</a>
+        <div class="navbar-item" style="scale: 1;">
+          <span class="control">
+            <img class="logo" src="../../_/img/gematik_logo_text.svg">
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="api-erp" data-version="1.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">ePrescription API</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="index.html">E-Rezept API-Dokumentation</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ePrescription API</span>
+    <span class="version">1.2</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">ePrescription API</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">1.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-directory-fhir/1.0.0/index.html">FHIR Directory API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-directory-fhir/1.0.0/index.html">1.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-directory-ldap/1.7.0/index.html">LDAP Directory API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-directory-ldap/1.7.0/index.html">1.7.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-telematik/5.5.0/overview/index.html">Telematik API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-telematik/5.5.0/overview/index.html">5.5.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-ti-messenger/1.1.0/index.html">TI-Messenger API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-ti-messenger/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../api-telematik/5.5.0/overview/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">ePrescription API</a></li>
+    <li><a href="index.html">E-Rezept API-Dokumentation</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/spilikin/poc-api-telematik/edit/erp/src/antora/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">E-Rezept API-Dokumentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Hier dokumentiert die gematik die Nutzung der Schnittstellen rund um das E-Rezept.</p>
+</div>
+<div class="paragraph">
+<p>Die gematik geht neue Wege und möchte auf diesem Weg die Nutzung der Schnittstellen rund um das E-Rezept vorstellen. Die Beschreibung dieser API ergänzt die normativen Dokumente der gematik sowie die Festlegungen über die [E-Rezept-Profile (inkl. Beispielen)](<a href="https://simplifier.net/erezept-workflow" class="bare">https://simplifier.net/erezept-workflow</a>) des genutzten FHIR-Standards.</p>
+</div>
+<div class="paragraph">
+<p>Auf den folgenden Seiten stellt die gematik die Nutzung der Schnittstellen durch die Primärsysteme der verordnenden Ärzte/Zahnärzte und der Apotheker sowie durch die E-Rezept-App vor.
+Die E-Rezept-App wird durch die gematik bereitgestellt und ist zum Start des E-Rezepts in den App Stores der beiden Plattformen iOS und Android verfügbar.</p>
+</div>
+<div class="paragraph">
+<p>Die KBV definiert die FHIR-Profile des Verordnungsdatensatzes im simplifier-Projekt [E-Rezept-Verordnung](<a href="https://simplifier.net/erezept" class="bare">https://simplifier.net/erezept</a>). Die Festlegungen zu Abgabe- und Abrechnungsdaten der Apotheken werden im DAV-Projekt [Abgabedaten](<a href="https://simplifier.net/erezeptabgabedaten" class="bare">https://simplifier.net/erezeptabgabedaten</a>) und im GKV-Projekt [Abrechnungsdaten](<a href="https://simplifier.net/eRezeptAbrechnungsdaten" class="bare">https://simplifier.net/eRezeptAbrechnungsdaten</a>) getroffen.</p>
+</div>
+<div class="paragraph">
+<p>Für die QES-Erstellung durch den Konnektor liegen im Unterordner [samples/qes](samples/qes) SOAP-Request/Responses zu den [Verordnungsbeispielen](<a href="https://simplifier.net/erezept/~resources?category=Example&amp;exampletype=Bundle" class="bare">https://simplifier.net/erezept/~resources?category=Example&amp;exampletype=Bundle</a>) der KBV bereit. Spezialfälle (z.B. abgelaufene Zertifikate wegen Kartenwechsel o.ä.) stellen wir im Unterordner [samples/qes-cases](samples/qes-cases) bereit.</p>
+</div>
+<div class="paragraph">
+<p>Durchgängige Beispieldatensätze von der Verordnung und qualifizierter Signatur über Quittung bis zu den Abrechnungsdaten stellt der Deutsche Apothekerverband in seinem github-Projekt [
+eRezept-Beispiele](<a href="https://github.com/DAV-ABDA/eRezept-Beispiele/tree/v1.0.0" class="bare">https://github.com/DAV-ABDA/eRezept-Beispiele/tree/v1.0.0</a>) zur Verfügung.</p>
+</div>
+<div class="paragraph">
+<p>In den nachfolgend verlinkten Abschnitten zeigen wir, wie sich verordnende Ärzte/Zahnärzte und Versicherte [mit der der TI verbinden](docs/authentisieren.adoc). Wir zeigen detailliert den Ablauf der [Erstellung eines E-Rezepts](docs/erp_bereitstellen.adoc) in der verordnenden Praxis und [wie Apotheker auf den Fachdienst zugreifen](docs/erp_abrufen.adoc), um ein E-Rezept zu beliefern. Für Versicherte stellen wir dar, wie die [Einsicht in die vorhandenen E-Rezepte](docs/erp_versicherte.adoc) und [Abgabeinformationen eingelöster Rezepte](docs/erp_versicherte.adoc) erfolgt, wie die [Kommunikation mit der Apotheke](docs/erp_communication.adoc) ablaufen kann und wie der Versicherte [Einsicht in das Zugriffsprotokoll](docs/erp_versicherte.adoc) auf alle seine E-Rezepte nehmen kann. Schließlich zeigen wir, wie der [Ablauf der Rezept-Einlösung](docs/erp_versicherte.adoc) für Versicherte mit dem E-Rezept funktioniert.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fhir_releases"><a class="anchor" href="#_fhir_releases"></a>FHIR-Releases</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>[Auf dieser Seite veröffentlichen die E-Rezept-Beteiligten {KBV, DAV, GKV, PKV und gematik} gemeinsam ihre FHIR-Release-Festlegungen.](docs/erp_fhirversion.adoc)</p>
+</div>
+<div class="paragraph">
+<p>Die Veröffentlichung an dieser Stelle erfolgt übergangsweise, bis ein gemeinsames Repository 'oberhalb' der API-Beschreibung gefunden ist.</p>
+</div>
+<div class="paragraph">
+<p>Das Titus-Testportal wird in den Anwendungsfällen zum E-Rezept um einen Validator erweitert. Zukünftig werden <strong>alle</strong> Requests vor der Weiterverarbeitung online validiert.
+Details dazu finden sich [auf der folgenden Seite](docs/erp_validation.adoc)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_zugang_zu_diensten_der_telematikinfrastruktur"><a class="anchor" href="#_zugang_zu_diensten_der_telematikinfrastruktur"></a>Zugang zu Diensten der Telematikinfrastruktur</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>[Hier geht es zur Beschreibung des Verbindungsaufbaus zur Telematikinfrastruktur](docs/authentisieren.adoc)</p>
+</div>
+<div class="paragraph">
+<p>[Hier geht es zur notwendigen Netzwerkkonfiguration für Primärsysteme](docs/ti_configuration.adoc)</p>
+</div>
+<div class="paragraph">
+<p>[Hier gibt es eine Übersicht der in der API verwendeten http-Status- und Fehlercodes](docs/erp_statuscodes.adoc)</p>
+</div>
+<div class="paragraph">
+<p>[Hinweise und Festlegungen zu Health-Checks und Verfügbarkeits-Probes](docs/erp_ps_probing.adoc)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_anwendungsfälle_e_rezept_in_der_praxis"><a class="anchor" href="#_anwendungsfälle_e_rezept_in_der_praxis"></a>Anwendungsfälle E-Rezept in der Praxis</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>[Hier geht es zu den Anwendungsfällen in der (Zahn-)Arztpraxis zur Verordnung von E-Rezepten](docs/erp_bereitstellen.adoc)</p>
+</div>
+<div class="paragraph">
+<p>[Hier geht es zu den Anwendungsfällen für die direkte Zuweisung eines E-Rezeptes an eine Apotheke](docs/erp_steuerung_durch_le.adoc)</p>
+</div>
+<div class="paragraph">
+<p>[Hier geht es zu der vorabveröffentlichten und unvollständigen Liste der PKV-Institutionskennzeichen](docs/pkv_ik_numbers.adoc)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_besonderheiten_der_mehrfachverordnung_mvo"><a class="anchor" href="#_besonderheiten_der_mehrfachverordnung_mvo"></a>Besonderheiten der Mehrfachverordnung (MVO)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>[Hier geht es zu den Besonderheiten der Mehrfachverordnung (MVO)](docs/erp_versicherte_mvo.adoc)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_anwendungsfälle_e_rezept_in_der_apotheke"><a class="anchor" href="#_anwendungsfälle_e_rezept_in_der_apotheke"></a>Anwendungsfälle E-Rezept in der Apotheke</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>[Hier geht es zu den Anwendungsfällen in der Apotheke, wie ein E-Rezept bedient wird](docs/erp_abrufen.adoc)</p>
+</div>
+<div class="paragraph">
+<p>[NEU Hier ist der Anwendungsfall zur Alternativen Zuweisung an die Apotheke beschrieben](docs/erp_alternative_zuweisung.adoc)</p>
+</div>
+<div class="paragraph">
+<p>[Hier folgt die Beschreibung der Benachrichtigungsschnittstelle für Apothekensysteme](docs/erp_notification_avs.adoc)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_anwendungsfälle_für_versicherte"><a class="anchor" href="#_anwendungsfälle_für_versicherte"></a>Anwendungsfälle für Versicherte</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>[Hier geht es zu den Anwendungsfällen für Versicherte, um ihre E-Rezepte zu verwalten und einzulösen](docs/erp_versicherte.adoc)</p>
+</div>
+<div class="sect2">
+<h3 id="_pkv_versicherte"><a class="anchor" href="#_pkv_versicherte"></a>PKV Versicherte</h3>
+<div class="paragraph">
+<p>[Hier geht es zu den Anwendungsfällen für die elektronische Verwaltung der Abrechnungsinformationen](docs/erp_chargeItem.adoc)</p>
+</div>
+<div class="paragraph">
+<p>[Hier geht es zu den Anwendungsfällen für das Verwalten der Einwilligung](docs/erp_consent.adoc)</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_anwendungsfälle_für_den_nachrichtenaustausch_zwischen_versicherten_und_apotheken"><a class="anchor" href="#_anwendungsfälle_für_den_nachrichtenaustausch_zwischen_versicherten_und_apotheken"></a>Anwendungsfälle für den Nachrichtenaustausch zwischen Versicherten und Apotheken</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>[Hier geht es zu den Anwendungsfällen für den Nachrichtenaustausch zwischen Versicherten und Apotheken](docs/erp_communication.adoc)</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> gematik GmbH</p>
+  <p>Generated using Antora and Asciidoc.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

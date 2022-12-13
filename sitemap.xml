@@ -7,6 +7,9 @@
 <loc>https://spilikin.dev/api-tools/sitemap-api-directory-ldap.xml</loc>
 </sitemap>
 <sitemap>
+<loc>https://spilikin.dev/api-tools/sitemap-api-erp.xml</loc>
+</sitemap>
+<sitemap>
 <loc>https://spilikin.dev/api-tools/sitemap-api-telematik.xml</loc>
 </sitemap>
 <sitemap>

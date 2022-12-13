@@ -24,3 +24,7 @@ ui:
     snapshot: true
 runtime:
   fetch: true
+asciidoc:
+  sourcemap: true
+  extensions:
+    - ./lib/simplifier-extension.js

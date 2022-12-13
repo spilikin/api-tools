@@ -1,0 +1,35 @@
+= 💾 Proof of Concept for API Documentation using Antora and Asciidoc
+
+To run the PoC locally you will need following tools:
+
+* https://nodejs.org/en/[NodeJS]
+* https://asdf-vm.com[asdf] (optional to manage the NodeJS versions)
+
+Checkout the git repositiories
+[source,bash]
+----
+# contains antora playbook
+git clone https://github.com/spilikin/api-tools
+# contains the sample documentation
+git clone https://github.com/spilikin/poc-api-telematik
+----
+
+Prepare to run antora for the very first time
+
+[source,bash]
+----
+cd api-tools/antora
+# install nodejs dependencies
+npm install
+----
+
+Run antora
+
+[source,bash]
+----
+# local testing playbook, requires that poc-api-telematik is checked out locally
+npx antora antora-playbook-test.yaml --fetch
+
+# production playbook, fetches documentation from public GitHub repositiy
+npx antora antora-playbook.yaml --fetch
+----

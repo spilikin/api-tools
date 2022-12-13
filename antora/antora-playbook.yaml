@@ -17,8 +17,9 @@ content:
       branches:
         - directory-fhir
         - ti-messenger
+        - erp
 # Use this to test locally      
-#    - url: ../poc-api-telematik
+#    - url: ../../poc-api-telematik
 #      start_path: src/antora
 ui:
   bundle:

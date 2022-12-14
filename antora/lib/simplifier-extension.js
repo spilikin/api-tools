@@ -46,7 +46,7 @@ module.exports.register = function (registry) {
         renderedResource = renderedResource.replaceAll("src=\"/", "src=\"https://simplifier.net/")
         renderedResource = renderedResource.replaceAll("href=\"/", "href=\"https://simplifier.net/")
 
-        var renderedResource = renderedResource + "<br><br>"+ request('GET', "https://simplifier.net/ui/packagefile/renderoverview?packageFileId=319737").getBody('utf8');
+        //var renderedResource = renderedResource + "<br><br>"+ request('GET', "https://simplifier.net/ui/packagefile/renderoverview?packageFileId=319737").getBody('utf8');
 
         return self.createPassBlock(parent, `<div class="simiplifier-resource>${renderedResource}</div>`)
       }

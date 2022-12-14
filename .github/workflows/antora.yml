@@ -14,7 +14,8 @@ jobs:
       with:
         node-version: '18'
     - name: Install Antora
-      run: npm i antora
+      working-directory: ./antora
+      run: npm install
     - name: Generate Site
       working-directory: ./antora
       run: npx antora --fetch antora-playbook.yaml

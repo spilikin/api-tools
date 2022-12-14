@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: gematik API</title>
+    <link rel="canonical" href="https://spilikin.dev/api-tools/api-erp/1.2/erp_ps_probing.html">
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spilikin.dev/api-tools">gematik API</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="https://github.com/gematik/"><img style="height: 1.4em;margin-right: 0.4em;" src="../../_/img/github-mark-white.svg"> GiHub</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://github.com/gematik/api-telematik">Telematik API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-erp">eRP API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-epa">ePA API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-kim/">KIM API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-ti-messenger/">TI-Messenger API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-vzd/">Directory API</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://fachportal.gematik.de/">Fachportal</a>
+        <div class="navbar-item" style="scale: 1;">
+          <span class="control">
+            <img class="logo" src="../../_/img/gematik_logo_text.svg">
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="api-erp" data-version="1.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">ePrescription API</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">index.adoc</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ePrescription API</span>
+    <span class="version">1.2</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">ePrescription API</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">1.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-directory-fhir/1.0.0/index.html">FHIR Directory API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-directory-fhir/1.0.0/index.html">1.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-directory-ldap/1.7.0/index.html">LDAP Directory API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-directory-ldap/1.7.0/index.html">1.7.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-telematik/5.5.0/overview/index.html">Telematik API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-telematik/5.5.0/overview/index.html">5.5.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-ti-messenger/1.1.0/index.html">TI-Messenger API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-ti-messenger/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../api-telematik/5.5.0/overview/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/spilikin/poc-api-telematik/edit/erp/src/antora/modules/ROOT/pages/erp_ps_probing.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="paragraph">
+<p><span class="image"><img src="_images/gematik_logo.png" alt="gematik logo" width="35%"></span></p>
+</div>
+<div class="sect1">
+<h2 id="_hinweise_und_vorgaben_zu_health_checks"><a class="anchor" href="#_hinweise_und_vorgaben_zu_health_checks"></a>Hinweise und Vorgaben zu Health-Checks</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Auf dieser Seite stellt die gematik Hinweise und Vorgaben für Primärsysteme zur Verfügung, wie mit Erreichbarkeitstests des E-Rezept-Fachdienstes umgegangen werden darf. Diese werden ebenso im Implementierungsleitfaden <code>gemILF_PS_eRp</code> mit entsprechenden Anforderungen im <a href="https://fachportal.gematik.de/dokumentensuche?tx_gemcharacteristics_productlist%5BformIdentifier%5D=form-2849&amp;tx_gemcharacteristics_productlist%5Btype%5D=ProdT&amp;tx_gemcharacteristics_productlist%5Bproducttype%5D=168&amp;tx_gemcharacteristics_productlist%5Bproducttypeversion%5D=74#c2849" target="_blank" rel="noopener">Fachportal</a> veröffentlicht.</p>
+</div>
+<div class="sect2">
+<h3 id="_definition"><a class="anchor" href="#_definition"></a>Definition</h3>
+<div class="paragraph">
+<p>Ein Health-Check ist eine https-Abfrage mit der Aufgabe, die Erreichbarkeit und damit gleichzeitig die Nutzbarkeit des E-Rezept-Fachdienstes festzustellen. Ein Health-Check dient <strong>nicht</strong> dazu, die fachliche Korrektheit des E-Rezept-Fachdienstes zu überprüfen.</p>
+</div>
+<div class="paragraph">
+<p>Endanwender können sich darauf verlassen, dass vom Betreiber des E-Rezept-Fachdienstes nur Endpunkte zur Verfügung gestellt werden, deren fachliche Korrektheit und Funktionalität kontinuierlich intern überwacht werden. Sollte dies nicht der Fall sein, so wird der entsprechende Host automatisiert vom Netz getrennt, wodurch keine Anfragen an ihn mehr stattfinden können.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_einfacher_health_check"><a class="anchor" href="#_einfacher_health_check"></a>Einfacher Health-Check</h3>
+<div class="paragraph">
+<p>Ein einfacher Health-Check ist ein leichtgewichtiger Aufruf auf den Fachdienst-Endpunkt / (root) mit der http-Methode GET ("äußerer http-Request"), ohne eine zusätzliche VAU-Verschlüsselung &#8658; ( "GET / [---]" ). Ziel dieses Health-Checks soll es sein, die Verfügbarkeit des E-Rezept-Fachdienstes vom Clientsystem aus sicherzustellen. Dabei werden weder Access-Token noch Verschlüsselung benötigt, was ihn für wiederkehrende Abfragen optimiert.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title=":warning:"></i>
+</td>
+<td class="content">
+Dieses Verfahren soll in der produktiven Betriebsumgebung nur dann angewandt werden, wenn z.B. binnen einer festgelegten Periode vom Clientsystem keine Anfragen an den E-Rezept-Fachdienst gestellt worden sind.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title=":warning:"></i>
+</td>
+<td class="content">
+Der Health-Check soll nicht in festgelegten Zeitintervallen, unabhängig von fachlichen Anwendungsfällen benutzt werden - sondern soll erst bei einem echten Idle-Zeitraum Anwendung finden.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_erweiterter_health_check"><a class="anchor" href="#_erweiterter_health_check"></a>Erweiterter Health-Check</h3>
+<div class="paragraph">
+<p>Ein erweiterter Health-Check ist ein spezieller Aufruf auf den Endpunkt /metadata mit der http-Methode GET im inneren, verschlüsselten http-Request an die /VAU &#8658; ( "POST /VAU [GET /metadata]" ). Ziel dieses Health-Checks soll es sein, die Anmeldung am E-Rezept-Fachdienst und dem damit einhergehenden VAU-Protokoll zur Ver- und Entschlüsselung zu überprüfen. Dabei wird ebenfalls das Access-Token überprüft, welches vorher am IDP abgeholt wurde.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title=":warning:"></i>
+</td>
+<td class="content">
+Dieses Verfahren soll in der produktiven Betriebsumgebung nur dann angewandt werden, wenn z.B. ein neuer Client in Betrieb genommen wird.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title=":warning:"></i>
+</td>
+<td class="content">
+Als Abfrage zum Systemstart darf dieser Health-Check nicht eingesetzt werden!
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> gematik GmbH</p>
+  <p>Generated using Antora and Asciidoc.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

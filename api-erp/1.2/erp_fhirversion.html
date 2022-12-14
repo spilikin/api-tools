@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: gematik API</title>
+    <link rel="canonical" href="https://spilikin.dev/api-tools/api-erp/1.2/erp_fhirversion.html">
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spilikin.dev/api-tools">gematik API</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="https://github.com/gematik/"><img style="height: 1.4em;margin-right: 0.4em;" src="../../_/img/github-mark-white.svg"> GiHub</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://github.com/gematik/api-telematik">Telematik API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-erp">eRP API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-epa">ePA API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-kim/">KIM API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-ti-messenger/">TI-Messenger API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-vzd/">Directory API</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://fachportal.gematik.de/">Fachportal</a>
+        <div class="navbar-item" style="scale: 1;">
+          <span class="control">
+            <img class="logo" src="../../_/img/gematik_logo_text.svg">
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="api-erp" data-version="1.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">ePrescription API</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">index.adoc</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ePrescription API</span>
+    <span class="version">1.2</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">ePrescription API</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">1.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-directory-fhir/1.0.0/index.html">FHIR Directory API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-directory-fhir/1.0.0/index.html">1.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-directory-ldap/1.7.0/index.html">LDAP Directory API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-directory-ldap/1.7.0/index.html">1.7.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-telematik/5.5.0/overview/index.html">Telematik API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-telematik/5.5.0/overview/index.html">5.5.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-ti-messenger/1.1.0/index.html">TI-Messenger API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-ti-messenger/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../api-telematik/5.5.0/overview/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/spilikin/poc-api-telematik/edit/erp/src/antora/modules/ROOT/pages/erp_fhirversion.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="paragraph">
+<p><span class="image"><img src="_images/gematik_logo.png" alt="gematik logo" width="35%"></span></p>
+</div>
+<div class="sect1">
+<h2 id="_e_rezept_fhir_package_versionsmanagement"><a class="anchor" href="#_e_rezept_fhir_package_versionsmanagement"></a>E-Rezept FHIR-Package Versionsmanagement</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Auf dieser Seite finden Sie eine Übersicht der FHIR-Release-Pakete der Prozessbeteiligten KBV, DAV, GKV, PKV und gematik.<br>
+Alle Prozessbeteiligten verantworten je mindestens ein FHIR-Profilierungs-Projekt, das im E-Rezept verwendet wird.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>KBV</strong> Definition des Verordnugnsdatensatzes ("eVerordnung") <a href="https://simplifier.net/erezept" class="bare">https://simplifier.net/erezept</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Festlegungen zu Verordnungen werden von der KBV im Dokument Technische Anlage zur elektronischen Arzneimittelverordnung (E16A)
+<a href="https://update.kbv.de/ita-update/DigitaleMuster/ERP/KBV_ITA_VGEX_Technische_Anlage_ERP.pdf" target="_blank" rel="noopener">KBV_ITA_VGEX_TECHNISCHE_ANLAGE_ERP</a> getroffen.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>DAV</strong> Definition des Abgabedatensatzes GKV ("eAbgabedaten") <a href="https://simplifier.net/erezeptabgabedaten" class="bare">https://simplifier.net/erezeptabgabedaten</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Festlegungen zum eAbgabedatensatz werden im Anhang 2 Kapitel 5 (<a href="https://www.gkv-datenaustausch.de/media/dokumente/leistungserbringer_1/apotheken/technische_anlagen_aktuell/TA7_Anhang_2_20220808.pdf" target="_blank" rel="noopener">FHIR-Version zu Technische Anlage 7 zur Arzneimittelabrechnungsvereinbarung gemäß § 300 Absatz 3 SGB V</a>) getroffen.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>GKV</strong> Definition des Abrechnungsdatensatzes für GKV ("TA7 Abrechnungsdaten") <a href="https://simplifier.net/eRezeptAbrechnungsdaten" class="bare">https://simplifier.net/eRezeptAbrechnungsdaten</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Festlegungen zum eAbrechnungsdatensatz werden im Anhang 2 Kapitel 6 (<a href="https://www.gkv-datenaustausch.de/media/dokumente/leistungserbringer_1/apotheken/technische_anlagen_aktuell/TA7_Anhang_2_20220808.pdf" target="_blank" rel="noopener">FHIR-Version zu Technische Anlage 7 zur Arzneimittelabrechnungsvereinbarung gemäß § 300 Absatz 3 SGB V</a>) getroffen.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>PKV</strong> Definition des Abrechnungsdatensatzes für PKV <a href="https://simplifier.net/erezeptabgabedatenpkv" class="bare">https://simplifier.net/erezeptabgabedatenpkv</a></p>
+</li>
+<li>
+<p><strong>gematik</strong> Definition des Workflows <a href="https://simplifier.net/erezept-workflow" class="bare">https://simplifier.net/erezept-workflow</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Festlegungen zur Quittung werden von der gematik in deren Fachportal im Dokument Spezifikation Datenmodell E-Rezept <a href="https://fachportal.gematik.de/fachportal-import/files/gemSpec_DM_eRp_V1.3.0.pdf" target="_blank" rel="noopener">gemSpec_DM_eRp</a> (Version der zugelassenen Fachdienst Produktversion) getroffen.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>gematik</strong> Definition der E-Rezept-Abgabeinformationen <a href="https://simplifier.net/erezept-patientenrechnung" class="bare">https://simplifier.net/erezept-patientenrechnung</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>FHIR-Ressourcen, welche zum Herunterladen und Einreichen der gesamten E-Rezept-Daten zur <strong>Abrechnung gegenüber einer Privaten Krankenversicherung</strong>, benötigt werden.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle" class="title">Inhaltsverzeichnis</div>
+<ul class="sectlevel1">
+<li><a href="#_e_rezept_fhir_package_versionsmanagement">E-Rezept FHIR-Package Versionsmanagement</a></li>
+<li><a href="#_übersicht_dependencies">Übersicht Dependencies</a></li>
+<li><a href="#_übersicht_timeline">Übersicht Timeline</a></li>
+<li><a href="#_versionsübergang_30_06_2023_01_07_2023">Versionsübergang 30.06.2023 &#8594; 01.07.2023</a></li>
+<li><a href="#_versionsübergang_30_06_2022_01_07_2022">Versionsübergang 30.06.2022 &#8594; 01.07.2022</a></li>
+<li><a href="#_2023_01_01">2023.01.01</a></li>
+<li><a href="#_2022_07_01">2022.07.01</a></li>
+<li><a href="#_2022_01_01">2022.01.01</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_übersicht_dependencies"><a class="anchor" href="#_übersicht_dependencies"></a>Übersicht Dependencies</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="_images/fhir_dependencies.png" alt="fhir dependencies" width="100%"></span></p>
+</div>
+<div class="paragraph">
+<p>Weiter unten sind die Releases der Prozessbeteiligten aufgeführt, die gemeinsam gültig sind. Die folgende Tabelle liefert dabei die Anmerkungen zu Übergangszeiträumen und mit welchen Versions-Konstellationen zu rechnen ist.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title=":heavy_exclamation_mark:"></i>
+</td>
+<td class="content">
+Die Hinweise und konkreten Regelungen zu stichtagsbezogenen Versionsübergängen der gemeinsam gültigen FHIR-Profilversionen werden in separaten Verträgen zwischen den Bundesmantelvertragspartnern festgelegt.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title=":bulb:"></i>
+</td>
+<td class="content">
+Hinweise zur aktuellen FHIR-Konfiguration des E-Rezept-Fachdienstes in der Referenzumgebung RU finden Sie auf <a href="https://wiki.gematik.de/display/RUAAS/E-Rezept@RU" target="_blank" rel="noopener">E-Rezept@RU</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_übersicht_timeline"><a class="anchor" href="#_übersicht_timeline"></a>Übersicht Timeline</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="_images/fhir_version_timeline.png" alt="fhir version timeline" width="100%"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_versionsübergang_30_06_2023_01_07_2023"><a class="anchor" href="#_versionsübergang_30_06_2023_01_07_2023"></a>Versionsübergang 30.06.2023 &#8594; 01.07.2023</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Annahmen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Praxisverwaltungssysteme erhalten Update zw. 01.06. und 31.07.</p>
+</li>
+<li>
+<p>Fachdienst erhält Update am 15.06.</p>
+</li>
+<li>
+<p>Apothekenverwaltungssysteme erhalten Update bis zum 30.06. (Vollziehen den Profilwechsel zum 01.07.)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Die Version der eRezeptAbgabedaten hängt vom Abgabedatum (siehe TA1) bei den Leistungserbringern ab (im Profil DAV_PR_ERP_Abgabeinformationen:
+MedicationDispense.whenHandedOver).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Abrechnungszentren vollziehen den Profilwechsel zum 01.08.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Die Version der eRezeptAbrechnungsdaten hängt vom Abrechnungsmonat (siehe TA1) ab (im Profil GKVSV_PR_TA7_Sammelrechnung_Composition:
+Composition.date).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>maximale Gültigkeitsdauer E-Rezept (Einlösefrist): 3 Monate</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Workflow-Schritt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">was passiert</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FHIR-Definition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01.01.-01.06.
+        (Status Quo)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01.06.-15.06.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15.06.-30.06.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01.07.-31.07.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01.08.-30.09.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01.10.-30.10.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01.11.-&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">$create</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fachdienst erzeugt Task</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gematik</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.1.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.1.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.1.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">$activate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PVS stellt Bundle ein</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KBV</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.0.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.0.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.0.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.1.0</strong> (1.0.2 bis 31.01.)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.1.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.1.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.1.0</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">$accept</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AVS lädt Bundle herunter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gematik (+ KBV)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.1.1</strong> + 1.0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.1.1</strong> + 1.0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.1.1</strong> + 1.0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong> + 1.0.2/1.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong> + 1.0.2/1.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong> + 1.0.2/1.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong> + 1.1.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">$close</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AVS erzeugt MedicationDispense</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gematik</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.1.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.1.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.1.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">$close</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fachdienst erzeugt Quittung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gematik</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.1.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.1.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.1.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eRezept-Abgabedaten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AVS erzeugt Abgabedaten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DAV</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.3</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.3</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.3</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.3</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eRezept-Abrechnungs-daten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ARZ erzeugt Abrechnungsdaten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GKV-SV</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong> + [1.0.2, 1.1.1, 1.2]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong> + [1.0.2, 1.1.1, 1.2]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong> + [1.0.2, 1.1.1, 1.2]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.2</strong> + [1.0.2, 1.1.1, 1.2] (für Jun)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.3</strong> + [1.0.2/1.1.0, 1.2, 1.2/1.3] (für Jul)<br>
+                                                                                         <strong>1.3</strong> + [1.0.2/1.1.0, 1.2, 1.3] (für Aug.)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.3</strong> + [1.1.0, 1.2, 1.3] (für Sept.)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.3</strong> + [1.1.0, 1.2, 1.3] (für Okt.++)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eRezept-patientenrechnung für PKV</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AVS erzeugt Abrechnungsdaten für Patient</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gematik</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.0</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_versionsübergang_30_06_2022_01_07_2022"><a class="anchor" href="#_versionsübergang_30_06_2022_01_07_2022"></a>Versionsübergang 30.06.2022 &#8594; 01.07.2022</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Annahmen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Praxisverwaltungssysteme sind vom neuen Profil eRezeptAbgabedaten nicht betroffen</p>
+</li>
+<li>
+<p>Fachdienst ist vom neuen Profil eRezeptAbgabedaten nicht betroffen</p>
+</li>
+<li>
+<p>Apothekenverwaltungssysteme erhalten Update bis zum 30.06. (Vollziehen den Profilwechsel zum 01.07.)</p>
+</li>
+<li>
+<p>maximale Gültigkeitsdauer E-Rezept (Einlösefrist): 3 Monate</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 11.1112%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Workflow-Schritt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">was passiert</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FHIR-Definition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01.01.-31.05. (Status Quo)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01.06.-15.06.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15.06.-30.06.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01.07.-31.07.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01.08.-30.09.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01.10.-&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">$create</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fachdienst erzeugt Task</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gematik</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">$activate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PVS stellt Bundle ein</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KBV</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0.2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">$accept</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AVS lädt Bundle herunter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gematik<br>
+                                                              (+ KBV)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1 + 1.0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1 + 1.0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1 + 1.0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1 + 1.0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1 + 1.0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1 + 1.0.2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">$close</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AVS erzeugt MedicationDispense</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gematik</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">$close</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fachdienst erzeugt Quittung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gematik</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eRezept-Abgabedaten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AVS erzeugt Abgabedaten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DAV</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eRezept-Abrechnungs-daten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ARZ erzeugt Abrechnungsdaten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GKV-SV</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.0 (für Abrechnungsmonat Juni)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2 (für Abrechnungsmonat Juli)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2</p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title=":bulb:"></i>
+</td>
+<td class="content">
+Im Folgenden sind die Releases inkl. Auszügen der bereitgestellten Releasenotes der Prozessbeteiligten aufgeführt, die jeweils für ein E-Rezept zusammen gültig sind.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2023_01_01"><a class="anchor" href="#_2023_01_01"></a>2023.01.01</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tbd.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 2.2222%;">
+<col style="width: 2.2222%;">
+<col style="width: 88.8888%;">
+<col style="width: 2.2222%;">
+<col style="width: 2.2222%;">
+<col style="width: 2.2224%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top"><strong>Versionsnummer</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Releasenotes</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Datum Veröffentlichung</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Datum gültig ab</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Datum gültig bis</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">KBV</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>tbd</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Plan:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Migration auf DE-Basisprofil 1.3.2</p>
+</li>
+<li>
+<p>Korrektur von Längenbeschränkungen, Kardinalitäten, Constraints in den FOR- und ERP-Profilen</p>
+</li>
+<li>
+<p>Abgleich der Profilierung der MVO (Längenbeschränkungen, Kardinalitäten, Constraints)</p>
+</li>
+<li>
+<p>Abgleich der Profilierung von "aut idem"</p>
+</li>
+<li>
+<p>Umstellung von Open Slices auf Closed Slice für Extensions</p>
+</li>
+<li>
+<p>MVO-"Klammer"-Identifier im Medication.Request für alle 4 Einzelverordnungen</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>In Prüfung/Abstimmung:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Erweiterung Infomodell um BTM- und T-Rezept</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>01.07.2022</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>01.01.2023</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">gematik</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Plan:<br>
+                Profile 1.2<br>
+                Package 1.2.0</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Refactoring der Profil-, Canonical- und Dateinamen nach gematik-Namensschema</p>
+</li>
+<li>
+<p>Flowtype für neue Workflows (BtM, T-Rezept, &#8230;&#8203;)</p>
+</li>
+<li>
+<p>Umstellung von Open Slices auf Closed Slice</p>
+</li>
+<li>
+<p>Bundle.entry der Quittung slicen für die 3 spezifizierten Einträge</p>
+</li>
+<li>
+<p>Neues Profil Provenance für Betäubungsmittelrezepte</p>
+</li>
+<li>
+<p>Profil für Bundle mehrerer MedicationDispenses in $close</p>
+</li>
+<li>
+<p>neues Versionierungsschema x.y für Profile und Ressourcen, Packages bleiben bei x.y.z mit z=Hotfix-Version</p>
+</li>
+<li>
+<p>Umstellung der Toolchain auf FSH und SUSHI</p>
+</li>
+<li>
+<p>Migration auf DE-Basisprofil 1.3.2</p>
+</li>
+<li>
+<p>Separierung der ChargeItem-bezogenen Profile (eingeführt mit PKV) in ein eigenes Package (siehe unten)</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>April</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>01.01.2023</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">gematik</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Profile 1.0</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Initiale Bereitstellung von ChargeItem-bezogenen Profile (eingeführt mit PKV)</p>
+</li>
+<li>
+<p>2 neue Communicationsprofile für PKV für Request und Reply zur Korrektur eines ChargeItems</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>April</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>01.01.2023</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">DAV</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>tbd</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Plan:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Migration auf DE-Basisprofil 1.3.2</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>tbd</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>01.01.2023</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">GKV</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>tbd</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Plan:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Migration auf DE-Basisprofil 1.3.2</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>tbd</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>01.01.2023</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">PKV</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>tbd</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Plan:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Migration auf DE-Basisprofil 1.3.2</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>tbd</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>01.01.2023</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2022_07_01"><a class="anchor" href="#_2022_07_01"></a>2022.07.01</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Mit dem Release zum 01.07.2022 erfolgt eine Anpassung der Profile von DAV und GKV für die eRezeptAbgabedaten und eRezeptAbrechnungsdaten.<br>
+Die Profilanpassungen der KBV und der gematik für die Unterstützung von Betäubungsmittelverordnungen sind erst ab dem 01.01.2023 zu verwenden.
+Sie behalten ihre Gültigkeit mit den zuletzt veröffentlichten Profilen</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 2.2222%;">
+<col style="width: 2.2222%;">
+<col style="width: 88.8888%;">
+<col style="width: 2.2222%;">
+<col style="width: 2.2222%;">
+<col style="width: 2.2224%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top"><strong>Versionsnummer</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Releasenotes</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Datum Veröffentlichung</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Datum gültig ab</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Datum gültig bis</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">KBV</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://simplifier.net/packages/kbv.ita.erp/1.0.2" target="_blank" rel="noopener">1.0.2</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>13.09.2021</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>01.01.2022</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>31.12.2022</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">gematik</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://simplifier.net/packages/de.gematik.erezept-workflow.r4/1.1.1" target="_blank" rel="noopener">1.1.1</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>04.11.2021</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>01.01.2022</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>31.12.2022</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">DAV</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://simplifier.net/packages/de.abda.erezeptabgabedaten/1.2.0" target="_blank" rel="noopener">Package 1.2.0 Profile 1.2</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>new versioning scheme (Profile x.y Package x.y.z)</p>
+</li>
+<li>
+<p>define fixed value meta.profile (canonical + version)</p>
+</li>
+<li>
+<p>set mustSupport only on optional fields</p>
+</li>
+<li>
+<p>DAV-PR-Base-ZusatzdatenEinheit (Invoice.lineItem.priceComponent.factor)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Change Constraint (PR-ZusatzdatenEinheit-1)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>old Expression: "toString().matches('^\d{1,5}$')"</p>
+</li>
+<li>
+<p>new Expression: "toString().matches('^\d{1,6}(\.\d{1,6})?$')"</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Add Keys 0, 4 and 5 to ZusatzattributFAMSchluesselMarkt</p>
+</li>
+<li>
+<p>Add CodeSystem / ValueSet DAV_CS_ERP_ZusatzattributFAMSchluesselImportFAM</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Binding in profile (DAV-EX-ERP-Zusatzattribute)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Add ValueSet DAV-VS-ERP-DEUEV-Anlage-8</p>
+</li>
+<li>
+<p>DAV_PR_Base_Apotheke (Organization.address.country)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Set Binding (DAV-VS-ERP-DEUEV-Anlage-8)</p>
+</li>
+<li>
+<p>Set maxLength to 3</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>DAV_PR_Base_Apotheke (Organization.identifier.value)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Change contraint "PR-Apotheke-1"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Set severity-level to error</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Remove PKV context profiles</p>
+<div class="ulist">
+<ul>
+<li>
+<p>DAV_PR_Base_Apotheke (remove Extension DAV_EX_ERP_Bankverbindung)</p>
+</li>
+<li>
+<p>DAV_EX_ERP_Bankverbindung (remove)</p>
+</li>
+<li>
+<p>DAV_EX_ERP_AbrechnungsTyp (remove)</p>
+</li>
+<li>
+<p>DAV_CS_ERP_AbrechnungsTyp (remove)</p>
+</li>
+<li>
+<p>DAV_VS_ERP_AbrechnungsTyp (remove)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Change slicing rules to close</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Invoice.lineItem.chargeItem</p>
+</li>
+<li>
+<p>all extensions</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>28.12.2021</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>01.07.2022</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>31.12.2022</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">GKV</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://simplifier.net/packages/de.gkvsv.erezeptabrechnungsdaten/1.2.0" target="_blank" rel="noopener">Package 1.2.0 1.2</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>new versioning scheme (Profile x.y Package x.y.z)</p>
+</li>
+<li>
+<p>GKVSV_PR_TA7_Sammelrechnung_Composition um Constraint erweitert</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Format des letzten Tages des Abrechnungszeitraumes zu JJJJ-MM-TT konkretisiert</p>
+</li>
+<li>
+<p>Format des letzten Tages des Abrechnungszeitraumes zu JJJJ-MM-TT konkretisiert</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>GKVSV_EX_ERP_TA7_Abrechnungszeitraum um Constraint erweitert</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Format des letzten Tages des Abrechnungszeitraumes zu JJJJ-MM-TT konkretisiert</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>GKVSV_EX_ERP_TA7_Dateinummer Constraint "Dateinummer-length" konkretisiert</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Nur noch numerische Zeichen erlaubt</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>GKVSV_PR_TA7_Sammelrechnung_Bundle</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Das Profil GKVSV_PR_TA7_Rechnung hat jetzt eine Kardinalität von 1:1.</p>
+</li>
+<li>
+<p>Kostenträger-Iks aus GKVSV_PR_TA7_Sammelrechnung_Composition und GKVSV_PR_TA7_Rechnung werden auf Gleicheit geprüft</p>
+</li>
+<li>
+<p>Es wird geprüft, dass das Enddatum des Abrechnungszeitraums in der Composition und der TA7_Rechnung identisch sind.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>GKVSV_PR_ERP_eAbrechnungsdaten</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Invoice.identifier-Slicing auf "closed" gesetzt</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>GKVSV_PR_TA7_Sammelrechnung_Composition</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Composition.section-Slicing auf "closed" gesetzt</p>
+</li>
+<li>
+<p>Das Profil GKVSV_PR_TA7_Rechnung hat jetzt eine Kardinalität von 1:1.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>GKVSV_PR_TA7_Rechnung um Constraint erweitert</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Die Rechnungsnummer darf nicht die Zeichen "/:?*\"&lt;&gt;|" enthalten.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>toString().matches('^\\S*[\/:?<strong>\\\"&lt;&gt;|]\\S</strong>$').not()</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>31.12.2021</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>01.07.2022</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>31.12.2022</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">PKV</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://simplifier.net/packages/de.abda.erezeptabgabedatenpkv/1.1.0-rc9" target="_blank" rel="noopener">1.1.0-rc9</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initial Release</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>03/2022</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>tbd</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>31.12.2022</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2022_01_01"><a class="anchor" href="#_2022_01_01"></a>2022.01.01</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Das Release zum 01.01.2022 ermöglicht das E-Rezept für die neue Benutzergruppe der PKV-Versicherten, zudem wird das E-Rezept zur Pflicht für alle GKV-Versicherten. Weiterhin werden bisherige Unschärfen korrigiert und Kleinere Verbesserungen bzw. Fehlerbeseitigungen in den beteilgiten FHIR-Projekten umgesetzt.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 2.2222%;">
+<col style="width: 2.2222%;">
+<col style="width: 88.8888%;">
+<col style="width: 2.2222%;">
+<col style="width: 2.2222%;">
+<col style="width: 2.2224%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top"><strong>Versionsnummer</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Releasenotes</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Datum Veröffentlichung</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Datum gültig ab</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Datum gültig bis</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">KBV</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://simplifier.net/packages/kbv.ita.erp/1.0.2" target="_blank" rel="noopener">1.0.2</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Aktualisierung des Profils KBV_PR_ERP_Prescription:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Optimierung von drei Contraints</p>
+</li>
+<li>
+<p>Streichung des nicht genutzten Elements dispenseRequest.validityPeriod</p>
+</li>
+<li>
+<p>Korrektur einer Referenzierung im Element insurance</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Aktualisierung der Profile KBV_PR_ERP_Medication_PZN /KBV_PR_ERP_Medication_Compounding / KBV_PR_ERP_Medication_FreeText / KBV_PR_ERP_Medication_Ingredient:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Sicherstellung der korrekten Validierung der Extension <a href="https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine" class="bare">https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine</a> durch unterschiedliche Validatoren durch Klarstellung der Kardinalitäten</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>13.09.2021</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>01.01.2022</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>31.12.2022</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">gematik</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://simplifier.net/packages/de.gematik.erezept-workflow.r4/1.1.1" target="_blank" rel="noopener">1.1.1</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>New Feature "PKV"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Added profile definitions ChargeItem, Consent</p>
+</li>
+<li>
+<p>ChargeItem includes new extension "markingFlag"</p>
+</li>
+<li>
+<p>Added examples for ChargeItem and Consent</p>
+</li>
+<li>
+<p>Added new workFlowTypes "200" and "209" in CodeSystem and ValueSet "flowType"</p>
+</li>
+<li>
+<p>Added indirect Dependency to DAV-Abgabedaten-Project <a href="http://fhir.abda.de/eRezeptAbgabedaten/StructureDefinition/DAV-PKV-PR-ERP-AbgabedatenBundle" class="bare">http://fhir.abda.de/eRezeptAbgabedaten/StructureDefinition/DAV-PKV-PR-ERP-AbgabedatenBundle</a> for PKV-Versicherte to be used in ChargeItem</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Minor Changes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ErxReceipt with modified cardinality as it will have additional &lt;entry&gt; Binary für ePrescription-Hash (severside generated)</p>
+</li>
+<li>
+<p>Removed unnesecary and unused workFlowTypes in CodeSystem and ValueSet "flowType"</p>
+</li>
+<li>
+<p>modified samples (less handcrafted, connectathon outcome used)</p>
+</li>
+<li>
+<p>removed dependency to KBV Medication-Profiles in MedicationDispense.Medication (switch to base Medication-Resource)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>New Release "1.1.1" for fxing Bugs in previous version 1.1.0</p>
+<div class="ulist">
+<ul>
+<li>
+<p>fixed problem with xml-notation in JSon-Files, when downloading snapshot-package</p>
+</li>
+<li>
+<p>removed external extension "KBVEXERPDosageFlag.xml"</p>
+</li>
+<li>
+<p>ChargeItem_example: fixed wrong canonical of "Abgabedatensatz" in ChargeItem.supportingInformation.type</p>
+</li>
+<li>
+<p>Added more information in Description for MedicationDispense.Medication (added names of KBV-Medication profiles)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>04.11.2021</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>01.01.2022</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>31.12.2022</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">DAV</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://simplifier.net/packages/de.abda.erezeptabgabedaten/1.1.2" target="_blank" rel="noopener">Package 1.1.2 Profile 1.1.0</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>PackageVersion 1.1.2 ProfileVersion 1.1.0 - KorrekturRelease vom 21.01.2022</p>
+<div class="ulist">
+<ul>
+<li>
+<p>BaseDefinition de.abda.eRezeptAbgabeBasis (dependencies)</p>
+</li>
+<li>
+<p>DAV-PR-Base-ZusatzdatenHerstellung</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix identifier for actor in ZusatzdatenHerstellung by removing not-allowed multiple profiles in type definition and adding constraints</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Expression: conformsTo("http://fhir.abda.de/eRezeptAbgabedaten/ StructureDefinition/DAV-PR-ERP-DAVHerstellerSchluessel") or conformsTo("http://fhir.de/StructureDefinition/identifier-iknr")</p>
+</li>
+<li>
+<p>Expression: conformsTo("http://fhir.de/StructureDefinition/identifier-iknr") implies value.matches('[0-9]{9}')</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>FIX Constraint Issue</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Error: Datatype (string) is case sensitiv but used with "Sting" in constraint</p>
+<div class="ulist">
+<ul>
+<li>
+<p>replace with "exists()" because string must have a value</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>DAV-EX-ERP-Rezeptaenderung - Rezeptaenderung-1 (on extention)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>error Expression: "(extension('ArtRezeptaenderung').value as CodeableConcept).coding.code.matches('2|3|4|12') implies ((extension('DokumentationRezeptaenderung').value as String).length() &gt; 0)"</p>
+</li>
+<li>
+<p>new Expression: "(extension('ArtRezeptaenderung').value as CodeableConcept).coding.code.matches('2|3|4|12') implies extension('DokumentationRezeptaenderung').exists()"</p>
+</li>
+<li>
+<p>DAV-EX-ERP-Zusatzattribute - PreisguenstigesFAM-1 (on Extension.extension:ZusatzattributFAM.extension:PreisguenstigesFAM)</p>
+</li>
+<li>
+<p>error Expression: "(extension('Schluessel').value as CodeableConcept).coding.code.matches('4') implies ((extension('DokumentationFreitext').value as String).length() &gt; 0)"</p>
+</li>
+<li>
+<p>new Expression: "(extension('Schluessel').value as CodeableConcept).coding.code.matches('4') implies extension('DokumentationFreitext').exists()"</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>DAV-EX-ERP-Zusatzattribute - ImportFAM-1 (on Extension.extension:ZusatzattributFAM.extension:ImportFAM)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>error Expression: "(extension('Schluessel').value as CodeableConcept).coding.code.matches('4') implies ((extension('DokumentationFreitext').value as String).length() &gt; 0)"</p>
+</li>
+<li>
+<p>new Expression: "(extension('Schluessel').value as CodeableConcept).coding.code.matches('4') implies extension('DokumentationFreitext').exists()"</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>DAV-EX-ERP-Zusatzattribute - Rabattvertragserfuellung-1 (on Extension.extension:ZusatzattributFAM.extension:Rabattvertragserfuellung)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>error Expression: "(extension('Schluessel').value as CodeableConcept).coding.code.matches('4') implies ((extension('DokumentationFreitext').value as String).length() &gt; 0)"</p>
+</li>
+<li>
+<p>new Expression: "(extension('Schluessel').value as CodeableConcept).coding.code.matches('4') implies extension('DokumentationFreitext').exists()"</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>DAV-PR-Base-ZusatzdatenHerstellung (MedicationDispense.whenPrepared)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>old definition: Die Angabe muss im Format "JJJJMMTT:HHMM" erfolgen.</p>
+</li>
+<li>
+<p>new definition: Die Angabe muss im Format ISO 8601 (z.B.: YYYY-MM-DDTHH:MM:00Z oder YYYY-MM-DDThh:mm:ss+zz:zz) erfolgen.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>DAV-PR-Base-Apotheke (Organization.identifier.value)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add contraint "PR-Apotheke-1" Eine IK muss 9-stellig (mit Prüfziffer) sein</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Expression: matches('[0-9]{9}')</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>DAV-CS-ERP-ZusatzattributSchluesselZuzahlungsstatus</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Edit Texte (display &amp; definition)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>PackageVersion 1.1.0 ProfileVersion 1.1.0 BaseDefinition de.abda.eRezeptAbgabeBasis (dependencies)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>DAV-EX-ERP-Zusatzattribute (<strong>structural change</strong>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add Zusatzattribut Zuzahlungsstatus (Änderung des Zuzahlungsstatus nach Ausstellung des E-Rezepts)</p>
+</li>
+<li>
+<p>Add CodeSystem (DAV-CS-ERP-ZusatzattributSchluesselZuzahlungsstatus)</p>
+</li>
+<li>
+<p>Add ValueSet (DAV-VS-ERP-ZusatzattributSchluesselZuzahlungsstatus)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>DAV-PR-ERP-Abgabeinformationen (<strong>structural change</strong>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix Canonical-URL <a href="http://fhir.abda.de/eRezeptAbgabadaten/" class="bare">http://fhir.abda.de/eRezeptAbgabadaten/</a> StructureDefinition/DAV-PR-ERP-Abgabeinformationen &#8594; <a href="http://fhir.abda.de/eRezeptAbgabedaten/" class="bare">http://fhir.abda.de/eRezeptAbgabedaten/</a> StructureDefinition/DAV-PR-ERP-Abgabeinformationen</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Profile-Optimierungen (contraints)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Näheres siehe Package-Release-Notes auf Simplifier</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Profile-Optimierungen (cardinality)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>näheres siehe package Release notes auf simplifier</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Plan 01.10.2021<br>
+ KorrekturRelease 21.01.2022</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>01.01.2022</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>30.06.2022</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">GKV</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://simplifier.net/packages/de.gkvsv.erezeptabrechnungsdaten/1.1.0" target="_blank" rel="noopener">1.1.0</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Aktualisierung des Profils GKVSV_PR_TA7_RezeptBundle<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Die Quittung Gem_erxReceipt wird jetzt analog zu KBV_PR_ERP_Bundel und DAV_PR_ERP_AbgabedatenBundle als Binary eingebunden (<strong>structural change</strong>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Constraint zur Überprüfung der Angabe der Signatur in der Quittung entfernt.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Plan 01.10.2021</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>01.01.2022</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>30.06.2022</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">PKV</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://simplifier.net/packages/de.abda.erezeptabgabedatenpkv/1.1.0-rc6" target="_blank" rel="noopener">1.1.0-rc6</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">initial Version (Release Candidate)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Plan 01.10.2021</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>tbd</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>31.12.2022</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> gematik GmbH</p>
+  <p>Generated using Antora and Asciidoc.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

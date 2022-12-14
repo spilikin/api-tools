@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: gematik API</title>
+    <link rel="canonical" href="https://spilikin.dev/api-tools/api-erp/1.2/pkv_ik_numbers.html">
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spilikin.dev/api-tools">gematik API</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="https://github.com/gematik/"><img style="height: 1.4em;margin-right: 0.4em;" src="../../_/img/github-mark-white.svg"> GiHub</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://github.com/gematik/api-telematik">Telematik API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-erp">eRP API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-epa">ePA API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-kim/">KIM API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-ti-messenger/">TI-Messenger API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-vzd/">Directory API</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://fachportal.gematik.de/">Fachportal</a>
+        <div class="navbar-item" style="scale: 1;">
+          <span class="control">
+            <img class="logo" src="../../_/img/gematik_logo_text.svg">
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="api-erp" data-version="1.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">ePrescription API</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">index.adoc</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ePrescription API</span>
+    <span class="version">1.2</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">ePrescription API</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">1.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-directory-fhir/1.0.0/index.html">FHIR Directory API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-directory-fhir/1.0.0/index.html">1.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-directory-ldap/1.7.0/index.html">LDAP Directory API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-directory-ldap/1.7.0/index.html">1.7.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-telematik/5.5.0/overview/index.html">Telematik API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-telematik/5.5.0/overview/index.html">5.5.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-ti-messenger/1.1.0/index.html">TI-Messenger API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-ti-messenger/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../api-telematik/5.5.0/overview/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/spilikin/poc-api-telematik/edit/erp/src/antora/modules/ROOT/pages/pkv_ik_numbers.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="paragraph">
+<p><span class="image"><img src="_images/gematik_logo.jpg" alt="gematik logo" width="35%"></span></p>
+</div>
+<div class="sect1">
+<h2 id="_unvollständige_liste_der_pkv_institutionskennzeichennummern"><a class="anchor" href="#_unvollständige_liste_der_pkv_institutionskennzeichennummern"></a>Unvollständige Liste der PKV-Institutionskennzeichennummern</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Die folgende Liste wurde freundlicherweise zur Weitergabe an dieser Stelle von der PKV übermittelt und stellt einen möglicherweise unvollständigen Stand dar. So soll die Arbeitsfähigkeit bei der Umsetzung durch die Industrie sichergestellt werden. Künftig wird diese Information durch die KBV bereitgestellt (Link wird ergänzt sobald bekannt).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Hinweis"></i>
+</td>
+<td class="content">
+Von den 42 ordentlichen Mitgliedsunternehmen des PKV-Verbandes bieten 36 die Krankheitsvollversicherung an. Die Krankenversorgung der Bundesbahnbeamten und die Postbeamtenkrankenkasse sind verbundene Einrichtungen des PKV-Verbands.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Hinweis"></i>
+</td>
+<td class="content">
+Stand der Liste: 16.09.2022
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Liste als Excel Dokument unter <a href="#./resources/2022-09-16_IK-Liste_PKV_V2.0.xlsx" class="xref unresolved">./resources/2022-09-16_IK-Liste_PKV_V2.0.xlsx</a></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Lfd. Nr.</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name gem. Webseite PKV-Verband (<a href="https://www.pkv.de/verband/ueber-uns/mitglieder-pkv-verband/" class="bare">https://www.pkv.de/verband/ueber-uns/mitglieder-pkv-verband/</a>)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Haupt-IK</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allianz Private Krankenversicherung-AG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168140346</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ALTE OLDENBURGER Krankenversicherung AG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168141427</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ARAG Krankenversicherungs-AG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168141121</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AXA Krankenversicherung Aktiengesellschaft</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168140950</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Barmenia Krankenversicherung AG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168140426</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bayerische Beamtenkrankenkasse Aktiengesellschaft</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168141347</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CONCORDIA Krankenversicherungs-Aktiengesellschaft</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168141187</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Continentale Krankenversicherung a.G.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168140017</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Debeka Krankenversicherungsverein auf Gegenseitigkeit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168140288</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEVK Krankenversicherungs-Aktiengesellschaft</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168141314</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DKV Deutsche Krankenversicherung AG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168140448</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FREIE ARZT- UND MEDIZINKASSE der Angehörigen der Berufsfeuerwehr und der Polizei VVaG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168140530</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generali Deutschland Krankenversicherung AG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168140040</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GOTHAER KRANKENVERSICHERUNG AG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168141198</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HALLESCHE Krankenversicherung auf Gegenseitigkeit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168140437</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HanseMerkur Speziale Krankenversicherung AG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168140186</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HUK-COBURG Krankenversicherung AG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168141176</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INTER Krankenversicherung AG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168141450</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KUK Krankenunterstützungskasse Hannover (KUK Hannover)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168141041</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LIGA Krankenversicherung katholischer Priester VVaG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168140518</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Landeskrankenhilfe V.V.a.G.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168140119</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LVM Krankenversicherungs-AG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168141096</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mecklenburgische Krankenversicherungs-AG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168141416</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Münchener Verein Versicherungsgruppe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168140379</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NÜRNBERGER Krankenversicherung AG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168141256</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ottonova Krankenversicherung AG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168141461</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PBeaKK Postbeamtenkrankenkasse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">950585030</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provinzial Krankenversicherung Hannover AG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168141358</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">R + V Krankenversicherung AG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168141165</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SIGNAL IDUNA Krankenversicherung a.G.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168140028</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Martinus Priesterverein der Diözese Rottenburg-Stuttgart - Kranken- und Sterbekasse (KSK) - VVaG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>unbekannt</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SDK Süddeutsche Krankenversicherung a.G.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168140391</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">33</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Union Krankenversicherung AG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168141085</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">34</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uniVersa Krankenversicherung a.G.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168140459</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">35</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Versicherer im Raum der Kirchen Krankenversicherung AG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168141438</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">36</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vigo Krankenversicherung VVaG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168141154</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">37</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Württembergische Krankenversicherung AG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">168141392</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">38</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KVB Krankenversorgung der Bundesbahnbeamten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">950686021</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> gematik GmbH</p>
+  <p>Generated using Antora and Asciidoc.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

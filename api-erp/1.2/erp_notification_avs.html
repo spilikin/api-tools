@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: gematik API</title>
+    <link rel="canonical" href="https://spilikin.dev/api-tools/api-erp/1.2/erp_notification_avs.html">
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spilikin.dev/api-tools">gematik API</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="https://github.com/gematik/"><img style="height: 1.4em;margin-right: 0.4em;" src="../../_/img/github-mark-white.svg"> GiHub</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://github.com/gematik/api-telematik">Telematik API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-erp">eRP API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-epa">ePA API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-kim/">KIM API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-ti-messenger/">TI-Messenger API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-vzd/">Directory API</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://fachportal.gematik.de/">Fachportal</a>
+        <div class="navbar-item" style="scale: 1;">
+          <span class="control">
+            <img class="logo" src="../../_/img/gematik_logo_text.svg">
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="api-erp" data-version="1.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">ePrescription API</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">index.adoc</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ePrescription API</span>
+    <span class="version">1.2</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">ePrescription API</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">1.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-directory-fhir/1.0.0/index.html">FHIR Directory API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-directory-fhir/1.0.0/index.html">1.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-directory-ldap/1.7.0/index.html">LDAP Directory API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-directory-ldap/1.7.0/index.html">1.7.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-telematik/5.5.0/overview/index.html">Telematik API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-telematik/5.5.0/overview/index.html">5.5.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-ti-messenger/1.1.0/index.html">TI-Messenger API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-ti-messenger/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../api-telematik/5.5.0/overview/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/spilikin/poc-api-telematik/edit/erp/src/antora/modules/ROOT/pages/erp_notification_avs.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="paragraph">
+<p><span class="image"><img src="_images/gematik_logo.png" alt="gematik logo" width="35%"></span></p>
+</div>
+<div class="sect1">
+<h2 id="_e_rezept_benachrichtigungen_für_apotheken"><a class="anchor" href="#_e_rezept_benachrichtigungen_für_apotheken"></a>E-Rezept Benachrichtigungen für Apotheken</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Auf dieser Seite dokumentiert die gematik die Schnittstellen des E-Rezept-Fachdienstes für Apotheken, über welche sie sich für Benachrichtigungen bei neuen Communications, registrieren können.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_funktionsweise"><a class="anchor" href="#_funktionsweise"></a>Funktionsweise</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Die Umsetzung der Notification-Schnittstelle des E-Rezept-Fachdienstes folgt den Vorgaben des <a href="https://www.hl7.org/fhir/subscription.html#2.46.7.2" target="_blank" rel="noopener">FHIR-Standards</a>.
+<span class="image"><img src="_images/notification_avs_overview.png" alt="notification avs overview" width="100%"></span></p>
+</div>
+<div class="paragraph">
+<p>Das AVS sendet eine Registrierungsanforderung an die VAU des E-Rezept-Fachdienstes, dieser generiert ein Pseudonym auf Basis der Telematik-ID und ein Bearer Token.</p>
+</div>
+<div class="paragraph">
+<p>Mit diesem Bearer Token baut das AVS eine Websocket-Verbindung an der Subscription-Schnittstelle des Fachdienstes auf und erhält je neu vorliegender Communications-Ressource für die Telematik-ID ein <code>Ping</code>. Das <code>Ping</code> ist dann Trigger für das <a href="erp_communication.adoc#user-content-anwendungsfall-auf-neue-nachrichten-im-e-rezept-fachdienst-prüfen">Abrufen der ungelesenen Communications</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/notification_avs_sequence.png" alt="notification avs sequence" width="50%"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_registrierung"><a class="anchor" href="#_registrierung"></a>Registrierung</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Der Aufbau der WebSocket-Verbindung erfolgt zweistufig. Als erstes erfolgt die Authentisierung durch die VAU. Diese stellt ein eigenes Bearer-Token aus, das im zweiten Schritt beim Aufbau der eigentlichen Socketverbindung an den Subscription-Service übergeben wird.</p>
+</div>
+<div class="sect2">
+<h3 id="_pseudonymgenerierung_in_der_vau_authentisierung"><a class="anchor" href="#_pseudonymgenerierung_in_der_vau_authentisierung"></a>Pseudonymgenerierung in der VAU (Authentisierung)</h3>
+<div class="paragraph">
+<p>Zunächst muss für die Apotheke als authentisierter Client (gültiges AccessToken des IDP) ein Subscription-Request an die VAU gesendet werden.</p>
+</div>
+<div class="paragraph">
+<p><strong>Request</strong></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">URI</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>/Subscription</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Method</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>POST</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Request</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">POST /Subscription HTTP/1.1
+Host: erp.zentral.erp.splitdns.ti-dienste.de
+User-Agent: Avs/1.0 AvSoft/GEMAvwepokrpxnwiorlc
+Cache-Control: no-cache
+Authorization: Bearer eyJraWQ.ewogImL2pA10Qql22ddtutrvx4FsDlz.rHQjEmB1lLmpqn9J
+Content-Type: application/fhir+xml; charset=UTF-8
+Accept: application/fhir+xml; charset=utf-8
+
+&lt;Subscription xmlns="http://hl7.org/fhir"&gt;
+    &lt;status value="requested"/&gt;
+    &lt;reason value="Communication notifications" /&gt;
+    &lt;criteria value="Communication?received=null&amp;amp;recipient=3-abc-12345678"/&gt;
+    &lt;channel&gt;
+        &lt;type value="websocket"/&gt;
+    &lt;/channel&gt;
+&lt;/Subscription&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Im http-Header des äußeren http-Requests an die VAU (POST /VAU) sind die Header <code>X-erp-user: l</code> und <code>X-erp-resource: Subscription</code> zu setzen.
+</td>
+</tr>
+</table>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Das Feld ` &lt;criteria value="<strong>"` benennt die Suchparameter, bei denen eine Notification verschickt werden soll. Das sind zum einen <code>received=null</code> für ungelesene Nachrichten und <code>recipient=3-abc-12345678</code> die Telematik-ID der Apotheke, die mit der Telematik-ID des IDP-AccessToken übereinstimmen muss.
+Andere Parameter werden aktuell nicht unterstützt.
+*ACHTUNG: das "&amp;" muss als "&amp;amp;" codiert werden.</strong>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Response</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">HTTP/1.1 200 OK
+Content-Length: 510
+Content-Type: application/fhir+xml;charset=utf-8
+
+&lt;Subscription&gt;
+    &lt;id value="df694c098c2fb373524150461cfd9d23"/&gt;
+    &lt;status value="active"/&gt;
+    &lt;end value="2022-01-01T00:00:00Z"/&gt;
+    &lt;reason value="Communication notifications" /&gt;
+    &lt;criteria value="Communication?received=null&amp;amp;recipient=3-abc-12345678"/&gt;
+    &lt;channel&gt;
+        &lt;type value="websocket"/&gt;
+        &lt;header value="Authorization: Bearer eyJhbGciOiAiYnJhaW5wb29sUDI1NnIxIiwidHlwIjogIkpXVCJ9.eyJpc3MiOiAiTWF0aGlzIGJyYWlucG9vbCBqd3QiLCJpYXQiOiAxNjMyMjk0MzY1LCJleHAiOiAxNjYzODMwMzY1LCJhdWQiOiAibG9jYWxob3N0Iiwic3ViIjogIm15VXNlcm5hbWUiLCJzdWJzY3JpcHRpb25JZCI6ICIxMjNhYmMifQ.MEUCIAKqlB50xqNhnHkP6qoOoll33l3rWQ-_b5XfQJAUErnFAiEAlGR-cEl7DCzaoHqifh0drreFInsqo1xVy3SrWSMmNCI"/&gt;
+    &lt;/channel&gt;
+&lt;/Subscription&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+In ` &lt;id value="df694c098c2fb373524150461cfd9d23"/&gt;` ist eine eindeutige ID (Pseudonym der Telematik-ID) hinterlegt
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Der timestamp in <code>&lt;end value="2022-01-01T00:00:00Z"/&gt; ` errechnet sich aus jetzt + 12h (UTC Timestamp)<br>
+<span class="red">In Klärung für RU: `jetzt + 1h</code> um den Verbinungsabbau nach Ablauf zu testen</span>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+die Header müssen in ` &lt;header value="*"` beim Web Socket Upgrade mitgegeben werden
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Die Schnittstelle antwortet mit den typischen http-StatusCodes des RESTful-Paradigmas</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type Success</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>201</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Created</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type Error</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>400</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Bad Request</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>401</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Unauthorized</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>403</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Forbidden</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>429</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Too Many Requests</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>500</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Server Errors</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_websocket_an_subscription_endpunkt"><a class="anchor" href="#_websocket_an_subscription_endpunkt"></a>Websocket an Subscription-Endpunkt</h3>
+<div class="paragraph">
+<p>Nach der Registrierung der Subscription wird eine WebSocket-Verbindung zum eigentlichen NotificationService aufgebaut.</p>
+</div>
+<div class="paragraph">
+<p><strong>Request</strong></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">URI</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>subscription</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Method</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>GET</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Request</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>GET /subscription HTTP/1.1
+Host: subscription.zentral.erp.splitdns.ti-dienste.de
+Authorization: Bearer eyJhbGciOiAiYnJhaW5wb29sUDI1NnIxIiwidHlwIjogIkpXVCJ9.eyJpc3MiOiAiTWF0aGlzIGJyYWlucG9vbCBqd3QiLCJpYXQiOiAxNjMyMjk0MzY1LCJleHAiOiAxNjYzODMwMzY1LCJhdWQiOiAibG9jYWxob3N0Iiwic3ViIjogIm15VXNlcm5hbWUiLCJzdWJzY3JpcHRpb25JZCI6ICIxMjNhYmMifQ.MEUCIAKqlB50xqNhnHkP6qoOoll33l3rWQ-_b5XfQJAUErnFAiEAlGR-cEl7DCzaoHqifh0drreFInsqo1xVy3SrWSMmNCI
+Connection: Upgrade
+Pragma: no-cache
+Cache-Control: no-cache
+Upgrade: websocket
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Key: q4xkcO32u266gldTuKaSOw==</pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title=":bulb:"></i>
+</td>
+<td class="content">
+Dieser Request ist NICHT zusätzlich VAU-verschlüsselt, sondern wird TLS-verschlüsselt an den Subscription-Endpunkt geschickt.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title=":bulb:"></i>
+</td>
+<td class="content">
+Je nach eingesetztem Framework lautet die Zieladresse dann <code>wss://subscription.zentral.erp.splitdns.ti-dienste.de:443</code><br>
+bzw. zum Test in der TI-Referenzumgebung RU = <code>wss://subscription-ref.zentral.erp.splitdns.ti-dienste.de:443</code>
+</td>
+</tr>
+</table>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+In <code>Authorization:</code> wird das von der VAU generierte Bearer Token mit dem Pseudonym über die Telematik-ID übergeben.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+In <code>Sec-WebSocket-Key</code> werden clientseitig generierte Nonce (16-Byte Zufallswert in base64-Codierung), siehe <a href="https://www.rfc-editor.org/rfc/rfc6455#page-18">RFC-6455 Seite 18, Punkt 7</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Response</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: fA9dggdnMPU79lJgAE3W4TRnyDM=</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Der Subscription-Service antwortet mit einem <code>Connection: Upgrade</code>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title=":bulb:"></i>
+</td>
+<td class="content">
+Der Subscription-Service antwortet beim Schließen der Websocket-Verbindung mit den Status-Codes gemäß <a href="https://datatracker.ietf.org/doc/html/rfc6455#section-7.4">RFC-6455</a>, bspw. mit Status <code>1000</code> wenn ein abgelaufenes Bearer Token übergeben wird.<br>
+Beendet der Service die WebSocket-Verbindung aufgrund eines (internen) Fehlers, liefert er einen http-Status [502 Bad Gateway, 504 Gateway Timeout].
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title=":fire:"></i>
+</td>
+<td class="content">
+<strong>Der Websocket-Client MUSS eine zufällig gewählte Pause zw. 5 - 60 Sekunden warten, bevor eine neue Websocket-Verbindung aufgebaut wird.</strong>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_regisitrierung_der_subscription_in_der_websocket_verbindung"><a class="anchor" href="#_regisitrierung_der_subscription_in_der_websocket_verbindung"></a>Regisitrierung der Subscription in der Websocket-Verbindung</h3>
+<div class="paragraph">
+<p>Das AVS registriert sich für die Subscription aus dem vorherigen Schritt, in dem eine <code>bind</code> Text Nachricht über die Websocket-Verbindung an den Subscription-Service geschickt wird.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">bind: df694c098c2fb373524150461cfd9d23</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Im Value für <code>bind</code> befindet sich die <code>Subscription.id</code>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Der Subscription Service antwortet mit einer "bound" um die Einrichtung der Subscription zu bestätigen.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">bound: df694c098c2fb373524150461cfd9d23</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+<code>Subscription.id</code>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_benachrichtigung"><a class="anchor" href="#_benachrichtigung"></a>Benachrichtigung</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ist eine neue Communication eingegangen, benachrichtigt der Subscription-Service das AVS, indem eine <code>ping &lt;Subscription.id&gt;</code> Text-Nachricht über die Websocket-Verbindung gesendet wird.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">ping: df694c098c2fb373524150461cfd9d23</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+<code>Subscription.id</code>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title=":warning:"></i>
+</td>
+<td class="content">
+Hinweis: die Nachricht <code>ping: df694c098c2fb373524150461cfd9d23</code> ist <strong>KEIN</strong> <code>Ping</code> der Ping/Pong Control Frames für das Aufrechterhalten der Verbindung (siehe <a href="https://datatracker.ietf.org/doc/html/rfc6455#section-5.5" class="bare">https://datatracker.ietf.org/doc/html/rfc6455#section-5.5</a>).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Empfängt das AVS nun ein <code>ping: df694c098c2fb373524150461cfd9d23</code>, liegt eine neue Nachricht vor, die über das VAU-Protokoll zum <a href="erp_communication.adoc#user-content-anwendungsfall-auf-neue-nachrichten-im-e-rezept-fachdienst-prüfen">Abrufen neuer Nachrichten</a> heruntergeladen werden kann. Über die Websockets werden selbst keine Nachrichten oder andere E-Rezept-bezogenen Daten verschickt.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_beispielhafte_implementierung_für_primärsysteme"><a class="anchor" href="#_beispielhafte_implementierung_für_primärsysteme"></a>Beispielhafte Implementierung für Primärsysteme</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c++ hljs" data-lang="c++">using System;
+using System.Net.WebSockets;
+using System.Text;
+using System.Threading;
+
+class Program {
+    static void Main() {
+        //subscriptionId und bearertoken aus VAU-Request /Subcription extrahieren
+        CreateSocket("df694c098c2fb373524150461cfd9d23",
+            "Bearer eyJhbGciOiJFUzI1NiJ9.CnsKInN1YnNjcmlwdGlvbklkIjogImRmNjk0YzA5OGMyZmIzNzM1MjQxNTA0NjFjZmQ5ZDI…");
+    }
+
+    private static void CreateSocket(string subscriptionId, string bearertoken) {
+        var _websocketObj = new ClientWebSocket();
+        _websocketObj.Options.SetRequestHeader("Authorization", bearertoken);
+        //url RU: "wss://subscription-ref.zentral.erp.splitdns.ti-dienste.de" und PU: "wss://subscription.zentral.erp.splitdns.ti-dienste.de"
+        _websocketObj.ConnectAsync(new Uri("wss://subscription-ref.zentral.erp.splitdns.ti-dienste.de/subscription"), CancellationToken.None)
+            .Wait();
+
+        if (_websocketObj.State != WebSocketState.Open) {
+            throw new Exception("Websocket ist nicht geöffnet");
+        }
+
+        {
+            var bind = $"bind: {subscriptionId}";
+            _websocketObj.SendAsync(new ArraySegment&lt;byte&gt;(Encoding.UTF8.GetBytes(bind)), WebSocketMessageType.Text, true, CancellationToken.None)
+                .Wait();
+            Console.Out.WriteLine($"Websocket-Bind: {bind}");
+
+            var buffer = new ArraySegment&lt;byte&gt;(new byte[2048]);
+            WebSocketReceiveResult wsr = _websocketObj.ReceiveAsync(buffer, CancellationToken.None).Result;
+            var res = Encoding.UTF8.GetString(buffer.Array, buffer.Offset, wsr.Count);
+            Console.Out.WriteLine($"Websocket-Bound: {res}");
+        }
+
+        while (true) {
+            var buffer = new ArraySegment&lt;byte&gt;(new byte[2048]);
+            WebSocketReceiveResult wsr = _websocketObj.ReceiveAsync(buffer, CancellationToken.None).Result;
+            // ReSharper disable once AssignNullToNotNullAttribute
+            var res = Encoding.UTF8.GetString(buffer.Array, buffer.Offset, wsr.Count);
+            if (wsr.Count &gt; 0) {
+                Console.Out.WriteLine($"Websocket-Empfangen: {res} ({wsr.Count} Bytes) -&gt; es liegen neue Nachrichten bereit!");
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_wichtige_hinweise"><a class="anchor" href="#_wichtige_hinweise"></a>&#8658; Wichtige Hinweise &#8656;</h2>
+<div class="sectionbody">
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title=":fire:"></i>
+</td>
+<td class="content">
+Jede eingestellte Nachricht führt zu einem Ping, ggfs. im Millisekundenbereich, wenn viele Nachrichten an einen Empfänger gerichtet werden. In Abhängigkeit von der Implementierung kann dieses Verhalten zu einer Überlastung des PS führen, wenn bspw. jedes einzelne Ping den Anwendungsfall "Nachrichten von Versicherten empfangen" triggert.<br>
+ Im Zweifel ist eine Wartezeit im AVS hilfreich, in der die zuletzt abgerufenen Nachrichten bearbeitet werden. Zwischenzeitlich "gepingte" Nachrichten gehen nicht verloren, da sie beim nächsten Abruf ungelesener Nachrichten gesammelt heruntergeladen werden.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title=":fire:"></i>
+</td>
+<td class="content">
+Wird die WebSocket-Verbindung aufgrund eines Fehlers unerwartet terminiert, MUSS der Websocket-Client eine zufällig gewählte Pause zw. 5 - 60 Sekunden warten, bevor eine neue Websocket-Verbindung aufgebaut wird.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Je Telematik-ID ist nur ein Websocket möglich
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Die Websocket-Verbindung wird nach 12h automatisch geschlossen und muss neu registriert werden.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> gematik GmbH</p>
+  <p>Generated using Antora and Asciidoc.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

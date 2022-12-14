@@ -1,0 +1,2405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: gematik API</title>
+    <link rel="canonical" href="https://spilikin.dev/api-tools/api-erp/1.2/erp_versicherte.html">
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spilikin.dev/api-tools">gematik API</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="https://github.com/gematik/"><img style="height: 1.4em;margin-right: 0.4em;" src="../../_/img/github-mark-white.svg"> GiHub</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://github.com/gematik/api-telematik">Telematik API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-erp">eRP API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-epa">ePA API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-kim/">KIM API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-ti-messenger/">TI-Messenger API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-vzd/">Directory API</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://fachportal.gematik.de/">Fachportal</a>
+        <div class="navbar-item" style="scale: 1;">
+          <span class="control">
+            <img class="logo" src="../../_/img/gematik_logo_text.svg">
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="api-erp" data-version="1.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">ePrescription API</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">index.adoc</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ePrescription API</span>
+    <span class="version">1.2</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">ePrescription API</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">1.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-directory-fhir/1.0.0/index.html">FHIR Directory API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-directory-fhir/1.0.0/index.html">1.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-directory-ldap/1.7.0/index.html">LDAP Directory API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-directory-ldap/1.7.0/index.html">1.7.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-telematik/5.5.0/overview/index.html">Telematik API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-telematik/5.5.0/overview/index.html">5.5.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-ti-messenger/1.1.0/index.html">TI-Messenger API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-ti-messenger/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../api-telematik/5.5.0/overview/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/spilikin/poc-api-telematik/edit/erp/src/antora/modules/ROOT/pages/erp_versicherte.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="paragraph">
+<p><span class="image"><img src="_images/gematik_logo.png" alt="gematik logo" width="35%"></span></p>
+</div>
+<div class="sect1">
+<h2 id="_e_rezept_api_dokumentation_für_versicherte"><a class="anchor" href="#_e_rezept_api_dokumentation_für_versicherte"></a>E-Rezept API Dokumentation für Versicherte</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Hier dokumentiert die gematik die Nutzung der Schnittstellen rund um das E-Rezept aus Sicht der Versicherten, die ihre E-Rezepte verwalten und einlösen möchten.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_anwendungsfälle_e_rezept_als_versicherter_verwalten"><a class="anchor" href="#_anwendungsfälle_e_rezept_als_versicherter_verwalten"></a>Anwendungsfälle E-Rezept als Versicherter verwalten</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Der Versicherte hat mit der E-Rezept-App die Möglichkeit, seine E-Rezepte zu verwalten, Zugriffsprotokolle einzusehen und sich zusätzliche Informationen über das herausgegebene Medikament herunterzuladen.<br>
+Verzichtet er bei der Handhabung des E-Rezepts auf einen Papierausdruck in der Arztpraxis, erfolgt die Einlösung des E-Rezeptes ebenso über die E-Rezept-App. Dafür generiert die E-Rezept-App aus den heruntergeladenen E-Rezept-Daten einen 2D-Code (DataMatrix-Darstellung), den er in der Apotheke vom Bildschirm seines Smartphones abscannen lässt. Mit den abgescannten Informationen <a href="./erp_abrufen.adoc">erhält der Apotheker die Adresse und Zugriffsberechtigung</a> des E-Rezepts, um seinerseits das E-Rezept herunterzuladen und den Versicherten dann mit dem Medikament versorgen zu dürfen.<br></p>
+</div>
+<div class="paragraph">
+<p>Einige der nachfolgenden UseCases sind auch für Vertreter des Versicherten vorgesehen, dabei sind sie bspw. berechtigt, ein E-Rezept einzusehen bzw. herunterzuladen, wenn sie im Wissen um den zugehörigen AccessCode sind, den sie vom Versicherten mitgeteilt bekommen (z.B. durch Abscannen des 2D-Codes vom Smartphone des Versicherten).<br></p>
+</div>
+<div class="paragraph">
+<p>Die Kommunikation zwischen Versicherten und einer Apotheke über E-Rezepte erfolgt ebenfalls über den Dienst zur Verwaltung der E-Rezepte. Aus Gründen der besseren Lesbarkeit und der Darstellung der Zusammenhänge zwischen Anfrage zur Verfügbarkeit eines Medikaments und der Antwort einer Apotheke erfolgt die Beschreibung über das <a href="./erp_communication.adoc">an dieser Stelle verlinkte Dokument</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_profilierung"><a class="anchor" href="#_profilierung"></a>Profilierung</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In diesen Anwendungsfällen werden die FHIR-Resourcen "Task": <a href="http://hl7.org/fhir/task.html" class="bare">http://hl7.org/fhir/task.html</a> und AuditEvent <a href="https://www.hl7.org/fhir/auditevent.html" class="bare">https://www.hl7.org/fhir/auditevent.html</a> verwendet. Die Ressource Bundle <a href="https://www.hl7.org/fhir/bundle.html" class="bare">https://www.hl7.org/fhir/bundle.html</a> kommt in ihrem Standardprofil als Suchergebnis und zusätzlich als signiertes Dokument der Verordnung und als Quittung zur Anwendung.
+Diese werden für das E-Rezept profiliert und werden hier spezifiziert:<br>
+Task: <a href="https://simplifier.net/erezept-workflow/gem_erp_pr_task" class="bare">https://simplifier.net/erezept-workflow/gem_erp_pr_task</a>  <br>
+AuditEvent: <a href="https://simplifier.net/erezept-workflow/gem_erp_pr_auditevent" class="bare">https://simplifier.net/erezept-workflow/gem_erp_pr_auditevent</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_alle_e_rezepte_ansehen"><a class="anchor" href="#_alle_e_rezepte_ansehen"></a>Alle E-Rezepte ansehen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Als Versicherter möchte ich all meine E-Rezepte einsehen.</p>
+</div>
+<div class="paragraph">
+<p>Der Aufruf erfolgt als http-<code>GET</code>-Operation auf die Ressource <code>/Task</code>. Im Aufruf muss das während der Authentisierung erhaltene ACCESS_TOKEN im http-Request-Header <code>Authorization</code> übergeben werden, der Fachdienst filtert die Task-Einträge nach der im ACCESS_TOKEN enthaltenen KVNR des Versicherten. Werden ein oder mehrere Tasks gefunden, erfolgt die Rückgabe eines Tasks immer zusammen mit dem entsprechenden, signierten E-Rezept-Datensatz zu diesem Task, welcher die Verordnungsinformationen des E-Rezepts enthält.</p>
+</div>
+<div class="paragraph">
+<p><strong>Request</strong></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">URI</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://erp.app.ti-dienste.de/Task" class="bare">https://erp.app.ti-dienste.de/Task</a></p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Method</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>GET</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">HTTP Header</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>Authorization: Bearer eyJraWQ.ewogImL2pA10Qql22ddtutrvx4FsDlz.rHQjEmB1lLmpqn9J</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Mit dem ACCESS_TOKEN im <code>Authorization</code>-Header weist sich der Zugreifende als Versicherter aus, im Token ist seine Versichertennummer enthalten. Die Base64-Darstellung des Tokens ist stark gekürzt.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Im http-Header des äußeren http-Requests an die VAU (POST /VAU) sind die Header <code>X-erp-user: v</code> und <code>X-erp-resource: Task</code> zu setzen.
+</td>
+</tr>
+</table>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Payload</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Response</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">HTTP/1.1 200 OK
+Content-Type: application/fhir+json;charset=utf-8
+
+{
+  "resourceType": "Bundle",
+  "id": "f5ba6eaf-9052-42f6-ac4e-fadceed7293b",
+  "meta": {
+    "lastUpdated": "2020-03-01T07:02:37.836+00:00"
+  },
+  "type": "collection",
+  "total": 2,
+  "link": [{
+    "relation": "self",
+    "url": "https://erp.app.ti-dienste.de/Task/"
+  }],
+  "entry": [{
+    "fullUrl": "https://erp.app.ti-dienste.de/Task/160.123.456.789.123.58",
+    "resource": {
+      "resourceType":"Task",
+      "id":"160.123.456.789.123.58",
+      "meta":{
+        "versionId":"2",
+        "lastUpdated":"2020-02-18T10:05:05.038+00:00",
+        "source":"#AsYR9plLkvONJAiv",
+        "profile": [
+          "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
+        ]
+      },
+      "identifier": [{
+        "use":"official",
+        "system":"https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_NS_PrescriptionId",
+        "value":"160.123.456.789.123.58"
+      },{
+        "use":"official",
+        "system":"https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_NS_AccessCode",
+        "value":"777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
+      },{
+        "use":"official",
+        "system":"http://fhir.de/sid/gkv/kvid-10",
+        "value":"X123456789"
+      }],
+      "intent":"order",
+      "status":"ready",
+      "extension": [ {
+        "url":"https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType",
+        "valueCodeableConcept":{
+          "coding": [ {
+            "system":"https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType",
+            "code":"160",
+            "display":"Muster 16 (Apothekenpflichtige Arzneimittel)"
+          } ]
+        }
+      }, {
+        "url":"https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate",
+          "valueDateTime": "2020-06-02"
+      }, {
+        "url":"https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate",
+          "valueDateTime": "2020-04-01"
+      }
+    ],
+      "authoredOn":"2020-03-02T08:25:05+00:00",
+      "lastModified":"2020-03-02T08:45:05+00:00",
+      "performerType": [{
+        "coding": [{
+          "system":"http://terminology.hl7.org/CodeSystem/task-performer-type",
+          "code":"1.2.276.0.76.4.32",
+          "display":"Apotheke" 
+        }],
+        "text":"Apotheke"
+      }],
+      "input": [{
+        "type": {
+          "coding": [{
+            "system":"https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType",
+            "code":"2"
+          }]
+        },
+        "valueString": "f8c2298f-7c00-4a68-af29-8a2862d55d43"
+      }]
+    }
+  },{
+    "resource": {
+      "resourceType":"Bundle",
+      "id":"f8c2298f-7c00-4a68-af29-8a2862d55d43",
+      "meta":{
+        "lastUpdated":"2020-02-03T12:30:02Z",
+        "profile": [
+          "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle\|1.0.0"
+        ]
+      },
+      "identifier":{
+          "system":"urn:ietf:rfc:3986",
+          "value":"281a985c-f25b-4aae-91a6-41ad744080b0"
+      },
+      "type":"document",
+      "timestamp":"2020-02-03T12:30:02Z",
+      "entry": [{
+        "fullUrl":"http://pvs.praxis-topp-gluecklich.local/fhir/Composition/ed52c1e3-b700-4497-ae19-b23744e29876",
+        "resource":{
+          "resourceType":"Composition",
+          "id":"ed52c1e3-b700-4497-ae19-b23744e29876",
+          "meta":{
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Composition\|1.0.0"
+[...]
+                      ]}}}],
+      "signature": {
+        "type": {
+          "system": "http://hl7.org/fhir/ValueSet/signature-type",
+          "code": "1.2.840.10065.1.12.1.1"
+        },
+        "when": "2020-03-20T07:31:34.328+00:00",
+        "who": "https://erp.app.ti-dienste.de/signature/verification",
+        "data": "eyJ0eXAiOiJKV1MiLCJhbGciOiJFUzI1NiIsIng1dSI6Imh0dHBzOi8vcHJlc2NyaXB0aW9uc2VydmVyLnRlbGVtYXRpay9zaWduYXR1cmUvY2VydGlmaWNhdGUifQ
+        .
+        eyJyZXNvdXJjZVR5cGUiOiJCdW5kbGUiLCJpZCI6ImY4YzIyOThmLTdjMDAtNGE2OC1hZjI5LThhMjg2MmQ1NWQ0MyIsImlkZW50aWZpZXIiOnsic3lzdGVtIjoiaHR0cHM6Ly9nZW1hdGlrLmRlL1ZhbHVlU2V0L0VSWF9QUkVTQ1JJUFRJT05fSUQiLCJ2YWx1ZSI6Ik0xNi4xMjMuNDU2Ljc4OS4xMjMuMTMifSwidHlwZSI6ImRvY3VtZW50IiwiZW50cnkiOlt7ImZ1bGxVcmwiOiJodHRwOi8vcHZzLnByYXhpcy10b3BwLWdsdWVja2xpY2gubG9jYWwvZmhpci9Db21wb3NpdGlvbi9lZDUyYzFlMy1iNzAwLTQ0OTctYWUxOS1iMjM3NDRlMjk4NzYiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJDb21wb3NpdGlvbiJ9fSx7ImZ1bGxVcmwiOiJodHRwOi8vcHZzLnByYXhpcy10b3BwLWdsdWVja2xpY2gubG9jYWwvZmhpci9NZWRpY2F0aW9uUmVxdWVzdC9lOTMwY2RlZS05ZWI1LTRiNDQtODhiNS0yYTE4YjY5ZjNiOWEiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJNZWRpY2F0aW9uUmVxdWVzdCJ9fV19
+        .
+        SSBhbSBhIHNpZ25hdHVyZSE="
+      }
+    }
+  }]
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Mit dem AccessCode <code>"value":"777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"</code> wird der Zugriff für Vertreter und Apotheker gesteuert, in dem der Versicherte diesen AccessCode z.B. als QR-Code weitergibt
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Der Prozesstyp referenziert die Workflow-Definition, in diesem Fall den Prozess für apothekenpflichtige Arzneimittel mit <code>"url":"https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"</code>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Mit der Angabe <code>"display":"Apotheke"</code> kann dem Versicherten ein Hinweis angezeigt werden, wo er das E-Rezept einlösen kann (bspw. Apotheke oder Sanitätshaus).
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+In <code>"valueString": "f8c2298f-7c00-4a68-af29-8a2862d55d43"</code> verweist der Task auf das signierte E-Rezept-Bundle im zurückgegebenen Bundle.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Aus Gründen der besseren Lesbarkeit ist das E-Rezept-Bundle hier nicht vollständig dargestellt. Das komplette Beispiel kann hier eingesehen werden: <a href="https://simplifier.net/eRezept/Bundle-example/~json" class="bare">https://simplifier.net/eRezept/Bundle-example/~json</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Bei der Rückgabe an den Versicherten wird der ärztliche Signaturanteil des E-Rezept-Bundles durch eine serverseitige Signatur in JWS-Format der ` "signature"` ersetzt. Aus Gründen der besseren Lesbarkeit mit separaten Zeilenumbrüchen zwischen den "."-separierten <code>Header.Payload.Signature</code>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type Success</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>200</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>OK<br>
+<span class="small">Die Anfrage wurde erfolgreich bearbeitet. Die angeforderten Ressourcen sind im Response-Body enthalten.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type Error</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>400</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Bad Request <br>
+<span class="small">Die Anfrage-Nachricht war fehlerhaft aufgebaut.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>401</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Unauthorized<br>
+<span class="small">Die Anfrage kann nicht ohne gültige Authentifizierung durchgeführt werden. Wie die Authentifizierung durchgeführt werden soll, wird im „WWW-Authenticate“-Header-Feld der Antwort übermittelt.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>403</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Forbidden<br>
+<span class="small">Die Anfrage wurde mangels Berechtigung des Clients nicht durchgeführt, bspw. weil der authentifizierte Benutzer nicht berechtigt ist.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>405</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Method Not Allowed<br>
+<span class="small">Die Anfrage darf nur mit anderen HTTP-Methoden (zum Beispiel GET statt POST) gestellt werden. Gültige Methoden für die betreffende Ressource werden im „Allow“-Header-Feld der Antwort übermittelt.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>429</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Too Many Requests<br>
+<span class="small">Der Client hat zu viele Anfragen in einem bestimmten Zeitraum gesendet.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>500</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Server Errors<br>
+<span class="small">Unerwarteter Serverfehler</span></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ein_einzelnes_e_rezept_abrufen_und_in_der_apotheke_einlösen"><a class="anchor" href="#_ein_einzelnes_e_rezept_abrufen_und_in_der_apotheke_einlösen"></a>Ein einzelnes E-Rezept abrufen und in der Apotheke einlösen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Der Zugriff auf ein einzelnes E-Rezept ist durch den Versicherten mit Nachweis seiner Identität immer zulässig. Als Vertreter ist der Zugriff auf ein E-Rezept eines anderen Versicherten nur gestattet, wenn der Vertreter in Kenntnis des beim Einstellen des E-Rezepts erzeugten AccessCodes ist.</p>
+</div>
+<div class="paragraph">
+<p>Der Aufruf erfolgt als http-<code>GET</code>-Operation auf eine konkrete Ressource <code>/Task/&lt;task_id&gt;</code>. Im Aufruf muss das während der Authentisierung erhaltene ACCESS_TOKEN im http-Request-Header <code>Authorization</code> übergeben werden. Der Aufruf kann auch durch einen Vertreter des Versicherten erfolgen, hierbei wird lediglich die Rolle <code>Versicherter</code> im ACCESS_TOKEN geprüft. Um die Berechtigung für den Zugriff auf einen Task mit einer fremden KVNR nachzuweisen, muss der Zugreifende den richtigen AccessCode im http-Request-Header <code>X-AccessCode</code> übergeben. Die Rückgabe eines Tasks erfolgt immer zusammen mit dem entsprechenden, signierten E-Rezept-Datensatz zu diesem Task, welcher die Verordnungsinformationen des E-Rezepts enthält.</p>
+</div>
+<div class="paragraph">
+<p><strong>Request</strong></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">URI</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://erp.app.ti-dienste.de/Task/160.123.456.789.123.58" class="bare">https://erp.app.ti-dienste.de/Task/160.123.456.789.123.58</a></p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Method</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>GET</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">HTTP Header</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>Authorization: Bearer eyJraWQ.ewogImL2pA10Qql22ddtutrvx4FsDlz.rHQjEmB1lLmpqn9J
+X-AccessCode: 777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Mit dem ACCESS_TOKEN im <code>Authorization</code>-Header weist sich der Zugreifende als Versicherter aus, im Token ist seine Versichertennummer enthalten. Die Base64-Darstellung des Tokens ist stark gekürzt.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Als Vertreter (wenn im E-Rezept eine andere Versichertennummer als im Token des Zugreifenden angegeben ist) muss im http-Header der <code>AccessCode</code> übergeben werden
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Im http-Header des äußeren http-Requests an die VAU (POST /VAU) sind die Header <code>X-erp-user: v</code> und <code>X-erp-resource: Task</code> zu setzen.
+</td>
+</tr>
+</table>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Payload</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Response</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">HTTP/1.1 200 OK
+Content-Type: application/fhir+json;charset=utf-8
+
+{
+  "resourceType": "Bundle",
+  "id": "f5ba6eaf-9052-42f6-ac4e-fadceed7293b",
+  "meta": {
+    "lastUpdated": "2020-03-01T07:02:37.836+00:00"
+  },
+  "type": "collection",
+  "total": 2,
+  "link": [{
+    "relation": "self",
+    "url": "https://erp.app.ti-dienste.de/Task/160.123.456.789.123.58"
+  }],
+  "entry": [{
+    "fullUrl": "https://erp.app.ti-dienste.de/Task/160.123.456.789.123.58",
+    "resource": {
+      "resourceType":"Task",
+      "id":"160.123.456.789.123.58",
+      "meta":{
+        "versionId":"2",
+        "lastUpdated":"2020-02-18T10:05:05.038+00:00",
+        "source":"#AsYR9plLkvONJAiv",
+        "profile": [
+          "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_Task"
+        ]
+      },
+      "identifier": [{
+        "use":"official",
+        "system":"https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_NS_PrescriptionId",
+        "value":"160.123.456.789.123.58"
+      },{
+        "use":"official",
+        "system":"https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_NS_AccessCode",
+        "value":"777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"
+      },{
+        "use":"official",
+        "system":"http://fhir.de/sid/gkv/kvid-10",
+        "value":"X123456789"
+      }],
+      "intent":"order",
+      "status":"ready",
+      "extension": [ {
+        "url":"https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType",
+        "valueCodeableConcept":{
+          "coding": [ {
+            "system":"https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_FlowType",
+            "code":"160",
+            "display":"Muster 16 (Apothekenpflichtige Arzneimittel)"
+          } ]
+        }
+      }, {
+        "url":"https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_ExpiryDate",
+          "valueDateTime": "2020-06-02"
+      }, {
+        "url":"https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_AcceptDate",
+          "valueDateTime": "2020-04-01"
+      } ],
+      "authoredOn":"2020-03-02T08:25:05+00:00",
+      "lastModified":"2020-03-02T08:45:05+00:00",
+      "performerType": [{
+        "coding": [{
+          "system":"http://terminology.hl7.org/CodeSystem/task-performer-type",
+          "code":"1.2.276.0.76.4.32",
+          "display":"Apotheke"
+        }],
+        "text":"Apotheke"
+      }],
+      "input": [{
+        "type": {
+          "coding": [{
+            "system":"https://gematik.de/fhir/erp/CodeSystem/GEM_ERP_CS_DocumentType",
+            "code":"2"
+          }]
+        },
+        "valueString": "f8c2298f-7c00-4a68-af29-8a2862d55d43"
+      }]
+    }
+  },{
+    "resource": {
+      "resourceType":"Bundle",
+      "id":"f8c2298f-7c00-4a68-af29-8a2862d55d43",
+      "meta":{
+        "lastUpdated":"2020-02-03T12:30:02Z",
+        "profile": [
+          "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle\|1.0.0"
+        ]
+      },
+      "identifier":{
+        "system":"urn:ietf:rfc:3986",
+        "value":"281a985c-f25b-4aae-91a6-41ad744080b0"
+      },
+      "type":"document",
+      "timestamp":"2020-02-03T12:30:02Z",
+      "entry": [{
+        "fullUrl":"http://pvs.praxis-topp-gluecklich.local/fhir/Composition/ed52c1e3-b700-4497-ae19-b23744e29876",
+        "resource":{
+          "resourceType":"Composition",
+          "id":"ed52c1e3-b700-4497-ae19-b23744e29876",
+          "meta":{
+            "profile": [
+              "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Composition\|1.0.0"
+[...]
+                      ]}}}],
+      "signature": {
+        "type": {
+          "system": "http://hl7.org/fhir/ValueSet/signature-type",
+          "code": "1.2.840.10065.1.12.1.1"
+        },
+        "when": "2020-03-20T07:31:34.328+00:00",
+        "who": "https://erp.app.ti-dienste.de/signature/verification",
+        "data": "eyJ0eXAiOiJKV1MiLCJhbGciOiJFUzI1NiIsIng1dSI6Imh0dHBzOi8vcHJlc2NyaXB0aW9uc2VydmVyLnRlbGVtYXRpay9zaWduYXR1cmUvY2VydGlmaWNhdGUifQ
+        .
+        eyJyZXNvdXJjZVR5cGUiOiJCdW5kbGUiLCJpZCI6ImY4YzIyOThmLTdjMDAtNGE2OC1hZjI5LThhMjg2MmQ1NWQ0MyIsImlkZW50aWZpZXIiOnsic3lzdGVtIjoiaHR0cHM6Ly9nZW1hdGlrLmRlL1ZhbHVlU2V0L0VSWF9QUkVTQ 1JJUFRJT05fSUQiLCJ2YWx1ZSI6Ik0xNi4xMjMuNDU2Ljc4OS4xMjMuMTMifSwidHlwZSI6ImRvY3VtZW50IiwiZW50cnkiOlt7ImZ1bGxVcmwiOiJodHRwOi8vcHZzLnByYXhpcy10b3BwLWdsdWVja2xpY2gubG9jYWwvZmhpci 9Db21wb3NpdGlvbi9lZDUyYzFlMy1iNzAwLTQ0OTctYWUxOS1iMjM3NDRlMjk4NzYiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJDb21wb3NpdGlvbiJ9fSx7ImZ1bGxVcmwiOiJodHRwOi8vcHZzLnByYXhpcy10b3BwLWd sdWVja2xpY2gubG9jYWwvZmhpci9NZWRpY2F0aW9uUmVxdWVzdC9lOTMwY2RlZS05ZWI1LTRiNDQtODhiNS0yYTE4YjY5ZjNiOWEiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJNZWRpY2F0aW9uUmVxdWVzdCJ9fV19
+        .
+        SSBhbSBhIHNpZ25hdHVyZSE="
+      }
+    }
+  }]
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Mit dem AccessCode in <code>"value":"777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea"</code> wird der Zugriff für Vertreter und Apotheker gesteuert, in dem der Versicherte diesen AccessCode z.B. als QR-Code weitergibt.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Bei <code>"value":"X123456789"</code> ist die KVNR des Versicherten enthalten, nach welcher die Rezept-Tasks gefiltert wurden. Im Ergebnis wurde nur ein einzelnes E-Rezept gefunden.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Der Prozesstyp in <code>"url":"https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_EX_PrescriptionType"</code> referenziert die Workflow-Definition, in diesem Fall den Prozess für apothekenpflichtige Arzneimittel.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Mit der Angabe ` "display":"Apotheke"` kann dem Versicherten ein Hinweis angezeigt werden, wo er das E-Rezept einlösen kann (bspw. Apotheke oder Sanitätshaus).
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Mit <code>"valueString": "f8c2298f-7c00-4a68-af29-8a2862d55d43"</code> verweist der Task auf das signierte E-Rezept-Bundle im zurückgegebenen Bundle.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Aus Gründen der besseren Lesbarkeit ist das E-Rezept-Bundle hier nicht vollständig dargestellt. Das komplette Beispiel kann hier eingesehen werden: <a href="https://simplifier.net/eRezept/Bundle-example/~json" class="bare">https://simplifier.net/eRezept/Bundle-example/~json</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Bei der Rückgabe an den Versicherten wird der ärztliche Signaturanteil in ` "signature"` des E-Rezept-Bundles durch eine serverseitige Signatur in JWS-Format ersetzt. Aus Gründen der besseren Lesbarkeit mit separaten Zeilenumbrüchen zwischen den "."-separierten <code>Header.Payload.Signature</code> .
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type Success</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>200</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>OK<br>
+<span class="small">Die Anfrage wurde erfolgreich bearbeitet. Die angeforderte Ressource wird im ResponseBody bereitgestellt.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type Error</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>400</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Bad Request <br>
+<span class="small">Die Anfrage-Nachricht war fehlerhaft aufgebaut.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>401</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Unauthorized<br>
+<span class="small">Die Anfrage kann nicht ohne gültige Authentifizierung durchgeführt werden. Wie die Authentifizierung durchgeführt werden soll, wird im „WWW-Authenticate“-Header-Feld der Antwort übermittelt.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>403</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Forbidden<br>
+<span class="small">Die Anfrage wurde mangels Berechtigung des Clients nicht durchgeführt, bspw. weil der authentifizierte Benutzer nicht berechtigt ist.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>404</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Not found<br>
+<span class="small">Die adressierte Ressource wurde nicht gefunden, die übergebene ID ist ungültig.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>405</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Method Not Allowed<br>
+<span class="small">Die Anfrage darf nur mit anderen HTTP-Methoden (zum Beispiel GET statt POST) gestellt werden. Gültige Methoden für die betreffende Ressource werden im „Allow“-Header-Feld der Antwort übermittelt.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>429</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Too Many Requests<br>
+<span class="small">Der Client hat zu viele Anfragen in einem bestimmten Zeitraum gesendet.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>500</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Server Errors<br>
+<span class="small">Unerwarteter Serverfehler</span></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_informationen_an_den_apotheker_übergeben"><a class="anchor" href="#_informationen_an_den_apotheker_übergeben"></a>Informationen an den Apotheker übergeben</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Um den Apotheker in die Lage zu versetzen, das E-Rezept einsehen zu können, müssen ihm die folgenden zwei Parameter für seinen Abruf übergeben werden, z.B. in Form eines QR-Codes oder DataMatrix-Codes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>AccessCode: <code>777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea</code></p>
+</li>
+<li>
+<p>Adresse des Tasks unter dem das E-Rezept geführt wird: <code><a href="https://erp.app.ti-dienste.de/Task/160.123.456.789.123.58" class="bare">https://erp.app.ti-dienste.de/Task/160.123.456.789.123.58</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Diese Informationen lassen sich nach den Vorgaben in  <code>ISO/IEC 18004:2015</code> in einen QR-Code oder gemäß ISO/IEC 16022:2006 in einen DataMatrix-Code transformieren.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "urls": [ "Task/160.123.456.789.123.58/$accept?ac=777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea" ]
+}</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="_images/datamatrix_sample.png" alt="datamatrix sample" width="250px"></span></p>
+</div>
+<div class="paragraph">
+<p>In DataMatrix-Darstellung gemäß ISO/IEC 16022:2006</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Sammlung von drei E-Rezept-Referenzen in einem 2D-Code<br></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "urls": [
+    "Task/160.123.456.789.123.58/$accept?ac=777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea",
+    "Task/160.346.135.722.516.16/$accept?ac=0936cfa582b447144b71ac89eb7bb83a77c67c99d4054f91ee3703acf5d6a629",
+    "Task/160.880.966.157.248.22/$accept?ac=d3e6092ae3af14b5225e2ddbe5a4f59b3939a907d6fdd5ce6a760ca71f45d8e5"
+  ]
+}</code></pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-center valign-middle"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="_images/datamatrix_sample_3.png" alt="datamatrix sample 3" width="250px"></span></p>
+</div>
+<div class="paragraph">
+<p>In DataMatrix-Darstellung gemäß ISO/IEC 16022:2006</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Aktuell unterstüten die Apothekenverwaltungssysteme auf Basis des SecurPharm-System in jedem Fall das DataMatrix-Format.
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_eine_apotheke_aus_dem_apotheken_verzeichnis_auswählen"><a class="anchor" href="#_eine_apotheke_aus_dem_apotheken_verzeichnis_auswählen"></a>Eine Apotheke aus dem Apotheken-Verzeichnis auswählen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Als Versicherter möchte ich eine Apotheke aus einem Verzeichnis wählen, um ihr eine Verfügbarkeitsanfrage zu meinem E-Rezept zu schicken oder ihr ein E-Rezept direkt zuzuweisen. Der Verzeichnisdienst der Telematikinfrastruktur führt eine Liste aller (Zahn-)Arztpraxen, Krankenhäuser und Apotheken in Deutschland, in der nach einer Apotheke über z.B. den Namen oder die Postleitzahl für eine Umgebungssuche gesucht werden kann. Im folgenden Beispiel wird die Suche nach Apotheken im Umkreis von <code>7 km</code> um den aktuellen Standort ausgeführt.<br>
+<code><a href="https://apovzd.app.ti-dienste.de/api/Location?near=48.13129322109354%7C11.563464055060686%7C999%7Ckm" class="bare">https://apovzd.app.ti-dienste.de/api/Location?near=48.13129322109354%7C11.563464055060686%7C999%7Ckm</a></code></p>
+</div>
+<div class="paragraph">
+<p>Folgende Suchalternativen sind ebenfalls möglich:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suche nach einer Apotheke mit konkretem Namen "Apotheke um die Ecke"<br>
+<code><a href="https://apovzd.app.ti-dienste.de/api/Location?name=Apotheke%20um%20die%20Ecke" class="bare">https://apovzd.app.ti-dienste.de/api/Location?name=Apotheke%20um%20die%20Ecke</a></code></p>
+</li>
+<li>
+<p>Suche nach allen Apotheken in "Berlin"<br>
+<code><a href="https://apovzd.app.ti-dienste.de/api/Location?address-city=Berlin" class="bare">https://apovzd.app.ti-dienste.de/api/Location?address-city=Berlin</a></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Der Aufruf erfolgt als http-<code>GET</code>-Operation am Apothekenverzeichnis der Telematikinfrastruktur für die Ressource <code>/Location</code>. Eine Authentifizierung der App-Nutzer erfolgt nicht, eine Absicherung gegenüber unberechtigte Zugriffe erfolgt mitels API-Key. Der Verzeichnisdienst liefert eine Liste von Apotheken, welche den ggfs. angegebenen Suchparametern entsprechen. Liefert die gewählte Suchanfrage eine zu große Ergebnismenge, bricht der Verzeichnisdienst bei einer technischen Obergrenze von max. <code>100</code> Ergebniseinträgen ab.</p>
+</div>
+<div class="paragraph">
+<p><strong>Request</strong></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">URI</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://apovzd.app.ti-dienste.de/api/Location?name=Adler" class="bare">https://apovzd.app.ti-dienste.de/api/Location?name=Adler</a></p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Method</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>GET</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Request</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>GET /api/Location?name=Adler HTTP/1.1
+Host: apovzd.app.ti-dienste.de
+Pragma: no-cache
+Cache-Control: no-cache</pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title=":bulb:"></i>
+</td>
+<td class="content">
+Dieser Request ist NICHT zusätzlich VAU-verschlüsselt, sondern wird plain an das Apothekenverzeichnis geschickt.
+</td>
+</tr>
+</table>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+In der Aufruf-Adresse können Suchparameter gemäß <a href="https://www.hl7.org/fhir/organization.html#search" class="bare">https://www.hl7.org/fhir/organization.html#search</a> angegeben werden (wie hier in <code>GET /api/Location?name=Adler HTTP/1.1</code>). Im konkreten Beispiel soll nach Apotheken (<code>Location</code>) mit <code>Adler</code> im Namen gefiltert werden. Weitere Suchparameter können z.B. eine Ortsangabe (z.B. <code>address-city=Köln</code> bzw. <code>address-city=K%C3%B6ln</code>) umfassen. Mehrere Suchparameter werden über das <code>&amp;</code>-Zeichen miteinander kombiniert.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Response</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">HTTP/1.1 200 OK
+Content-Type: application/fhir+json;charset=utf-8
+
+...</code></pre>
+</div>
+</div>
+<details>
+<summary class="title">Details</summary>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "id": "2b50e07d-ace1-4f83-ae8f-e2845e291cc3",
+  "meta": {
+    "lastUpdated": "2021-11-23T10:33:52.590809+02:00"
+  },
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 2,
+  "link": [
+    {
+      "relation": "self",
+      "url": "Bundle2b50e07d-ace1-4f83-ae8f-e2845e291cc3"
+    }
+  ],
+  "entry": [
+    {
+      "resource": {
+        "id": "5a403761-3a18-4ae9-bca8-9ed8abada08a",
+        "resourceType": "Location",
+        "address": {
+          "use": "work",
+          "type": "physical",
+          "line": [
+            "Friedrichstr. 136"
+          ],
+          "postalCode": "10117",
+          "city": "Berlin",
+          "country": "de"
+        },
+        "identifier": [
+          {
+            "system": "https://gematik.de/fhir/sid/telematik-id",
+            "value": "3-1.54.10123404"
+          }
+        ],
+        "name": "Adlerapotheke",
+        "position": {
+          "latitude": 52.522575,
+          "longitude": 13.387884
+        },
+        "status": "active",
+        "telecom": [
+          {
+            "system": "email",
+            "value": "service@gematik.de"
+          },
+          {
+            "system": "phone",
+            "value": "030 40041 0"
+          },
+          {
+            "system": "url",
+            "value": "www.gematik.de"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                "code": "PHARM",
+                "display": "pharmacy"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                "code": "MOBL",
+                "display": "Mobile Services"
+              }
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "resource": {
+        "id": "354d16fa-ceff-4a18-b1b7-c583ee211cea",
+        "meta": {
+          "lastUpdated": "2021-10-12T11:54:29+02:00"
+        },
+        "resourceType": "Location",
+        "contained": [
+          {
+            "id": "8fe0eea1-6379-41ce-bb51-efd33f02e853",
+            "resourceType": "HealthcareService",
+            "active": true,
+            "coverageArea": [
+              {
+                "extension": [
+                  {
+                    "url": "https://ngda.de/fhir/extensions/ServiceCoverageRange",
+                    "valueQuantity": {
+                      "value": 5000,
+                      "unit": "m"
+                    }
+                  }
+                ]
+              }
+            ],
+            "location": [
+              {
+                "reference": "/Location/354d16fa-ceff-4a18-b1b7-c583ee211cea"
+              }
+            ],
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/service-type",
+                    "code": "498",
+                    "display": "Mobile Services"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "address": {
+          "use": "work",
+          "type": "physical",
+          "line": [
+            "Adlerstr. 21"
+          ],
+          "postalCode": "10178",
+          "city": "Berlin",
+          "country": "de"
+        },
+        "hoursOfOperation": [
+          {
+            "daysOfWeek": [
+              "mon"
+            ],
+            "openingTime": "08:30:00",
+            "closingTime": "13:30:00"
+          },
+          {
+            "daysOfWeek": [
+              "mon"
+            ],
+            "openingTime": "14:30:00",
+            "closingTime": "18:30:00"
+          },
+          {
+            "daysOfWeek": [
+              "tue"
+            ],
+            "openingTime": "08:30:00",
+            "closingTime": "13:30:00"
+          },
+          {
+            "daysOfWeek": [
+              "tue"
+            ],
+            "openingTime": "14:30:00",
+            "closingTime": "18:30:00"
+          },
+          {
+            "daysOfWeek": [
+              "wed"
+            ],
+            "openingTime": "08:30:00",
+            "closingTime": "13:30:00"
+          },
+          {
+            "daysOfWeek": [
+              "wed"
+            ],
+            "openingTime": "14:30:00",
+            "closingTime": "18:30:00"
+          },
+          {
+            "daysOfWeek": [
+              "thu"
+            ],
+            "openingTime": "08:30:00",
+            "closingTime": "13:30:00"
+          },
+          {
+            "daysOfWeek": [
+              "thu"
+            ],
+            "openingTime": "14:30:00",
+            "closingTime": "18:30:00"
+          },
+          {
+            "daysOfWeek": [
+              "fri"
+            ],
+            "openingTime": "08:30:00",
+            "closingTime": "13:30:00"
+          },
+          {
+            "daysOfWeek": [
+              "fri"
+            ],
+            "openingTime": "14:30:00",
+            "closingTime": "18:30:00"
+          },
+          {
+            "daysOfWeek": [
+              "sat"
+            ],
+            "openingTime": "08:30:00",
+            "closingTime": "14:00:00"
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://gematik.de/fhir/sid/telematik-id",
+            "value": "3-10.2.0123456100.10.228"
+          },
+          {
+            "system": "https://ngda.de/fhir/NamingSystem/NID",
+            "value": "APO1234642"
+          }
+        ],
+        "name": "Apotheke am Adler",
+        "position": {
+          "latitude": 52.523044,
+          "longitude": 13.411917
+        },
+        "status": "active",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "030/400410"
+          },
+          {
+            "system": "email",
+            "value": "erezept@gematik.de"
+          },
+          {
+            "system": "url",
+            "value": "https://www.gematik.de"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                "code": "PHARM",
+                "display": "pharmacy"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                "code": "OUTPHARM",
+                "display": "outpatient pharmacy"
+              }
+            ]
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Die Suchanfrage nach <code>Adler</code>-Apotheken liefert genau zwei Treffer.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Die <code>Telematik-ID</code> ist die eindeutige Kennung der Apotheke, um an diese bspw. eine Nachricht zu schicken.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Der Name der Apotheke, unter dem sie im Verzeichnis geführt wird findet sich unter z.B.<code>"name": "Apotheke am Adler"</code>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</details>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type Success</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>200</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>OK<br>
+<span class="small">Die Anfrage wurde erfolgreich bearbeitet. Die Response enthält die angefragten Daten.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type Error</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>400</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Bad Request <br>
+<span class="small">Die Anfrage-Nachricht war fehlerhaft aufgebaut.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>401</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Unauthorized<br>
+<span class="small">Die Anfrage kann nicht ohne gültige Authentifizierung durchgeführt werden. Wie die Authentifizierung durchgeführt werden soll, wird im „WWW-Authenticate“-Header-Feld der Antwort übermittelt.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>403</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Forbidden<br>
+<span class="small">Die Anfrage wurde mangels Berechtigung des Clients nicht durchgeführt, bspw. weil der authentifizierte Benutzer nicht berechtigt ist.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>404</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Not found<br>
+<span class="small">Es wurde kein passender Verzeichniseintrag gefunden.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>500</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Server Errors<br>
+<span class="small">Unerwarteter Serverfehler</span></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Mit dem Suchergebnis kennt der Versicherte nun die Apotheken in seinem Umkreis. Eine Navigationsanwendung könnte ihm nun den kürzesten Weg zu einer der beiden Apotheken berechnen, unter folgendem Link stellen wir dar, wie der <a href="./erp_communication.adoc">Apotheke eine Nachricht geschickt werden kann</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_abgabeinformationen_abrufen"><a class="anchor" href="#_abgabeinformationen_abrufen"></a>Abgabeinformationen abrufen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Als Versicherter möchte ich die Abgabeinformationen aus der Apotheke zu meinem belieferten E-Rezept erhalten, um mir darüber einen digitalen Beipackzettel herunterzuladen und weitere Anwendungshinweise für mein Medikament zu erhalten.</p>
+</div>
+<div class="paragraph">
+<p>Der Aufruf erfolgt als http-<code>GET</code>-Operation auf die Ressource <code>/MedicationDispense</code>. Im Aufruf muss das während der Authentisierung erhaltene ACCESS_TOKEN im http-Request-Header <code>Authorization</code> übergeben werden, der Fachdienst filtert die MedicationDispense-Einträge nach der im ACCESS_TOKEN enthaltenen KVNR des Versicherten und ggfs. in der Aufrufadresse angegebenen weiteren Suchparametern. Die Rückgabe erfolgt als Liste im <code>Bundle</code> eines oder mehrerer MedicationDispenses, welche den ggfs. angegebenen Suchparametern entsprechen.</p>
+</div>
+<div class="paragraph">
+<p><strong>Request</strong></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">URI</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://erp.app.ti-dienste.de/MedicationDispense?whenhandedover=gt2020-03-01" class="bare">https://erp.app.ti-dienste.de/MedicationDispense?whenhandedover=gt2020-03-01</a>  <br></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+In der Aufruf-Adresse können Suchparameter gemäß <code><a href="https://www.hl7.org/fhir/medicationdispense.html#search" class="bare">https://www.hl7.org/fhir/medicationdispense.html#search</a></code> angegeben werden. Im konkreten Beispiel soll nach Dispensierinformationen zu Medikamenten mit einem Abholdatum <code>whenhandedover</code> größer (<code>gt</code>) dem Datum <code>01.03.2020</code> gesucht werden.
+</td>
+</tr>
+</table>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Method</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>GET</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">HTTP Header</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>Authorization: Bearer eyJraWQ.ewogImL2pA10Qql22ddtutrvx4FsDlz.rHQjEmB1lLmpqn9J</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Mit dem ACCESS_TOKEN im <code>Authorization</code>-Header weist sich der Zugreifende als Versicherter aus, im Token ist seine Versichertennummer enthalten nach welcher die Einträge gefiltert werden. Die Base64-Darstellung des Tokens ist stark gekürzt.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Im http-Header des äußeren http-Requests an die VAU (POST /VAU) sind die Header <code>X-erp-user: v</code> und <code>X-erp-resource: MedicationDispense</code> zu setzen.
+</td>
+</tr>
+</table>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Payload</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Response</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">HTTP/1.1 200 OK
+Content-Type: application/fhir+json;charset=utf-8
+
+{
+  "resourceType": "Bundle",
+  "id": "187dc298-c2b8-40f5-8938-c6c4078660ed",
+  "meta": {
+    "lastUpdated": "2020-04-07T08:05:42.225+00:00"
+  },
+  "type": "searchset",
+  "total": 1,
+  "link": [ {
+    "relation": "self",
+    "url": "https://erp.app.ti-dienste.de/MedicationDispense?whenhandedover=gt2020-01-01"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://erp.app.ti-dienste.de/MedicationDispense/1093629",
+    "resource": {
+      "resourceType": "MedicationDispense",
+      "id": "1093629",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-04-02T09:06:40.735+00:00",
+        "source": "#IanTxrBta61i4om4",
+        "profile": [ "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_MedicationDispense" ]
+      },
+      "contained": [ {
+        "resourceType":"Medication",
+        "id":"med0314",
+        "meta":{
+          "profile": [
+            "https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Medikament_PZN\|1.0.1"
+          ] },
+        "extension": [ {
+          "url":"https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Category",
+          "valueCoding":{
+            "system":"http://fhir.de/CodeSystem/ifa/pzn",
+            "code":"06313728"
+          }
+        }, {
+          "url":"https://fhir.kbv.de/StructureDefinition/KBV_EX_ERP_Medication_Vaccine",
+          "valueBoolean":false
+        }, {
+          "url":"http://fhir.de/StructureDefinition/normgroesse",
+          "valueCode":"N1"
+        } ],
+        "code":{
+          "coding": [ {
+            "system":"http://fhir.de/CodeSystem/ifa/pzn",
+            "code":"06313728"
+          } ],
+          "text":"Sumatriptan-1a Pharma 100 mg Tabletten"
+        },
+        "form":{
+          "coding": [ {
+            "system":"https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM",
+            "code":"TAB"
+          } ]
+        },
+        "amount":{
+          "numerator":{
+            "value":"12",
+            "system":"http://unitsofmeasure.org",
+            "unit":"{tbl}"
+          },
+          "denominator":{
+            "value":"1"
+          }
+        }
+      } ],
+      "identifier": [ {
+        "use":"official",
+        "system":"https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_NS_PrescriptionId",
+        "value":"12345678"
+      } ],
+      "status":"completed",
+      "medicationReference":{
+        "reference":"#med0314",
+        "display":"Sumatriptan-1a Pharma 100 mg Tabletten"
+      },
+      "supportingInformation": [ {
+        "reference":"Task/160.880.966.157.248.22"
+      } ],
+      "subject": [ {
+        "identifier":{
+          "system":"http://fhir.de/sid/gkv/kvid-10",
+          "value":"x1234567"
+        }
+        } ],
+      "performer": [ {
+        "actor":{
+          "identifier":{
+            "use":"official",
+            "system":"https://gematik.de/fhir/sid/telematik-id",
+            "value":"3-1.54.10123404"
+          },
+          "display":"Ihre Apotheke um die Ecke"
+        }
+      } ],
+      "whenPrepared":"2020-03-20T07:13:00+05:00",
+      "whenHandedOver":"2020-03-20T07:13:00+05:00",
+      "dosageInstruction": [ {
+        "text":"1-0-1-0"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Der Task wird unter <code>"reference":"Task/160.880.966.157.248.22"</code> des eingelösten E-Rezepts referenziert. Über den Link können weitere Informationen wie E-Rezept-Datensatz und ggfs. die Quittung abgerufen werden.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Unter <code>"performer"</code> findet sich der Name und die Betriebsstättennummer Telematik-ID der Apotheke, bei der das E-Rezept eingelöst wurde.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+` "whenHandedOver"` wurde als Filterkriterium verwendet, das Medikament wurde hier am 20.03.2020 ausgehändigt (<code>whenhandedover</code>) und ist damit vom Datumswert "größer" als das Datum des Filterkriteriums der Suchanfrage 01.01.2020 (<code>whenhandedover=gt2020-01-01</code>)
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type Success</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>200</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>OK<br>
+<span class="small">Die Anfrage wurde erfolgreich bearbeitet. Die Response enthält die angefragten Daten.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type Error</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>400</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Bad Request <br>
+<span class="small">Die Anfrage-Nachricht war fehlerhaft aufgebaut.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>401</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Unauthorized<br>
+<span class="small">Die Anfrage kann nicht ohne gültige Authentifizierung durchgeführt werden. Wie die Authentifizierung durchgeführt werden soll, wird im „WWW-Authenticate“-Header-Feld der Antwort übermittelt.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>403</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Forbidden<br>
+<span class="small">Die Anfrage wurde mangels Berechtigung des Clients nicht durchgeführt, bspw. weil der authentifizierte Benutzer nicht berechtigt ist.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>404</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Not found<br>
+<span class="small">Es wurde kein passender Verzeichniseintrag gefunden.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>500</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Server Errors<br>
+<span class="small">Unerwarteter Serverfehler</span></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ein_e_rezept_löschen"><a class="anchor" href="#_ein_e_rezept_löschen"></a>Ein E-Rezept löschen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Als Versicherter möchte ich ein E-Rezept löschen können, um mein Recht auf informationelle Selbstbestimmung wahrzunehmen.</p>
+</div>
+<div class="paragraph">
+<p>Der Aufruf erfolgt als http-<code>POST</code>-Operation auf eine konkrete Ressource <code>/Task/&lt;task_id&gt;</code> mit dem Zusatz der FHIR-Operation <code>$abort</code>. Im Aufruf muss das während der Authentisierung erhaltene ACCESS_TOKEN im http-Request-Header <code>Authorization</code> übergeben werden. Der Aufruf kann auch durch einen Vertreter des Versicherten erfolgen, hierbei wird lediglich die Rolle <code>Versicherter</code> im ACCESS_TOKEN geprüft. Um die Berechtigung für den Zugriff auf einen Task mit einer fremden KVNR nachzuweisen, muss der Zugreifende den richtigen AccessCode im http-Request-Header <code>X-AccessCode</code> übergeben. Die Operation löscht alle personenbezogenen und medizinischen Daten.</p>
+</div>
+<div class="paragraph">
+<p><strong>Request</strong></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">URI</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://erp.app.ti-dienste.de/Task/160.880.966.157.248.22/$abort" class="bare">https://erp.app.ti-dienste.de/Task/160.880.966.157.248.22/$abort</a></p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Method</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>POST</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">HTTP Header</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>Authorization: Bearer eyJraWQ.ewogImL2pA10Qql22ddtutrvx4FsDlz.rHQjEmB1lLmpqn9J
+X-AccessCode: 777bea0e13cc9c42ceec14aec3ddee2263325dc2c6c699db115f58fe423607ea</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Mit dem ACCESS_TOKEN im <code>Authorization</code>-Header weist sich der Zugreifende als Versicherter aus, im Token ist seine Versichertennummer enthalten. Die Base64-Darstellung des Tokens ist stark gekürzt.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Im http-Header des äußeren http-Requests an die VAU (POST /VAU) sind die Header <code>X-erp-user: v</code> und <code>X-erp-resource: Task</code> zu setzen.
+</td>
+</tr>
+</table>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Payload</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Response</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">HTTP/1.1 204 No Content</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Im Ergebnis der $abort-Operation wird der referenzierte Task gelöscht. Dementsprechend werden keine Daten an den aufrufenden Client zurückgegeben.
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type Success</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>204</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>No Content<br>
+<span class="small">Die Anfrage wurde erfolgreich bearbeitet. Die Response enthält jedoch keine Daten.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type Error</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>400</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Bad Request <br>
+<span class="small">Die Anfrage-Nachricht war fehlerhaft aufgebaut.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>401</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Unauthorized<br>
+<span class="small">Die Anfrage kann nicht ohne gültige Authentifizierung durchgeführt werden. Wie die Authentifizierung durchgeführt werden soll, wird im „WWW-Authenticate“-Header-Feld der Antwort übermittelt.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>403</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Forbidden<br>
+<span class="small">Die Anfrage wurde mangels Berechtigung des Clients nicht durchgeführt, bspw. weil der authentifizierte Benutzer nicht berechtigt ist. Beispielsweise ist das Rezept grade in der Belieferung durch eine Apotheke.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>404</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Not found<br>
+<span class="small">Die adressierte Ressource wurde nicht gefunden, die übergebene ID ist ungültig.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>405</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Method Not Allowed<br>
+<span class="small">Die Anfrage darf nur mit anderen HTTP-Methoden (zum Beispiel GET statt POST) gestellt werden. Gültige Methoden für die betreffende Ressource werden im „Allow“-Header-Feld der Antwort übermittelt.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>429</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Too Many Requests<br>
+<span class="small">Der Client hat zu viele Anfragen in einem bestimmten Zeitraum gesendet.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>500</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Server Errors<br>
+<span class="small">Unerwarteter Serverfehler</span></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_einsicht_in_das_zugriffsprotokoll"><a class="anchor" href="#_einsicht_in_das_zugriffsprotokoll"></a>Einsicht in das Zugriffsprotokoll</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Als Versicherter möchte ich Einsicht in das Zugriffsprotokoll meiner Daten im E-Rezept-Fachdienst nehmen, um Zugriffe nachvollziehen zu können und eine unberechtigte Einsicht in meine Daten zu prüfen.</p>
+</div>
+<div class="paragraph">
+<p>Der Aufruf erfolgt als http-<code>GET</code>-Operation auf die Ressource <code>/AuditEvent</code>. Im Aufruf muss das während der Authentisierung erhaltene ACCESS_TOKEN im http-Request-Header <code>Authorization</code> übergeben werden, der Fachdienst filtert die AuditEvent-Einträge nach der im ACCESS_TOKEN enthaltenen KVNR des Versicherten.
+Der E-Rezept-Fachdienst liefert eine Liste von Protokolleinträgen, die mit einem zusätzlichen Suchparameter in der Anfrage-URL sortiert werden kann. <code><a href="https://erp.app.ti-dienste.de/AuditEvent?_sort=-date" class="bare">https://erp.app.ti-dienste.de/AuditEvent?_sort=-date</a></code> sortiert die Protokolleinträge nach dem Protokollierungszeitpunkt <code>recorded</code> gemäß <a href="https://www.hl7.org/fhir/auditevent.html#search" class="bare">https://www.hl7.org/fhir/auditevent.html#search</a>, das Minuszeichen in <code>-date</code> bewirkt die absteigende Sortierung (jüngster Eintrag zuerst).</p>
+</div>
+<div class="paragraph">
+<p><strong>Request</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">URI</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://erp.app.ti-dienste.de/AuditEvent" class="bare">https://erp.app.ti-dienste.de/AuditEvent</a></p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Method</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>GET</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">HTTP Header</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>Authorization: Bearer eyJraWQ.ewogImL2pA10Qql22ddtutrvx4FsDlz.rHQjEmB1lLmpqn9J</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Mit dem ACCESS_TOKEN im <code>Authorization</code>-Header weist sich der Zugreifende als Versicherter aus, im Token ist seine Versichertennummer enthalten, nach der die Protokolleinträge gefiltert werden. Die Base64-Darstellung des Tokens ist stark gekürzt.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Im http-Header des äußeren http-Requests an die VAU (POST /VAU) sind die Header <code>X-erp-user: v</code> und <code>X-erp-resource: AuditEvent</code> zu setzen.
+</td>
+</tr>
+</table>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Payload</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>-</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Response</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">HTTP/1.1 200 OK
+Content-Type: application/fhir+json;charset=utf-8
+
+{
+  "resourceType": "Bundle",
+  "id": "12653b13-5fca-4e3b-860c-9558bdfef9a1",
+  "meta": {
+    "lastUpdated": "2020-03-29T13:44:18.783+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://erp.app.ti-dienste.de/AuditEvent"
+  }, {
+    "relation": "next",
+    "url": "https://erp.app.ti-dienste.de/AuditEvent?_getpages=12653b13-5fca-4e3b-860c-9558bdfef9a1&amp;_getpagesoffset=20&amp;_count=20"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://erp.app.ti-dienste.de/AuditEvent/58862",
+    "resource": {
+      "resourceType": "AuditEvent",
+      "id": "58862",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-02-27T08:04:27.434+00:00",
+        "source": "#IkMt252YovlsJTAE",
+        "profile": [
+          "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent"
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;Praxis Dr. Müller,
+        Bahnhofstr. 78 hat ein E-Rezept 160.123.456.789.123.58 eingestellt&lt;/div&gt;"
+      },
+      "type": {
+        "system": "http://terminology.hl7.org/CodeSystem/audit-event-type",
+        "code": "rest"
+      },
+      "subtype": [ {
+        "system": "http://hl7.org/fhir/restful-interaction",
+        "code": "create"
+      } ],
+      "action": "C",
+      "recorded": "2020-02-27T08:04:27.434+00:00",
+      "outcome": "0",
+      "agent": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/extra-security-role-type",
+            "code": "humanuser",
+            "display": "Human User"
+          } ]
+        },
+        "who": {
+          "identifier": {
+            "system": "https://gematik.de/fhir/sid/telematik-id",
+            "value": "1-1.54.102323123404"
+          }
+        },
+        "name": "Praxis Dr. Müller",
+        "requestor": false
+      }],
+      "source": {
+        "site": "E-Rezept Fachdienst",
+        "observer": {
+          "reference": "Device/1234",
+        }
+      },
+      "entity": [ {
+        "what": {
+          "reference": "https://erp.app.ti-dienste.de/Task/160.123.456.789.123.58",
+          "identifier": {
+            "use":"official",
+            "system":"https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_NS_PrescriptionId",
+            "value":"160.123.456.789.123.58"
+          },
+        },
+        "name": "X123456789",
+        "description": "*160.123.456.789.123.58*"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://erp.app.ti-dienste.de/AuditEvent/58863",
+    "resource": {
+      "resourceType": "AuditEvent",
+      "id": "58863",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-02-27T09:04:27.434+00:00",
+        "source": "#IkMt252YovlsJTAE",
+        "profile": [
+          "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent"
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;Max Mustermann hat ein E-Rezept 160.123.456.789.123.58 heruntergeladen&lt;/div&gt;"
+      },
+      "type": {
+        "system": "http://terminology.hl7.org/CodeSystem/audit-event-type",
+        "code": "rest"
+      },
+      "subtype": [ {
+        "system": "http://hl7.org/fhir/restful-interaction",
+        "code": "read",
+      } ],
+      "action": "R",
+      "recorded": "2020-02-27T09:04:27.434+00:00",
+      "outcome": "0",
+      "agent": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/extra-security-role-type",
+            "code": "humanuser",
+            "display": "Human User"
+          } ]
+        },
+        "who": {
+          "identifier": {
+            "system": "https://gematik.de/fhir/sid/telematik-id",
+            "value": "3-1.54.10123404"
+          }
+        },
+        "name": "Ihre Apotheke um die Ecke, Hauptstraße 1",
+        "requestor": false
+      }],
+      "source": {
+        "site": "E-Rezept Fachdienst",
+        "observer": {
+          "reference": "Device/5678"
+        }
+      },
+      "entity": [ {
+        "what": {
+          "reference": "https://erp.app.ti-dienste.de/Task/160.123.456.789.123.58",
+          "identifier": {
+            "use":"official",
+            "system":"https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_NS_PrescriptionId",
+            "value":"160.123.456.789.123.58"
+          },
+        },
+        "name": "X123456789",
+         "description": "*160.123.456.789.123.58*"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://erp.app.ti-dienste.de/AuditEvent/620049",
+    "resource": {
+      "resourceType": "AuditEvent",
+      "id": "620049",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-02-27T10:04:27.434+00:00",
+        "source": "#IkMt252YovlsJTAE",
+        "profile": [
+          "https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_PR_AuditEvent"
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;Ihre Apotheke um die Ecke,
+        Hauptstraße 1 hat ein E-Rezept 160.123.456.789.123.58 beliefert&lt;/div&gt;"
+      },
+      "type": {
+        "system": "http://terminology.hl7.org/CodeSystem/audit-event-type",
+        "code": "rest"
+      },
+      "subtype": [ {
+        "system": "http://hl7.org/fhir/restful-interaction",
+        "code": "update"
+      } ],
+      "action": "U",
+      "recorded": "2020-02-27T10:04:27.434+00:00",
+      "outcome": "0",
+      "agent": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/extra-security-role-type",
+            "code": "humanuser",
+            "display": "Human User"
+          } ]
+        },
+        "who": {
+          "identifier": {
+            "system": "https://gematik.de/fhir/sid/telematik-id",
+            "value": "3-1.54.10123404"
+          }
+        },
+        "name": "Ihre Apotheke um die Ecke, Hauptstraße 1",
+        "requestor": false
+      }],
+      "source": {
+        "site": "E-Rezept Fachdienst",
+        "observer": {
+          "reference": "Device/1234"
+        }
+      },
+      "entity": [ {
+        "what": {
+           "reference": "https://erp.app.ti-dienste.de/Task/160.123.456.789.123.58",
+          "identifier": {
+            "use":"official",
+            "system":"https://gematik.de/fhir/erp/StructureDefinition/GEM_ERP_NS_PrescriptionId",
+            "value":"160.123.456.789.123.58"
+          },
+        },
+        "name": "X123456789",
+        "description": "*160.123.456.789.123.58*"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Beim Abrufen der Protokolleinträge erfolgt die Rückgabe als <code>Bundle</code>, in dem die Protokolleinträge mit Bezug zum authentifizierten Versicherten über dessen KVNR aufgelistet werden. In diesem vereinfachten Beispiel werden nur drei Einträge dargestellt.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Für eine komfortable Darstellung vieler Protokolleinträge und zur Reduktion der übertragenen Datenmenge kommt ein Paging-Mechanismus zum Einsatz. Über diese <code>url</code> können die nächsten 20 Protokolleinträge abgerufen werden (sofern weitere vorhanden)
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Die Darstellung eines Protokolleintrags erfolgt als <code>AuditEvent</code>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Unter <code>"div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;Praxis Dr. Müller,
+        Bahnhofstr. 78 hat ein E-Rezept 160.123.456.789.123.58 eingestellt&lt;/div&gt;"</code> wird eine lesbare Darstellung in HTML-Format bereitgestellt.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title=":information_source:"></i>
+</td>
+<td class="content">
+Der Versichertenbezug wird über die Versichertennummer des jeweils gelesenen/eingestellten/gelöschten E-Rezept in <code>"name": "X123456789"</code> oder auch MedicationDispense hergestellt.
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type Success</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>200</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>OK<br>
+<span class="small">Die Anfrage wurde erfolgreich bearbeitet.  Die angeforderte Ressource wird im ResponseBody bereitgestellt.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type Error</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>400</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Bad Request <br>
+<span class="small">Die Anfrage-Nachricht war fehlerhaft aufgebaut.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>401</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Unauthorized<br>
+<span class="small">Die Anfrage kann nicht ohne gültige Authentifizierung durchgeführt werden. Wie die Authentifizierung durchgeführt werden soll, wird im „WWW-Authenticate“-Header-Feld der Antwort übermittelt.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>403</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Forbidden<br>
+<span class="small">Die Anfrage wurde mangels Berechtigung des Clients nicht durchgeführt, bspw. weil der authentifizierte Benutzer nicht berechtigt ist.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>405</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Method Not Allowed<br>
+<span class="small">Die Anfrage darf nur mit anderen HTTP-Methoden (zum Beispiel GET statt POST) gestellt werden. Gültige Methoden für die betreffende Ressource werden im „Allow“-Header-Feld der Antwort übermittelt.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>429</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Too Many Requests<br>
+<span class="small">Der Client hat zu viele Anfragen in einem bestimmten Zeitraum gesendet.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>500</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Server Errors<br>
+<span class="small">Unerwarteter Serverfehler</span></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> gematik GmbH</p>
+  <p>Generated using Antora and Asciidoc.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

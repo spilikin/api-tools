@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: gematik API</title>
+    <link rel="canonical" href="https://spilikin.dev/api-tools/api-erp/1.2/erp_versicherte_mvo.html">
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spilikin.dev/api-tools">gematik API</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="https://github.com/gematik/"><img style="height: 1.4em;margin-right: 0.4em;" src="../../_/img/github-mark-white.svg"> GiHub</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://github.com/gematik/api-telematik">Telematik API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-erp">eRP API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-epa">ePA API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-kim/">KIM API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-ti-messenger/">TI-Messenger API</a>
+            <a class="navbar-item" href="https://github.com/gematik/api-vzd/">Directory API</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://fachportal.gematik.de/">Fachportal</a>
+        <div class="navbar-item" style="scale: 1;">
+          <span class="control">
+            <img class="logo" src="../../_/img/gematik_logo_text.svg">
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="api-erp" data-version="1.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">ePrescription API</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">index.adoc</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">ePrescription API</span>
+    <span class="version">1.2</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">ePrescription API</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">1.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-directory-fhir/1.0.0/index.html">FHIR Directory API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-directory-fhir/1.0.0/index.html">1.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-directory-ldap/1.7.0/index.html">LDAP Directory API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-directory-ldap/1.7.0/index.html">1.7.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-telematik/5.5.0/overview/index.html">Telematik API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-telematik/5.5.0/overview/index.html">5.5.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../api-ti-messenger/1.1.0/index.html">TI-Messenger API</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../api-ti-messenger/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../api-telematik/5.5.0/overview/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/spilikin/poc-api-telematik/edit/erp/src/antora/modules/ROOT/pages/erp_versicherte_mvo.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="paragraph">
+<p><span class="image"><img src="_images/gematik_logo.png" alt="gematik logo" width="35%"></span></p>
+</div>
+<div class="sect1">
+<h2 id="_e_rezept_api_dokumentation_für_versicherte_mehrfachverordnungen"><a class="anchor" href="#_e_rezept_api_dokumentation_für_versicherte_mehrfachverordnungen"></a>E-Rezept API Dokumentation für Versicherte - Mehrfachverordnungen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Hier dokumentiert die gematik die Nutzung der Schnittstellen rund um das E-Rezept aus Sicht der Versicherten, die ihre E-Rezepte verwalten und einlösen möchten.</p>
+</div>
+<div class="paragraph">
+<p>Mehrfachverordnungen sollen die Versorgung mit Arzneimittel für chronisch Kranke erleichtern.
+Für Versicherte, die eine kontinuierliche Versorgung mit einem bestimmten Arzneimittel benötigen, können Vertragsärzte Verordnungen ausstellen, nach denen eine nach der Erstabgabe bis zu dreimal sich wiederholende Abgabe erlaubt ist.</p>
+</div>
+<div class="paragraph">
+<p>Aus der Mehrfachverordnung ergeben sich Vorteile für Patienten und die Abläufe in Arztpraxen, da die Rezepte für Dauermedikationen im Voraus ausgestellt werden können und somit Wege zur Arztpraxis zum Rezepte abholen entfallen.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fachliches_konzept"><a class="anchor" href="#_fachliches_konzept"></a>Fachliches Konzept</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Eine Mehrfachverordnung besteht aus mindestens 2 bis maximal 4 Teilverordnungen. Jede Teilverordnung einer Mehrfachverordnung ist ein vollständiges E-Rezept mit eigenem E-Rezept-Token. Das bedeutet, dass jede der Teilverordnungen durch den eigenen E-Rezept-Token auch einzeln durch den Versicherten, ggf. in verschiedenen Apotheken, eingelöst werden kann.</p>
+</div>
+<div class="paragraph">
+<p>Der Arzt/Zahnarzt kann das Ende der Gültigkeitszeitraumes einer Teilverordnung festlegen. Falls das Ende nicht festgelegt wird, dann gilt die Teilverordnung bis 365 Tage nach dem Ausstellungsdatum der Mehrfachverordnung. Die folgende Abbildung zeigt eine mögliche Variante für die Gültigkeitszeiträume zweier Teilverordnungen einer Mehrfachverordnung.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/api_mvo_gueltigkeit.png" alt="api mvo gueltigkeit" width="100%"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_datenmodell_der_mehrfachverordnung"><a class="anchor" href="#_datenmodell_der_mehrfachverordnung"></a>Datenmodell der Mehrfachverordnung</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Eine Mehrfachverordnung besteht aus 2 bis max. 4 unabhängigen Teilverordnungen. Jede Teilverordnung ist ein (zahn)ärztlich signiertes E-Rezept gemäß der <a href="https://simplifier.net/erezept" target="_blank" rel="noopener">KBV-Festlegungen</a> für einen Verordnungsdatensatz.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title=":bulb:"></i>
+</td>
+<td class="content">
+Beispieldatensätze finden sich im Unterverzeichnis <a href="../samples/MVO_KBV_1.0.2_.zip">samples/MVO_KBV_1.0.2_.zip</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Die folgenden Felder sind dabei charakteristisch für die Teilverordnungen einer Mehrfachverordnung</p>
+</div>
+<div class="paragraph">
+<p>Kennzeichen einer Verordnung als Teilverordnung einer Mehrfachverordnung</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">MedicationRequest.extension:Mehrfachverordnung.extension:Kennzeichen = true</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Nummer des Rezepts der Mehrfachverordnung ("Zähler")</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">MedicationRequest.extension:Mehrfachverordnung.extension:Nummerierung.value[x]:valueRatio.numerator</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Gesamtzahl der Teilverordnungen in der Mehrfachverordnung ("Nenner")</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">MedicationRequest.extension:Mehrfachverordnung.extension:Nummerierung.value[x]:valueRatio.denominator</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Start der Gültigkeit</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">MedicationRequest.extension:Mehrfachverordnung.extension:Zeitraum.value[x]:valuePeriod.start</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ende der Gültigkeit</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">MedicationRequest.extension:Mehrfachverordnung.extension:Zeitraum.value[x]:valuePeriod.end</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title=":warning:"></i>
+</td>
+<td class="content">
+Patienten haben zu jeder Zeit die Möglichkeit, alle Teilverordnungen einer Mehrfachverordnung über die E-Rezept-App einzusehen und die Einlöseinformationen als Datamatrix oder Zuweisung an Apotheken zu teilen (und bei Bedarf zu löschen).
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title=":warning:"></i>
+</td>
+<td class="content">
+Apotheken sind VOR dem Gültigkeitsbeginn <code>valuePeriod.start</code> nicht berechtigt, eine Teilverordnung herunterzuladen.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> gematik GmbH</p>
+  <p>Generated using Antora and Asciidoc.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
